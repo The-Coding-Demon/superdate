@@ -1,7 +1,8 @@
+import { HomeButton } from "../components/HomeButton";
 export const Login = () => {
   return (
     <div>
-      <h1>Hi</h1>
+      <HomeButton />
     </div>
   );
 };

@@ -1,7 +1,9 @@
+import { FullDescription } from "../components/FullDescription";
+
 export const DetailedResults = () => {
   return (
     <div>
-      <h1>Hi</h1>
+      <FullDescription />
     </div>
   );
 };

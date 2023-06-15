@@ -35,4 +35,24 @@ h1 h2 {
   z-index: 10;
   min-width: 100vw;
   width: max-content;
+  color: #fff;
+}
+
+.navbar {
+  background-color: var(--Secondary);
+}
+
+.button-nav {
+  background-color: var(--Primary);
+  border: none;
+  font-family: Montserrat;
+}
+
+.HomeButton {
+  padding-top: 3em;
+  padding-left: 3em;
+}
+
+.DetailsDescription {
+  max-width: 540px;
 }
