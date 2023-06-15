@@ -1,20 +1,17 @@
-// import { BrowserRouter } from "react-router-dom";
-// import { AppRoutes } from "./AppRoutes";
-
-import { NavigationBar } from "./components/NavigationBar";
-import MainBG from "./assets/MainBG.mp4";
+import { BrowserRouter } from "react-router-dom";
+import { AppRoutes } from "./AppRoutes";
+import { Footer } from "./components/Footer.js";
+import { Background } from "./components/Background.js";
 
 export const App = () => {
   return (
     <div>
-      <video autoPlay loop muted>
-        <source src={MainBG} type="video/mp4" />
-      </video>
-      <NavigationBar />
+      <BrowserRouter>
+        <Background />
+        <Footer />
+        <AppRoutes />
+      </BrowserRouter>
     </div>
-    // <BrowserRouter>
-    //   <AppRoutes />
-    // </BrowserRouter>
   );
 };
 

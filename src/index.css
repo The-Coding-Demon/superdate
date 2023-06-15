@@ -1,18 +1,38 @@
+:root {
+  --Primary: #ff75a0;
+  --Secondary: #a8e6cf;
+  --Third: #d9d9d9;
+}
+
 * {
   margin: 0;
 }
 
 video {
+  position: fixed;
   z-index: -1;
-  min-width: 100vw;
   height: 100vh;
+  border-bottom: 5px solid #d9d9d9;
   object-fit: cover;
+  min-width: 100%;
+  max-width: 100%;
 }
 
 body {
+  max-width: 100%;
+  overflow: hidden;
   font-family: Prompt;
 }
 
 h1 h2 {
   font-family: Montserrat;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0%;
+  background-color: var(--Primary);
+  z-index: 10;
+  min-width: 100vw;
+  width: max-content;
 }

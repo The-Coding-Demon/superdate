@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 
 import { Home } from "./pages/Home";
-import { Login } from "./pages/Home";
-import { Results } from "./pages/Home";
-import { DetailedResults } from "./pages/Home";
-import { MyFavourites } from "./pages/Home";
-import { MapDirections } from "./pages/Home";
-import { Contact } from "./pages/Home";
+import { Login } from "./pages/Login";
+import { Results } from "./pages/Results";
+import { DetailedResults } from "./pages/DetailedResults";
+import { MyFavourites } from "./pages/MyFavourites";
+import { MapDirections } from "./pages/MapDirections";
+import { Contact } from "./pages/Contact";
 
 export const AppRoutes = () => {
   return (
