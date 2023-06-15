@@ -8,7 +8,7 @@ export const App = () => {
     <div>
       <BrowserRouter>
         <Background />
-        <Footer />
+        <Footer props="©Superdate" />
         <AppRoutes />
       </BrowserRouter>
     </div>
