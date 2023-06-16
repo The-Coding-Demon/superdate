@@ -4,9 +4,25 @@
   --Third: #d9d9d9;
 }
 
+/* Main */
+
 * {
   margin: 0;
+  box-sizing: border-box;
 }
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Prompt;
+}
+
+h1 h2 {
+  font-family: Montserrat;
+  font-size: 2em;
+}
+
+/* Background Vid */
 
 video {
   position: fixed;
@@ -18,25 +34,7 @@ video {
   max-width: 100%;
 }
 
-body {
-  max-width: 100%;
-  overflow: hidden;
-  font-family: Prompt;
-}
-
-h1 h2 {
-  font-family: Montserrat;
-}
-
-.footer {
-  position: absolute;
-  bottom: 0%;
-  background-color: var(--Primary);
-  z-index: 10;
-  min-width: 100vw;
-  width: max-content;
-  color: #fff;
-}
+/* Navbar */
 
 .navbar {
   background-color: var(--Secondary);
@@ -53,6 +51,76 @@ h1 h2 {
   padding-left: 3em;
 }
 
+/* Initial Details */
+
+.InitialResultsCards {
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 2%;
+}
+
+.card-img-top {
+  height: 475px;
+  width: 800px;
+}
+
+/* Details Page */
+
 .DetailsDescription {
-  max-width: 540px;
+  max-width: 1200px;
+  height: 700px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-shadow: 1px 1px black;
+}
+
+.WrittenDescription {
+  text-align: justify;
+  font-size: 25px;
+}
+
+.DetailsTitle {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 35px;
+  padding-top: 2.8em;
+}
+
+.ScubaIMG {
+  margin-top: 9em;
+}
+
+/* Contact */
+
+.Contacttitle {
+  padding-top: 3em;
+  color: #fff;
+  font-family: Montserrat;
+}
+
+.ContactDetails {
+  line-height: 10em;
+  color: #fff;
+  font-family: Prompt;
+  text-align: center;
+  margin-top: 14em;
+  margin-right: 45em;
+}
+
+/* Footer */
+
+.footer {
+  display: block;
+  position: absolute;
+  top: 99%;
+  background-color: var(--Primary);
+  z-index: 1;
+  min-width: 100vw;
+  width: max-content;
+  color: #fff;
 }

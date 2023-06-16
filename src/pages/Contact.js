@@ -1,7 +1,9 @@
+import { DetailsinContact } from "../components/DetailsinContact";
+
 export const Contact = () => {
   return (
     <div>
-      <h1>Hi</h1>
+      <DetailsinContact />
     </div>
   );
 };

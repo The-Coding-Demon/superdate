@@ -1,7 +1,9 @@
+import { InitialResults } from "../components/InitialResults";
+
 export const Results = () => {
   return (
     <div>
-      <h1>Hi</h1>
+      <InitialResults />
     </div>
   );
 };
