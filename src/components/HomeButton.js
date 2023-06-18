@@ -1,4 +1,4 @@
-import MainLogo from "./MainLogo.png";
+import MainLogo from "./assets/MainLogo.png";
 export const HomeButton = () => {
   return (
     <div className="container-fluid HomeButton">

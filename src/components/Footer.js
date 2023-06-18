@@ -1,7 +1,7 @@
-export const Footer = ({ props }) => {
+export const Footer = () => {
   return (
-    <div className="d-flex pt-2 justify-content-center footer">
-      <h5>{props}</h5>
-    </div>
+    <nav class="navbar fixed-bottom text-center footer">
+      <a class="navbar-brand text-center ">©SuperDate</a>
+    </nav>
   );
 };
