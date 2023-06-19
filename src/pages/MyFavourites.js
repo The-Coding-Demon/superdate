@@ -1,7 +1,9 @@
+import { FavouritesContainer } from "../components/FavouritesContainer";
+
 export const MyFavourites = () => {
   return (
     <div>
-      <h1>Hi</h1>
+      <FavouritesContainer />
     </div>
   );
 };
