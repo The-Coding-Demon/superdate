@@ -7,6 +7,7 @@ export const QuestionsBox = () => {
       firstName: "",
       lastName: "",
       email: "",
+      city: "",
     },
     validationSchema: Yup.object({
       firstName: Yup.string()
@@ -16,6 +17,7 @@ export const QuestionsBox = () => {
         .max(20, "Must be 20 characters or less")
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
+      city: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -54,6 +56,17 @@ export const QuestionsBox = () => {
       />
       {formik.touched.email && formik.errors.email ? (
         <div>{formik.errors.email}</div>
+      ) : null}
+
+      <input
+        className="InputBoxes"
+        id="city"
+        type="text"
+        {...formik.getFieldProps("city")}
+        placeholder="Enter Your City"
+      />
+      {formik.touched.city && formik.errors.city ? (
+        <div>{formik.errors.city}</div>
       ) : null}
 
       <button type="submit" className="btn btn-info text-white InputButton">

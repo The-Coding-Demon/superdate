@@ -4,7 +4,7 @@ export const FullDescription = () => {
   return (
     <div class="p-2 DetailedDesc">
       <div class="p-3">
-        <img src={ScubaDiving}></img>
+        <img src={ScubaDiving} className="MainIMGResult"></img>
       </div>
       <div class="p-3">
         <h2>Scuba Diving</h2>

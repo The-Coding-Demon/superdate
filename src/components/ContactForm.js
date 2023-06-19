@@ -48,7 +48,7 @@ export const ContactForm = () => {
       <input
         id="email"
         className="ContactBoxes"
-        type="email"
+        type="textarea"
         placeholder="Message"
         {...formik.getFieldProps("email")}
       />

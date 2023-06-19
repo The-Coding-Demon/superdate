@@ -1,6 +1,6 @@
 export const DetailsinContact = () => {
   return (
-    <div>
+    <div className="MainContactContainer">
       <div>
         <h1 className="ContactTitle">Contact</h1>
       </div>
