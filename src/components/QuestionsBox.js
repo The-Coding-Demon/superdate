@@ -56,7 +56,7 @@ export const QuestionsBox = () => {
         <div>{formik.errors.email}</div>
       ) : null}
 
-      <button type="submit" className="btn btn-primary InputButton">
+      <button type="submit" className="btn btn-info text-white InputButton">
         Submit
       </button>
     </form>

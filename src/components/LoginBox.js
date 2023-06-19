@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-export const QuestionsBox = () => {
+export const LoginBox = () => {
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -22,8 +22,9 @@ export const QuestionsBox = () => {
     },
   });
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form className="QuestionForm" onSubmit={formik.handleSubmit}>
       <input
+        className="InputBoxes"
         id="firstName"
         type="text"
         {...formik.getFieldProps("firstName")}
@@ -34,6 +35,7 @@ export const QuestionsBox = () => {
       ) : null}
 
       <input
+        className="InputBoxes"
         id="password"
         type="text"
         placeholder="Enter Password"
@@ -44,6 +46,7 @@ export const QuestionsBox = () => {
       ) : null}
 
       <input
+        className="InputBoxes"
         id="email"
         type="email"
         placeholder="Enter Email"
@@ -53,7 +56,9 @@ export const QuestionsBox = () => {
         <div>{formik.errors.email}</div>
       ) : null}
 
-      <button type="submit">Submit</button>
+      <button className="btn btn-info text-white InputButton" type="submit">
+        Submit{" "}
+      </button>
     </form>
   );
 };

@@ -11,7 +11,7 @@ export const NavigationBar = () => {
           height="24"
           class="d-inline-block align-text-top"
         />
-        <button className="btn btn-dark button-nav" type="submit">
+        <button className="btn btn-info text-white button-nav" type="submit">
           Contact Us
         </button>
       </div>
