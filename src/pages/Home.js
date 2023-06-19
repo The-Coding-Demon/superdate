@@ -5,7 +5,6 @@ export const Home = () => {
   return (
     <div>
       {/* <HomeButton /> */}
-      {/* <QuestionsBox /> */}
       <BackingLayerBoxes />
     </div>
   );
