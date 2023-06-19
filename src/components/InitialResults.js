@@ -2,6 +2,7 @@ import ScubaDiving from "./assets/ScubaDiving.jpg";
 import MiniGolf from "./assets/Mini-Golf.jpg";
 import BoatTrip from "./assets/Boat-Trip.jpg";
 import Cinema from "./assets/Cinema.jpg";
+import PlusIcon from "./assets/Plus Icon.png";
 
 export const InitialResults = () => {
   return (
