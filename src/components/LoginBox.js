@@ -1,7 +1,9 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 export const LoginBox = () => {
+  const Navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -56,7 +58,13 @@ export const LoginBox = () => {
         <div>{formik.errors.email}</div>
       ) : null}
 
-      <button className="btn btn-info text-white InputButton" type="submit">
+      <button
+        className="btn btn-info text-white InputButton"
+        type="submit"
+        onClick={() => {
+          Navigate("./");
+        }}
+      >
         Submit{" "}
       </button>
     </form>
