@@ -171,6 +171,16 @@ input {
   max-width: 50px;
 }
 
+.LocationButton {
+  display: block;
+  position: absolute;
+  bottom: 1%;
+  right: 0.5%;
+
+  max-height: 50px;
+  max-width: 50px;
+}
+
 .DetailedDesc {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -213,6 +223,11 @@ input {
   }
 
   .BackButton {
+    display: block;
+    position: static;
+  }
+
+  .LocationButton {
     display: block;
     position: static;
   }

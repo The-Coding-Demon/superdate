@@ -1,8 +1,18 @@
 import Map from "./assets/MapImage.png";
+import BackArrow from "./assets/circle-arrow-left-solid.png";
+import { useNavigate } from "react-router-dom";
 
 export const MapDetails = () => {
+  const Navigate = useNavigate();
   return (
     <div class="p-2 MapDetails">
+      <img
+        src={BackArrow}
+        className="BackButton CursorChange"
+        onClick={() => {
+          Navigate("/DetailedResults");
+        }}
+      ></img>
       <div class="p-3">
         <img src={Map} className="MainIMGMap"></img>
       </div>

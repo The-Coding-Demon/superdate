@@ -62,7 +62,7 @@ export const LoginBox = () => {
         className="btn btn-info text-white InputButton"
         type="submit"
         onClick={() => {
-          Navigate("./");
+          Navigate("/");
         }}
       >
         Submit{" "}

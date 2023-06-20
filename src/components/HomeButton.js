@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import MainLogo from "./assets/MainLogo.png";
 export const HomeButton = () => {
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
   return (
     <div className="container-fluid HomeButton">
       <img
         onClick={() => {
-          navigate("/");
+          Navigate("/");
         }}
         src={MainLogo}
         alt="Logo"
