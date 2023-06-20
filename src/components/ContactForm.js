@@ -24,7 +24,7 @@ export const ContactForm = () => {
   return (
     <form className="ContactForm" onSubmit={formik.handleSubmit}>
       <input
-        className="ContactBoxes"
+        className="ContactFormInputs"
         id="firstName"
         type="text"
         {...formik.getFieldProps("firstName")}
@@ -36,7 +36,7 @@ export const ContactForm = () => {
 
       <input
         id="lastName"
-        className="ContactBoxes"
+        className="ContactFormInputs"
         type="text"
         placeholder="Email"
         {...formik.getFieldProps("lastName")}
@@ -47,7 +47,7 @@ export const ContactForm = () => {
 
       <input
         id="email"
-        className="ContactBoxes"
+        className="ContactFormInputs"
         type="textarea"
         placeholder="Message"
         {...formik.getFieldProps("email")}
