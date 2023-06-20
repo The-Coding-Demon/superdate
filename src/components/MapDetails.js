@@ -8,7 +8,7 @@ export const MapDetails = () => {
       </div>
       <div class="p-3">
         <h2>Map Directions</h2>
-        <p>
+        <p className="Maptext">
           1. Start by heading southeast on the A52 road from Nottingham city
           center. 2. Continue on the A52 for about 9 miles (14.5 kilometers)
           until you reach the junction with the M1 motorway. 3. Join the M1

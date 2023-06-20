@@ -8,7 +8,7 @@ export const FullDescription = () => {
       </div>
       <div class="p-3">
         <h2>Scuba Diving</h2>
-        <p>
+        <p className="Detailedtext">
           Scuba diving is an underwater activity that allows individuals to
           explore the beauty of the underwater world. The term "SCUBA" stands
           for Self-Contained Underwater Breathing Apparatus, which refers to the
