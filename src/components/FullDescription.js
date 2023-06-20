@@ -1,8 +1,18 @@
 import ScubaDiving from "./assets/ScubaDiving.jpg";
+import BackArrow from "./assets/circle-arrow-left-solid.png";
+import { useNavigate } from "react-router-dom";
 
 export const FullDescription = () => {
+  const navigate = useNavigate();
   return (
     <div class="p-2 DetailedDesc">
+      <img
+        src={BackArrow}
+        className="BackButton CursorChange"
+        onClick={() => {
+          navigate("/results");
+        }}
+      ></img>
       <div class="p-3">
         <img src={ScubaDiving} className="MainIMGResult"></img>
       </div>
