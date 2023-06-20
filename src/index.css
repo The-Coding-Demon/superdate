@@ -230,6 +230,7 @@ input {
   .LocationButton {
     display: block;
     position: static;
+    float: right;
   }
 }
 
@@ -271,7 +272,6 @@ input {
   .MainIMGMap {
     display: block;
     width: 100%;
-    /* width: auto; */
     height: auto;
     text-align: center;
   }
