@@ -33,7 +33,7 @@ export const FullDescription = () => {
         src={Location}
         className="LocationButton CursorChange"
         onClick={() => {
-          navigate("/MapDirections");
+          Navigate("/MapDirections");
         }}
       ></img>
     </div>
