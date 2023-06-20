@@ -1,7 +1,8 @@
+import { MapDetails } from "../components/MapDetails";
 export const MapDirections = () => {
   return (
     <div>
-      <h1>Hi</h1>
+      <MapDetails />
     </div>
   );
 };
