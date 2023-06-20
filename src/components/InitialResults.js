@@ -12,7 +12,7 @@ export const InitialResults = () => {
      InitialResultsCards"
     >
       <div
-        class="card"
+        class="card CursorChange"
         onClick={() => {
           Navigate("/DetailedResults");
         }}
@@ -23,7 +23,7 @@ export const InitialResults = () => {
         </div>
       </div>
       <div
-        class="card"
+        class="card CursorChange"
         onClick={() => {
           Navigate("/DetailedResults");
         }}
@@ -34,7 +34,7 @@ export const InitialResults = () => {
         </div>
       </div>
       <div
-        class="card"
+        class="card CursorChange"
         onClick={() => {
           Navigate("/DetailedResults");
         }}
@@ -49,7 +49,7 @@ export const InitialResults = () => {
         </div>
       </div>
       <div
-        class="card"
+        class="card CursorChange"
         onClick={() => {
           Navigate("/DetailedResults");
         }}

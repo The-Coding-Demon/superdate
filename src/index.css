@@ -6,6 +6,10 @@
 
 /* Main */
 
+.CursorChange {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;

@@ -11,13 +11,13 @@ export const NavigationBar = () => {
           alt="Logo"
           width="150"
           height="24"
-          class="d-inline-block align-text-top"
+          class="d-inline-block align-text-top CursorChange"
           onClick={() => {
             Navigate("/");
           }}
         />
         <button
-          className="btn btn-info text-white button-nav"
+          className="btn btn-info text-white button-nav CursorChange"
           type="submit"
           onClick={() => {
             Navigate("./Contact");
