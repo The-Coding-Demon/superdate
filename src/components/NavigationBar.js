@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import MainLogo from "./assets/MainLogo.png";
+import HeartLogo from "./assets/HeartLogo.png";
 
 export const NavigationBar = () => {
   const Navigate = useNavigate();
@@ -14,6 +15,17 @@ export const NavigationBar = () => {
           class="d-inline-block align-text-top CursorChange"
           onClick={() => {
             Navigate("/");
+          }}
+        />
+        <img
+          src={HeartLogo}
+          alt="HeartLogo"
+          width="34"
+          height="34"
+          id="HeartLogo"
+          class="CursorChange"
+          onClick={() => {
+            Navigate("/MyFavourites");
           }}
         />
         <button
