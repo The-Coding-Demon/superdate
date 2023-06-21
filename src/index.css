@@ -61,6 +61,8 @@ video {
   border: none;
   font-family: Montserrat;
   color: #fff;
+  margin-left: auto;
+  margin-right: 5px;
 }
 
 .HeartLogo {

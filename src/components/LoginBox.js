@@ -2,6 +2,9 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
+const LoginCheck = (values) => {
+  localStorage.setItem("userList", JSON.stringify(values));
+};
 export const LoginBox = () => {
   const Navigate = useNavigate();
   const formik = useFormik({
@@ -14,13 +17,13 @@ export const LoginBox = () => {
       firstName: Yup.string()
         .max(15, "Must be 15 characters or less")
         .required("Required"),
-      lastName: Yup.string()
+      password: Yup.string()
         .max(20, "Must be 20 characters or less")
         .required("Required"),
       email: Yup.string().email("Invalid email address").required("Required"),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      LoginCheck(values);
     },
   });
   return (
@@ -39,7 +42,7 @@ export const LoginBox = () => {
       <input
         className="InputBoxes"
         id="password"
-        type="text"
+        type="password"
         placeholder="Enter Password"
         {...formik.getFieldProps("password")}
       />
