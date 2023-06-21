@@ -1,6 +1,6 @@
 import ScubaDiving from "./assets/ScubaDiving.jpg";
-import BackArrow from "./assets/Circle-arrow-left-solid.png";
-import Location from "./assets/Location-dot-solid.png";
+import BackArrow from "./assets/circle-arrow-left-solid.png";
+import Location from "./assets/location-dot-solid.png";
 import { useNavigate } from "react-router-dom";
 
 export const FullDescription = () => {
