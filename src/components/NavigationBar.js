@@ -24,7 +24,6 @@ export const NavigationBar = () => {
             Navigate("/MyFavourites");
           }}
         >
-          Favourites
           <img
             src={HeartLogo}
             alt="HeartLogo"
@@ -32,6 +31,7 @@ export const NavigationBar = () => {
             height="24"
             class="HeartLogo CursorChange"
           />
+          Favourites
         </button>
         <button
           className="btn btn-info text-white button-nav CursorChange"
