@@ -21,10 +21,9 @@ body {
   font-family: Prompt;
 }
 
-h1 h2 {
-  font-family: Montserrat;
-  font-size: 2em;
-}
+/* h1 h2 {
+  font-family: Poppins;
+  font-size: 2em; */
 
 /* Background Vid */
 
@@ -296,21 +295,58 @@ input {
   display: block;
   position: fixed;
   text-align: center;
-  top: 41%;
+  top: 32%;
   left: 12%;
   color: #fff;
-  font-family: Montserrat;
+  font-family: Poppins;
 }
 
 .ContactTitle {
-  color: #fff;
+  /* color: #fff; */
+  color: var(--Secondary);
   text-align: center;
-  padding-top: 100px;
+  padding-top: 75px;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 3.5rem;
 }
 
 .ContactInfo {
   padding: 5%;
   line-height: 50px;
+  font-family: DM Sans;
+  font-size: 2.5rem;
+}
+
+.ContactEmail .ContactPhone {
+  font-family: DM Sans;
+}
+
+.ContactPhoneImg {
+  max-height: 22px;
+  max-width: 22px;
+}
+
+.ContactEmailImg {
+  max-height: 30px;
+  max-width: 30px;
+  padding-right: 7px;
+}
+
+.ContactDetails {
+  float: left;
+  padding-top: 65px;
+}
+
+.GitHubContact {
+  font-size: 1rem;
+  padding-top: 15px;
+  float: right;
+}
+
+.GitHubContact a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .ContactForm {
@@ -381,6 +417,7 @@ input {
 .footer {
   background-color: var(--Primary);
   justify-content: center;
+  font-family: Poppins;
 }
 
 .navbar-brand {
