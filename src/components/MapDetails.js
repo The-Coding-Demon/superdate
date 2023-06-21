@@ -1,5 +1,5 @@
 import Map from "./assets/MapImage.png";
-import BackArrow from "./assets/circle-arrow-left-solid.png";
+import BackArrow from "./assets/Circle-arrow-left-solid.png";
 import { useNavigate } from "react-router-dom";
 
 export const MapDetails = () => {
