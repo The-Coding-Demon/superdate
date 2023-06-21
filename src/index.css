@@ -55,6 +55,19 @@ video {
   padding-left: 3em;
 }
 
+.button-nav-favourites {
+  background-color: var(--Primary);
+  border: none;
+  font-family: Montserrat;
+  color: #fff;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.HeartLogo {
+  margin-right: 7px;
+}
+
 /* Question Box */
 
 @media only screen and (max-width: 1820px) {
@@ -79,7 +92,7 @@ video {
 .QuestionForm {
   display: block;
   text-align: center;
-  padding: 1em;
+  padding: 1.5em;
   top: 50%;
   margin: auto;
   margin-top: 80px;
@@ -89,7 +102,7 @@ video {
 }
 
 .InputBoxes {
-  width: 94%;
+  width: 90%;
   padding: 10px;
 }
 
@@ -97,13 +110,12 @@ input {
   display: block;
   margin: auto;
   margin-bottom: 10px;
-  padding: 5px;
 }
 
 .InputButton {
   background-color: var(--Primary);
   border: none;
-  width: 94%;
+  width: 90%;
 }
 
 .BackContainer {
@@ -165,7 +177,6 @@ input {
   position: absolute;
   top: 1%;
   left: 0.5%;
-
   max-height: 50px;
   max-width: 50px;
 }
