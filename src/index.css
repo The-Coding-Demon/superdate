@@ -56,16 +56,15 @@ video {
   padding-left: 3em;
 }
 
-#HeartLogo {
-  display: block;
-  position: absolute;
-  right: 6%;
+.button-nav-favourites {
+  background-color: var(--Primary);
+  border: none;
+  font-family: Montserrat;
+  color: #fff;
 }
 
-#HeartLogo:hover {
-  background-color: #ff75a0;
-  border-radius: 5px;
-  padding: 2px;
+.HeartLogo {
+  margin-left: 7px;
 }
 
 /* Question Box */
@@ -92,7 +91,7 @@ video {
 .QuestionForm {
   display: block;
   text-align: center;
-  padding: 1em;
+  padding: 1.5em;
   top: 50%;
   margin: auto;
   margin-top: 80px;
@@ -102,7 +101,7 @@ video {
 }
 
 .InputBoxes {
-  width: 94%;
+  width: 90%;
   padding: 10px;
 }
 
@@ -110,13 +109,12 @@ input {
   display: block;
   margin: auto;
   margin-bottom: 10px;
-  padding: 5px;
 }
 
 .InputButton {
   background-color: var(--Primary);
   border: none;
-  width: 94%;
+  width: 90%;
 }
 
 .BackContainer {

@@ -17,17 +17,22 @@ export const NavigationBar = () => {
             Navigate("/");
           }}
         />
-        <img
-          src={HeartLogo}
-          alt="HeartLogo"
-          width="34"
-          height="34"
-          id="HeartLogo"
-          class="CursorChange"
+        <button
+          className="btn btn-info text-white button-nav-favourites CursorChange"
+          type="submit"
           onClick={() => {
             Navigate("/MyFavourites");
           }}
-        />
+        >
+          Favourites
+          <img
+            src={HeartLogo}
+            alt="HeartLogo"
+            width="24"
+            height="24"
+            class="HeartLogo CursorChange"
+          />
+        </button>
         <button
           className="btn btn-info text-white button-nav CursorChange"
           type="submit"
