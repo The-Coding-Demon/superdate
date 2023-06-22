@@ -56,7 +56,7 @@ export const ContactForm = () => {
         <div>{formik.errors.email}</div>
       ) : null}
 
-      <button type="submit" className="btn btn-info text-white ContactButton">
+      <button type="submit" className="btn ContactButton">
         Submit
       </button>
     </form>

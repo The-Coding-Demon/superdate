@@ -2,6 +2,7 @@
   --Primary: #ff75a0;
   --Secondary: #a8e6cf;
   --Third: #d9d9d9;
+  --Quartenary: #9163aa;
 }
 
 /* Main */
@@ -20,10 +21,6 @@ body {
   overflow-x: hidden;
   font-family: Prompt;
 }
-
-/* h1 h2 {
-  font-family: Poppins;
-  font-size: 2em; */
 
 /* Background Vid */
 
@@ -45,9 +42,15 @@ video {
 }
 
 .button-nav {
-  background-color: var(--Primary);
+  background-color: var(--Secondary);
   border: none;
-  font-family: Montserrat;
+  font-family: Poppins;
+  color: #fff;
+}
+
+.button-nav:hover {
+  background-color: var(--Primary);
+  color: #fff;
 }
 
 .HomeButton {
@@ -56,13 +59,23 @@ video {
 }
 
 .button-nav-favourites {
-  background-color: var(--Primary);
+  background-color: var(--Secondary);
   border: none;
-  font-family: Montserrat;
+  font-family: Poppins;
   color: #fff;
   margin-left: auto;
   margin-right: 5px;
 }
+
+.button-nav-favourites:hover {
+  background-color: var(--Primary);
+  color: #fff;
+}
+
+/* .button-nav-favourites:active {
+  background-color: #9163aa;
+  color: #fff;
+} */
 
 .HeartLogo {
   margin-right: 7px;
@@ -95,15 +108,20 @@ video {
   padding: 1.5em;
   top: 50%;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 30px;
   margin-bottom: 40px;
   background-color: var(--Secondary);
   width: 80%;
+  border-radius: 10px;
+  font-family: DM Sans;
 }
 
 .InputBoxes {
   width: 90%;
   padding: 10px;
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
 input {
@@ -116,6 +134,12 @@ input {
   background-color: var(--Primary);
   border: none;
   width: 90%;
+  color: #fff;
+}
+
+.InputButton:hover {
+  background-color: #9163aa;
+  color: #fff;
 }
 
 .BackContainer {
@@ -130,16 +154,22 @@ input {
   color: #fff;
   width: 30%;
   position: absolute;
-  top: 50%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.BackContainer p {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+
 .BackingLayer {
   min-height: 20%;
-  width: 50%;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  width: 70%;
+  margin-top: 6em;
+  margin-bottom: 3em;
 }
 
 /* Initial Details */
@@ -154,6 +184,10 @@ input {
   display: flex;
   height: 475px;
   width: 800px;
+}
+
+.card-title {
+  font-family: Poppins;
 }
 
 @media only screen and (max-width: 990px) {
@@ -186,7 +220,6 @@ input {
   position: absolute;
   bottom: 1%;
   right: 0.5%;
-
   max-height: 50px;
   max-width: 50px;
 }
@@ -212,6 +245,10 @@ input {
 
 .MainIMGResult {
   height: 100%;
+}
+
+.DetailedTitle {
+  font-family: Poppins;
 }
 
 .Detailedtext {
@@ -269,6 +306,10 @@ input {
   height: 100%;
 }
 
+.MapTitle {
+  font-family: Poppins;
+}
+
 .Maptext {
   text-align: justify;
 }
@@ -300,6 +341,10 @@ input {
   margin: 25px 50px;
 }
 
+.FavouritesTitle {
+  font-family: Poppins;
+}
+
 /* Contact */
 
 .ContactInfoContainer {
@@ -313,8 +358,7 @@ input {
 }
 
 .ContactTitle {
-  /* color: #fff; */
-  color: var(--Secondary);
+  color: #fff;
   text-align: center;
   padding-top: 75px;
   font-family: Poppins;
@@ -367,6 +411,7 @@ input {
   padding: 1em;
   top: 40%;
   right: 12%;
+  font-family: DM Sans;
 }
 
 .ContactFormInputs {
@@ -375,14 +420,24 @@ input {
   padding: 5%;
   margin: 5px;
   background-color: rgba(255, 255, 255, 0.5);
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
 .ContactButton {
-  background-color: var(--Primary);
+  background-color: #9163aa;
   border: none;
   padding: 15px;
   float: right;
   margin: 5px;
+  color: #fff;
+  font-family: DM Sans;
+}
+
+.ContactButton:hover {
+  background-color: var(--Primary);
+  color: #fff;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -429,6 +484,13 @@ input {
   background-color: var(--Primary);
   justify-content: center;
   font-family: Poppins;
+  height: 25px;
+}
+
+.footerText {
+  color: #fff;
+  position: absolute;
+  padding-top: 15px;
 }
 
 .navbar-brand {

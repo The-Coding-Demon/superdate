@@ -18,7 +18,7 @@ export const FullDescription = () => {
         <img src={ScubaDiving} className="MainIMGResult"></img>
       </div>
       <div class="p-3">
-        <h2>Scuba Diving</h2>
+        <h2 className="DetailedTitle">Scuba Diving</h2>
         <p className="Detailedtext">
           Scuba diving is an underwater activity that allows individuals to
           explore the beauty of the underwater world. The term "SCUBA" stands

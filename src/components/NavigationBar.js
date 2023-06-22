@@ -10,15 +10,15 @@ export const NavigationBar = () => {
         <img
           src={MainLogo}
           alt="Logo"
-          width="150"
-          height="24"
+          width="180"
+          height="30"
           class="d-inline-block align-text-top CursorChange"
           onClick={() => {
             Navigate("/");
           }}
         />
         <button
-          className="btn btn-info text-white button-nav-favourites CursorChange"
+          className="btn button-nav-favourites CursorChange"
           type="submit"
           onClick={() => {
             Navigate("/MyFavourites");
@@ -34,7 +34,7 @@ export const NavigationBar = () => {
           Favourites
         </button>
         <button
-          className="btn btn-info text-white button-nav CursorChange"
+          className="btn button-nav CursorChange"
           type="submit"
           onClick={() => {
             Navigate("./Contact");

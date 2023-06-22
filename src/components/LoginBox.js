@@ -43,7 +43,7 @@ export const LoginBox = () => {
         className="InputBoxes"
         id="password"
         type="password"
-        placeholder="Enter Password"
+        placeholder="Password"
         {...formik.getFieldProps("password")}
       />
       {formik.touched.lastName && formik.errors.lastName ? (
@@ -54,7 +54,7 @@ export const LoginBox = () => {
         className="InputBoxes"
         id="email"
         type="email"
-        placeholder="Enter Email"
+        placeholder="Email"
         {...formik.getFieldProps("email")}
       />
       {formik.touched.email && formik.errors.email ? (
@@ -62,7 +62,7 @@ export const LoginBox = () => {
       ) : null}
 
       <button
-        className="btn btn-info text-white InputButton"
+        className="btn InputButton"
         type="submit"
         onClick={() => {
           Navigate("/");
