@@ -20,11 +20,11 @@ npm i yup formik uuid
 
 ```
 
-### Screenshots
+## Screenshots
 
 Coming Soon
 
-### `Credits`
+## Credits
 
 Steve Smith
 Nadiar Paim
@@ -33,7 +33,3 @@ Enrico Carnevale
 Anamaria Gherghisan
 
 # superdate
-
-```
-
-```
