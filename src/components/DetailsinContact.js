@@ -24,43 +24,6 @@ export const DetailsinContact = () => {
             </p>
           </div>
         </div>
-        <div className="GitHubContact">
-          <p>
-            Adalbert Gyuris |
-            <a href="https://github.com/Adalbert95" target="_blank">
-              {" "}
-              GitHub
-            </a>
-          </p>
-          <p>
-            Anamaria Gherghisan |
-            <a href="https://github.com/AnamariaGherghisan" target="_blank">
-              {" "}
-              GitHub
-            </a>
-          </p>
-          <p>
-            Enrico Carnevale |
-            <a href="https://github.com/ThatGuyWithAHammer" target="_blank">
-              {" "}
-              GitHub
-            </a>
-          </p>
-          <p>
-            Nadiar Paim |
-            <a href="https://github.com/nadiarpaim" target="_blank">
-              {" "}
-              GitHub
-            </a>
-          </p>
-          <p>
-            Steven Smith |
-            <a href="https://github.com/The-Coding-Demon" target="_blank">
-              {" "}
-              GitHub
-            </a>
-          </p>
-        </div>
       </div>
     </div>
   );

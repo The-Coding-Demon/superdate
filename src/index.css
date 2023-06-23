@@ -53,6 +53,16 @@ video {
   color: #fff;
 }
 
+.button-nav:not(:disabled):not(.disabled):active {
+  background-color: #9163aa;
+  color: #fff;
+}
+
+.button-nav:focus {
+  background-color: var(--Quartenary);
+  color: #fff;
+}
+
 .HomeButton {
   padding-top: 3em;
   padding-left: 3em;
@@ -72,10 +82,15 @@ video {
   color: #fff;
 }
 
-/* .button-nav-favourites:active {
+.button-nav-favourites:not(:disabled):not(.disabled):active {
   background-color: #9163aa;
   color: #fff;
-} */
+}
+
+.button-nav-favourites:focus {
+  background-color: var(--Quartenary);
+  color: #fff;
+}
 
 .HeartLogo {
   margin-right: 7px;
@@ -184,6 +199,14 @@ input {
   display: flex;
   height: 475px;
   width: 800px;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  opacity: 0.7;
+  border: 7px solid var(--Secondary);
 }
 
 .card-title {
@@ -210,9 +233,44 @@ input {
   display: block;
   position: absolute;
   top: 1%;
-  left: 0.5%;
-  max-height: 50px;
-  max-width: 50px;
+  left: 5%;
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.BackButton:hover {
+  background-color: var(--Primary);
+  box-shadow: 3px 3px var(--Primary);
+  border-radius: 50%;
+}
+
+.BackButton:active {
+  background-color: var(--Primary);
+  box-shadow: 3px 3px var(--Primary);
+  border-radius: 50%;
+}
+
+.HeartButton {
+  display: block;
+  position: absolute;
+  bottom: 1%;
+  right: 8%;
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.HeartButton:hover {
+  background-color: var(--Primary);
+  box-shadow: 3px 3px var(--Primary);
+  border-radius: 20%;
+  margin: 2px;
+}
+
+.HeartButton:active {
+  background-color: var(--Quartenary);
+  box-shadow: 3px 3px var(--Quartenary);
+  border-radius: 20%;
+  margin: 2px;
 }
 
 .LocationButton {
@@ -220,8 +278,22 @@ input {
   position: absolute;
   bottom: 1%;
   right: 0.5%;
-  max-height: 50px;
-  max-width: 50px;
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.LocationButton:hover {
+  background-color: var(--Primary);
+  box-shadow: 3px 3px var(--Primary);
+  border-radius: 20%;
+  margin: 2px;
+}
+
+.LocationButton:active {
+  background-color: var(--Quartenary);
+  box-shadow: 3px 3px var(--Quartenary);
+  border-radius: 20%;
+  margin: 2px;
 }
 
 .DetailedDesc {
@@ -389,19 +461,7 @@ input {
 }
 
 .ContactDetails {
-  float: left;
   padding-top: 65px;
-}
-
-.GitHubContact {
-  font-size: 1rem;
-  padding-top: 15px;
-  float: right;
-}
-
-.GitHubContact a {
-  text-decoration: none;
-  color: #fff;
 }
 
 .ContactForm {
