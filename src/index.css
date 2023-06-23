@@ -245,8 +245,8 @@ input {
 }
 
 .BackButton:active {
-  background-color: var(--Primary);
-  box-shadow: 3px 3px var(--Primary);
+  background-color: var(--Quartenary);
+  box-shadow: 3px 3px var(--Quartenary);
   border-radius: 50%;
 }
 
