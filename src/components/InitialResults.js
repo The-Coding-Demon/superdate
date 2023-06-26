@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 export const InitialResults = () => {
   const Navigate = useNavigate();
+  const userDatePreferences = JSON.parse(localStorage.getItem("userDatePreferences"));
+  
   return (
     <div
       class="d-flex justify-content-evenly flex-wrap gap-5

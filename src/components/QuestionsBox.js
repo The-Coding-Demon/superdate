@@ -4,60 +4,79 @@ import { useNavigate } from "react-router-dom";
 
 export const QuestionsBox = () => {
   const Navigate = useNavigate();
+  let userDatePreferences = JSON.parse(
+    localStorage.getItem("userDatePreferences")
+  );
+  if (userDatePreferences && userDatePreferences.expiresAt < Date.now()) {
+    userDatePreferences = {};
+  }
   const formik = useFormik({
     initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      city: "",
+      venueCategoryChoice: userDatePreferences?.venueCategoryChoice || "Indoor",
+      timeCategoryChoice: userDatePreferences?.timeCategoryChoice || "Day",
+      lengthCategoryChoice:
+        userDatePreferences?.lengthCategoryChoice || "Short",
+      city: userDatePreferences?.city || "",
     },
     validationSchema: Yup.object({
-      firstName: Yup.string()
-        .max(15, "Must be 15 characters or less")
-        .required("Required"),
-      lastName: Yup.string()
-        .max(20, "Must be 20 characters or less")
-        .required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
+      venueCategoryChoice: Yup.string().required("Required"),
+      timeCategoryChoice: Yup.string().required("Required"),
+      lengthCategoryChoice: Yup.string().required("Required"),
       city: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      // user can navigate back to this form and edit choices, but choices will expire after 1 hour
+      localStorage.setItem(
+        "userDatePreferences",
+        JSON.stringify({ ...values, expiresAt: Date.now() + 3600 * 60 * 60 })
+      );
+      Navigate("./Results");
     },
   });
   return (
     <form className="QuestionForm" onSubmit={formik.handleSubmit}>
-      <input
+      <select
         className="InputBoxes"
-        id="firstName"
+        id="venueCategoryChoice"
         type="text"
-        {...formik.getFieldProps("firstName")}
+        {...formik.getFieldProps("venueCategoryChoice")}
         placeholder="Indoor or Outdoor"
-      />
-      {formik.touched.firstName && formik.errors.firstName ? (
-        <div>{formik.errors.firstName}</div>
+      >
+        <option value="Indoor">Indoor</option>
+        <option value="Outdoor">Outdoor</option>
+      </select>
+      {formik.touched.venueCategoryChoice &&
+      formik.errors.venueCategoryChoice ? (
+        <div>{formik.errors.venueCategoryChoice}</div>
       ) : null}
 
-      <input
-        id="lastName"
+      <select
+        id="timeCategoryChoice"
         className="InputBoxes"
         type="text"
         placeholder="Day or Night"
-        {...formik.getFieldProps("lastName")}
-      />
-      {formik.touched.lastName && formik.errors.lastName ? (
-        <div>{formik.errors.lastName}</div>
+        {...formik.getFieldProps("timeCategoryChoice")}
+      >
+        <option value="Day">Day</option>
+        <option value="Night">Night</option>
+      </select>
+      {formik.touched.timeCategoryChoice && formik.errors.timeCategoryChoice ? (
+        <div>{formik.errors.timeCategoryChoice}</div>
       ) : null}
 
-      <input
-        id="email"
+      <select
+        id="lengthCategoryChoice"
         className="InputBoxes"
-        type="email"
+        type="lengthCategoryChoice"
         placeholder="Short or Long"
-        {...formik.getFieldProps("email")}
-      />
-      {formik.touched.email && formik.errors.email ? (
-        <div>{formik.errors.email}</div>
+        {...formik.getFieldProps("lengthCategoryChoice")}
+      >
+        <option value="Short">Short</option>
+        <option value="Long">Long</option>
+      </select>
+      {formik.touched.lengthCategoryChoice &&
+      formik.errors.lengthCategoryChoice ? (
+        <div>{formik.errors.lengthCategoryChoice}</div>
       ) : null}
 
       <input
@@ -71,13 +90,7 @@ export const QuestionsBox = () => {
         <div>{formik.errors.city}</div>
       ) : null}
 
-      <button
-        type="submit"
-        className="btn btn-info text-white InputButton"
-        onClick={() => {
-          Navigate("./Results");
-        }}
-      >
+      <button type="submit" className="btn btn-info text-white InputButton">
         Submit
       </button>
     </form>
