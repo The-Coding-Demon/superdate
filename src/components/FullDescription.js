@@ -1,6 +1,7 @@
 import ScubaDiving from "./assets/ScubaDiving.jpg";
 import BackArrow from "./assets/circle-arrow-left-solid.png";
 import Location from "./assets/location-dot-solid.png";
+import HeartLogo from "./assets/HeartLogo.png";
 import { useNavigate } from "react-router-dom";
 
 export const FullDescription = () => {
@@ -29,6 +30,13 @@ export const FullDescription = () => {
           archaeology.
         </p>
       </div>
+      <img
+        src={HeartLogo}
+        className="HeartButton CursorChange"
+        onClick={() => {
+          Navigate("/MyFavourites");
+        }}
+      ></img>
       <img
         src={Location}
         className="LocationButton CursorChange"

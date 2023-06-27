@@ -2,6 +2,7 @@
   --Primary: #ff75a0;
   --Secondary: #a8e6cf;
   --Third: #d9d9d9;
+  --Quartenary: #9163aa;
 }
 
 /* Main */
@@ -19,11 +20,6 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   font-family: Prompt;
-}
-
-h1 h2 {
-  font-family: Montserrat;
-  font-size: 2em;
 }
 
 /* Background Vid */
@@ -46,9 +42,25 @@ video {
 }
 
 .button-nav {
-  background-color: var(--Primary);
+  background-color: var(--Secondary);
   border: none;
-  font-family: Montserrat;
+  font-family: Poppins;
+  color: #fff;
+}
+
+.button-nav:hover {
+  background-color: var(--Primary);
+  color: #fff;
+}
+
+.button-nav:not(:disabled):not(.disabled):active {
+  background-color: #9163aa;
+  color: #fff;
+}
+
+.button-nav:focus {
+  background-color: var(--Quartenary);
+  color: #fff;
 }
 
 .HomeButton {
@@ -57,12 +69,27 @@ video {
 }
 
 .button-nav-favourites {
-  background-color: var(--Primary);
+  background-color: var(--Secondary);
   border: none;
-  font-family: Montserrat;
+  font-family: Poppins;
   color: #fff;
   margin-left: auto;
   margin-right: 5px;
+}
+
+.button-nav-favourites:hover {
+  background-color: var(--Primary);
+  color: #fff;
+}
+
+.button-nav-favourites:not(:disabled):not(.disabled):active {
+  background-color: #9163aa;
+  color: #fff;
+}
+
+.button-nav-favourites:focus {
+  background-color: var(--Quartenary);
+  color: #fff;
 }
 
 .HeartLogo {
@@ -96,15 +123,27 @@ video {
   padding: 1.5em;
   top: 50%;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 30px;
   margin-bottom: 40px;
   background-color: var(--Secondary);
   width: 80%;
+  border-radius: 10px;
+  font-family: DM Sans;
 }
 
 .InputBoxes {
   width: 90%;
   padding: 10px;
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+}
+
+select {
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
+  color: #6f6f6f;
 }
 
 input {
@@ -117,6 +156,12 @@ input {
   background-color: var(--Primary);
   border: none;
   width: 90%;
+  color: #fff;
+}
+
+.InputButton:hover {
+  background-color: #9163aa;
+  color: #fff;
 }
 
 .BackContainer {
@@ -136,11 +181,17 @@ input {
   transform: translate(-50%, -50%);
 }
 
+.BackContainer p {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+
 .BackingLayer {
   min-height: 20%;
-  width: 50%;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  width: 70%;
+  margin-top: 6em;
+  margin-bottom: 3em;
 }
 
 /* Initial Details */
@@ -155,6 +206,18 @@ input {
   display: flex;
   height: 475px;
   width: 800px;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  opacity: 0.7;
+  border: 7px solid var(--Secondary);
+}
+
+.card-title {
+  font-family: Poppins;
 }
 
 @media only screen and (max-width: 990px) {
@@ -177,9 +240,44 @@ input {
   display: block;
   position: absolute;
   top: 1%;
-  left: 0.5%;
-  max-height: 50px;
-  max-width: 50px;
+  left: 5%;
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.BackButton:hover {
+  background-color: var(--Primary);
+  box-shadow: 3px 3px var(--Primary);
+  border-radius: 50%;
+}
+
+.BackButton:active {
+  background-color: var(--Quartenary);
+  box-shadow: 3px 3px var(--Quartenary);
+  border-radius: 50%;
+}
+
+.HeartButton {
+  display: block;
+  position: absolute;
+  bottom: 1%;
+  right: 8%;
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.HeartButton:hover {
+  background-color: var(--Primary);
+  box-shadow: 3px 3px var(--Primary);
+  border-radius: 20%;
+  margin: 2px;
+}
+
+.HeartButton:active {
+  background-color: var(--Quartenary);
+  box-shadow: 3px 3px var(--Quartenary);
+  border-radius: 20%;
+  margin: 2px;
 }
 
 .LocationButton {
@@ -187,9 +285,22 @@ input {
   position: absolute;
   bottom: 1%;
   right: 0.5%;
+  max-height: 35px;
+  max-width: 35px;
+}
 
-  max-height: 50px;
-  max-width: 50px;
+.LocationButton:hover {
+  background-color: var(--Primary);
+  box-shadow: 3px 3px var(--Primary);
+  border-radius: 20%;
+  margin: 2px;
+}
+
+.LocationButton:active {
+  background-color: var(--Quartenary);
+  box-shadow: 3px 3px var(--Quartenary);
+  border-radius: 20%;
+  margin: 2px;
 }
 
 .DetailedDesc {
@@ -215,6 +326,10 @@ input {
   height: 100%;
 }
 
+.DetailedTitle {
+  font-family: Poppins;
+}
+
 .Detailedtext {
   text-align: justify;
 }
@@ -228,7 +343,6 @@ input {
   .MainIMGResult {
     display: block;
     width: 100%;
-    /* width: auto; */
     height: auto;
     text-align: center;
   }
@@ -270,6 +384,10 @@ input {
   height: 100%;
 }
 
+.MapTitle {
+  font-family: Poppins;
+}
+
 .Maptext {
   text-align: justify;
 }
@@ -301,27 +419,55 @@ input {
   margin: 25px 50px;
 }
 
+.FavouritesTitle {
+  font-family: Poppins;
+}
+
 /* Contact */
 
 .ContactInfoContainer {
   display: block;
   position: fixed;
   text-align: center;
-  top: 41%;
+  top: 40%;
   left: 12%;
   color: #fff;
-  font-family: Montserrat;
+  font-family: Poppins;
 }
 
 .ContactTitle {
   color: #fff;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 75px;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 3.5rem;
 }
 
 .ContactInfo {
   padding: 5%;
   line-height: 50px;
+  font-family: DM Sans;
+  font-size: 2.5rem;
+}
+
+.ContactEmail .ContactPhone {
+  font-family: DM Sans;
+}
+
+.ContactPhoneImg {
+  max-height: 22px;
+  max-width: 22px;
+}
+
+.ContactEmailImg {
+  max-height: 30px;
+  max-width: 30px;
+  padding-right: 7px;
+}
+
+.ContactDetails {
+  padding-top: 65px;
 }
 
 .ContactForm {
@@ -331,6 +477,7 @@ input {
   padding: 1em;
   top: 40%;
   right: 12%;
+  font-family: DM Sans;
 }
 
 .ContactFormInputs {
@@ -339,17 +486,27 @@ input {
   padding: 5%;
   margin: 5px;
   background-color: rgba(255, 255, 255, 0.5);
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
 .ContactButton {
-  background-color: var(--Primary);
+  background-color: var(--Quartenary);
   border: none;
   padding: 15px;
   float: right;
   margin: 5px;
+  color: #fff;
+  font-family: DM Sans;
 }
 
-@media only screen and (max-width: 1300px) {
+.ContactButton:hover {
+  background-color: var(--Primary);
+  color: #fff;
+}
+
+@media only screen and (max-width: 1400px) {
   .MainContactContainer {
     display: block;
     text-align: center;
@@ -392,6 +549,14 @@ input {
 .footer {
   background-color: var(--Primary);
   justify-content: center;
+  font-family: Poppins;
+  height: 25px;
+}
+
+.footerText {
+  color: #fff;
+  position: absolute;
+  padding-top: 15px;
 }
 
 .navbar-brand {

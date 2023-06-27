@@ -16,7 +16,8 @@ const userPreferencesToOptionsMap = {
     "title": "Cooking Class",
     "description": "Experience a culinary adventure with your partner in a cooking class date. Learn the art of preparing delicious dishes under the guidance of skilled chefs. Explore new flavors, techniques, and create culinary masterpieces together. Indulge in a fun and interactive date where you bond over food, laughter, and shared culinary creativity.",
     "image": ".assets/CookingClass.jpg",
-    "id": 1
+    "id": 1,
+    "indoor": true
   },
   {
     "title": "Art gallery ",
@@ -231,7 +232,7 @@ const userPreferencesToOptionsMap = {
   {
     "title": "Safari Tour",
     "description": "Safari Tour Date: Embark on an unforgettable adventure on [Date], as you and your partner venture into the wild, encountering majestic wildlife up close, witnessing awe-inspiring sights, and creating cherished memories amidst the untamed beauty of the savannah, where love and nature intertwine. ",
-    "image": ".assets/Safari.jpg",
+    "image": ".assets/afari.jpg",
     "id": 37
   },
   {
