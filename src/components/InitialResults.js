@@ -1,7 +1,3 @@
-import ScubaDiving from "./assets/ScubaDiving.jpg";
-import MiniGolf from "./assets/Mini-Golf.jpg";
-import BoatTrip from "./assets/Boat-Trip.jpg";
-import Cinema from "./assets/Cinema.jpg";
 import { useNavigate } from "react-router-dom";
 import JsonData from "./Dates.json";
 
