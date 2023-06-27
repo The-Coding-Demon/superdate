@@ -1,14 +1,18 @@
-export const ResultCard = () => {
+export const ResultCard = ({ activity }) => {
   return (
     <div
       class="card CursorChange"
-      onClick={() => {
-        Navigate("/DetailedResults");
-      }}
+      // onClick={() => {
+      //   Navigate("/DetailedResults");
+      // }}
     >
-      <img src={Cinema} class="card-img-top IMGResults" alt="Cinema" />
+      <img
+        src={activity.image}
+        class="card-img-top IMGResults"
+        alt={activity.title}
+      />
       <div class="card-body">
-        <h5 class="card-title text-center">Cinema</h5>
+        <h5 class="card-title text-center">{activity.title}</h5>
       </div>
     </div>
   );

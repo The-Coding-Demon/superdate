@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 import JsonData from "./Dates.json";
+import { ResultCard } from "./ResultCard";
 
 export const InitialResults = () => {
   console.log(JsonData);
@@ -51,34 +52,47 @@ export const InitialResults = () => {
         }
       }
     }
-    thirdFilter(newArray);
+    randomSelection(newArray);
   };
-  const thirdFilter = (arr) => {
-    const newArray = [];
-    if (userDatePreferences.lengthCategoryChoice == "Long") {
-      for (let i = 0; i < arr.length; i++) {
-        let currentItem = arr[i];
-        let checklong = currentItem.long;
-        if (checklong == true) {
-          newArray.push(currentItem);
-        }
-      }
-    } else {
-      for (let i = 0; i < arr.length; i++) {
-        let currentItem = arr[i];
-        let checklong = currentItem.long;
-        if (checklong == false) {
-          newArray.push(currentItem);
-        }
-      }
+  const randomSelection = (arr) => {
+    const newRandomList = createNewList(arr);
+    localStorage.setItem("currentSelect", JSON.stringify(newRandomList));
+  };
+  const createNewList = (arr) => {
+    const finalSelectionArray = [];
+    const randomiser = Math.floor(Math.random() * arr.length);
+    finalSelectionArray.push(arr[randomiser]);
+    let randomiser2 = Math.floor(Math.random() * arr.length);
+    if (randomiser == randomiser2) {
+      randomiser2 = Math.floor(Math.random() * arr.length);
     }
-    console.log(newArray);
+    finalSelectionArray.push(arr[randomiser2]);
+    let randomiser3 = Math.floor(Math.random() * arr.length);
+    if (randomiser3 == randomiser || randomiser3 == randomiser2) {
+      randomiser3 = Math.floor(Math.random() * arr.length);
+    }
+    finalSelectionArray.push(arr[randomiser3]);
+    let randomiser4 = Math.floor(Math.random() * arr.length);
+    if (
+      randomiser4 == randomiser ||
+      randomiser4 == randomiser2 ||
+      randomiser4 == randomiser3
+    ) {
+      randomiser4 = Math.floor(Math.random() * arr.length);
+    }
+    finalSelectionArray.push(arr[randomiser4]);
+    return finalSelectionArray;
   };
   JsonPicker();
+  const getCurrentSelection = JSON.parse(localStorage.getItem("currentSelect"));
   return (
     <div
       class="d-flex justify-content-evenly flex-wrap gap-5
      InitialResultsCards"
-    ></div>
+    >
+      {getCurrentSelection.map((activitystuff) => (
+        <ResultCard activity={activitystuff} />
+      ))}
+    </div>
   );
 };
