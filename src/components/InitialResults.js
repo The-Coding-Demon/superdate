@@ -1,10 +1,8 @@
-import { json, useNavigate } from "react-router-dom";
 import JsonData from "./Dates.json";
 import { ResultCard } from "./ResultCard";
 
 export const InitialResults = () => {
   console.log(JsonData);
-  const Navigate = useNavigate();
   const userDatePreferences = JSON.parse(
     localStorage.getItem("userDatePreferences")
   );
