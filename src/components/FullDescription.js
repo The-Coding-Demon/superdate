@@ -1,4 +1,3 @@
-import ScubaDiving from "./assets/ScubaDiving.jpg";
 import BackArrow from "./assets/circle-arrow-left-solid.png";
 import Location from "./assets/location-dot-solid.png";
 import HeartLogo from "./assets/HeartLogo.png";
@@ -8,7 +7,6 @@ export const FullDescription = () => {
   const Navigate = useNavigate();
   const SelectedActivity = JSON.parse(localStorage.getItem("SelectedActivity"));
   const SelectedActivityItem = SelectedActivity[0];
-  console.log(SelectedActivityItem);
   return (
     <div class="p-2 DetailedDesc">
       <img

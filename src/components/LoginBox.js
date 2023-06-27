@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
 const LoginCheck = (values) => {
+  Object.assign(values, { userFavourites: [] });
   localStorage.setItem("userList", JSON.stringify(values));
 };
 export const LoginBox = () => {

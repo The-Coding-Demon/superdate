@@ -7,7 +7,7 @@ export const ResultCard = ({ activity }) => {
     const asArray = [activity];
     const result = asArray.filter((val) => itemID.includes(val.id));
     localStorage.setItem("SelectedActivity", JSON.stringify(result));
-    Navigate("/FullDescription");
+    Navigate("/DetailedResults");
   };
   return (
     <div class="card CursorChange" onClick={handleOnClick}>

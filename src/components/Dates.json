@@ -2,7 +2,7 @@
   "data": [
     {
       "title": "Cooking Class",
-      "description": "Experience a culinary adventure with your partner in a cooking class date. Learn the art of preparing delicious dishes under the guidance of skilled chefs. Explore new flavors, techniques, and create culinary masterpieces together. Indulge in a fun and interactive date where you bond over food, laughter, and shared culinary creativity.",
+      "description": "Experience a culinary adventure with your partner on a cooking class date. Learn the art of preparing delicious dishes under the guidance of skilled chefs. Explore new flavors, techniques, and create culinary masterpieces together. Indulge in a fun and interactive date where you bond over food, laughter, and shared culinary creativity.",
       "image": "./images/CookingClass.jpg",
       "id": 1,
       "indoor": true,
@@ -13,7 +13,7 @@
       "short": true
     },
     {
-      "title": "Art gallery ",
+      "title": "Art Gallery ",
       "description": "Immerse yourselves in the world of creativity on a captivating art gallery date. Discover captivating masterpieces, engage in thought-provoking conversations, and appreciate the beauty of local art. Let the vibrant artwork inspire and deepen your connection as you explore the rich artistic expressions together. ",
       "image": "./images/ArtGallery.jpg",
       "id": 2,
@@ -25,7 +25,7 @@
       "short": true
     },
     {
-      "title": "Pottery workshop",
+      "title": "Pottery Workshop",
       "description": "Unleash your creativity and get your hands dirty on a pottery workshop date. Mold clay into beautiful creations together, while enjoying a hands-on experience that sparks laughter and connection. Explore the art of ceramics as you shape memories and create lasting masterpieces side by side.",
       "image": "./images/PotteryClass.jpg",
       "id": 3,
@@ -37,7 +37,7 @@
       "short": true
     },
     {
-      "title": "Board game cafe",
+      "title": "Board Game Cafe",
       "description": "Bring out the competitive spirit on a board game date or double date. Gather around the table, strategize, and have a blast with classic or modern board games. Enjoy friendly banter, laughter, and a fun-filled evening of bonding over dice rolls and card flips. ",
       "image": "./images/BoardGame.jpg",
       "id": 4,
@@ -49,8 +49,8 @@
       "short": true
     },
     {
-      "title": "Botanical garden",
-      "description": "Escape into a lush oasis with a date to an indoor botanical garden. Stroll hand in hand amidst vibrant flora, immerse yourselves in the serene atmosphere, and discover the beauty of nature together. A perfect setting for intimate conversations and creating lasting memories.",
+      "title": "Botanical Garden",
+      "description": "Escape into a lush oasis with a date to an indoor botanical garden. Stroll hand in hand amidst vibrant flora, immerse yourselves in the serene atmosphere and discover the beauty of nature together. A perfect setting for intimate conversations and creating lasting memories.",
       "image": "./images/BotanicalGarden.jpg",
       "id": 5,
       "indoor": true,
@@ -61,7 +61,7 @@
       "short": true
     },
     {
-      "title": "Picnic area",
+      "title": "Picnic Area",
       "description": "Indulge in a cozy picnic date, where you can savor delicious treats and create a romantic atmosphere away from the elements. With soft blankets, ambient lighting, and delightful bites, it's a perfect setting for an intimate and memorable experience together.",
       "image": "./images/Picnic.jpg",
       "id": 6,
@@ -109,8 +109,8 @@
       "short": true
     },
     {
-      "title": "Wine tasting",
-      "description": " Indulge in an enchanting wine tasting experience as you savor a delightful selection of fine wines. Explore the rich aromas, flavors, and textures together, while learning about the art of winemaking. Let the elegant ambiance and shared appreciation for wine create a romantic and unforgettable date.",
+      "title": "Wine Tasting",
+      "description": "Indulge in an enchanting wine-tasting experience as you savor a delightful selection of fine wines. Explore the rich aromas, flavors, and textures together, while learning about the art of winemaking. Let the elegant ambiance and shared appreciation for wine create a romantic and unforgettable date.",
       "image": "./images/WineTasting.jpg",
       "id": 10,
       "indoor": true,
@@ -122,7 +122,7 @@
     },
     {
       "title": "Aquarium",
-      "description": "Embark on an enchanting underwater journey as you explore the wonders of the ocean together at the aquarium. Marvel at colorful marine life, encounter majestic creatures, and deepen your connection as you share the awe-inspiring beauty of the underwater world. Dive into a captivating date that will leave you with lasting memories. ",
+      "description": "Embark on an enchanting underwater journey as you explore the wonders of the ocean together at the aquarium. Marvel at colorful marine life, encounter majestic creatures and deepen your connection as you share the awe-inspiring beauty of the underwater world. Dive into a captivating date that will leave you with lasting memories. ",
       "image": "./images/Aquarium.jpg",
       "id": 11,
       "indoor": true,
@@ -146,7 +146,7 @@
     },
     {
       "title": "Karaoke",
-      "description": "Unleash your inner rockstar and ignite the stage with a karaoke date. Belt out your favorite tunes, serenade each other with duets, and embrace the joy of singing your hearts out. Let the music bring you closer as you create harmonious memories and celebrate the magic of karaoke together.",
+      "description": "Unleash your inner rockstar and ignite the stage with a karaoke date. Belt out your favorite tunes, serenade each other with duets and embrace the joy of singing your hearts out. Let the music bring you closer as you create harmonious memories and celebrate the magic of karaoke together.",
       "image": "./images/Karaoke.jpg",
       "id": 13,
       "indoor": true,
@@ -182,7 +182,7 @@
     },
     {
       "title": "Spa",
-      "description": "Indulge in pure bliss with a spa date for ultimate relaxation. Let the skilled therapists pamper you with soothing massages, rejuvenating facials, and tranquil ambiance, creating a serene escape where you can unwind and reconnect with your partner in pure tranquility. ",
+      "description": "Indulge in pure bliss with a spa date for ultimate relaxation. Let the skilled therapists pamper you with soothing massages, rejuvenating facials, and a tranquil ambiance, creating a serene escape where you can unwind and reconnect with your partner in pure tranquility. ",
       "image": "./images/SpaExperience.jpg",
       "id": 16,
       "indoor": true,
@@ -193,8 +193,8 @@
       "short": true
     },
     {
-      "title": "Treasure hunt",
-      "description": "Embark on an exhilarating treasure hunt with your date. Follow clues, uncover hidden surprises, and enjoy the thrill of unraveling mysteries together, creating unforgettable memories and forging a deeper connection as you navigate through an adventure filled with excitement and anticipation.",
+      "title": "Treasure Hunt",
+      "description": "Embark on an exhilarating treasure hunt with your date. Follow clues, uncover hidden surprises, and enjoy the thrill of unraveling mysteries together, creating unforgettable memories, and forging a deeper connection as you navigate through an adventure filled with excitement and anticipation.",
       "image": "./images/TreasureHunt.jpg",
       "id": 17,
       "indoor": false,
@@ -205,7 +205,7 @@
       "short": true
     },
     {
-      "title": "Yoga class",
+      "title": "Yoga Class",
       "description": "Embark on a journey of relaxation and inner peace with your date as you join a rejuvenating yoga class. Find harmony and balance together, exploring different poses and connecting mind, body, and spirit, leaving the session feeling refreshed and centered, deepening your bond through shared serenity.",
       "image": "./images/YogaClass.jpg",
       "id": 18,
@@ -218,7 +218,7 @@
     },
     {
       "title": "Painting",
-      "description": " Unleash your creativity and embark on a vibrant artistic adventure with your date during a 3-6 hour painting session. Express yourselves through brushstrokes and colors, as you create unique masterpieces together, fostering a playful and inspiring atmosphere, where imagination knows no bounds.",
+      "description": "Unleash your creativity and embark on a vibrant artistic adventure with your date during a 3-6 hour painting session. Express yourselves through brushstrokes and colors, as you create unique masterpieces together, fostering a playful and inspiring atmosphere, where imagination knows no bounds.",
       "image": "./images/Painting.jpg",
       "id": 19,
       "indoor": true,
@@ -253,8 +253,8 @@
       "short": true
     },
     {
-      "title": "Photography course",
-      "description": "Capture precious moments together on a photography date. Join a course to learn the art of capturing stunning images, exploring composition, lighting, and editing techniques. Spend 3-6 hours honing your skills, unleashing your creativity, and creating timeless memories through the lens. ",
+      "title": "Photography Course",
+      "description": "Capture precious moments together on a photography date. Join a course to learn the art of capturing stunning images, and exploring composition, lighting, and editing techniques. Spend 3-6 hours honing your skills, unleashing your creativity, and creating timeless memories through the lens. ",
       "image": "./images/Photography.jpg",
       "id": 22,
       "indoor": true,
@@ -266,7 +266,7 @@
     },
     {
       "title": "Boat Trip",
-      "description": "Embark on a virtual journey to a winery and its picturesque surroundings on a unique date. Explore the vineyards, learn about winemaking processes, and indulge in virtual wine tasting, all from the comfort of your home. Spend 3-6 hours immersed in the world of wine, discovering flavors, an  enjoying a virtual escape together. ",
+      "description": "Embark on a virtual journey to a winery and its picturesque surroundings on a unique date. Explore the vineyards, learn about winemaking processes, and indulge in virtual wine tasting, all from the comfort of your home. Spend 3-6 hours immersed in the world of wine, discovering flavors, and  enjoying a virtual escape together. ",
       "image": "./images/BoatTrip.jpg",
       "id": 23,
       "indoor": false,
@@ -277,7 +277,7 @@
       "short": true
     },
     {
-      "title": "Baking class",
+      "title": "Baking Class",
       "description": "Ignite your passion for baking with a delightful date to a baking class. Join hands in the kitchen as you knead, mix, and create mouthwatering treats. From decadent desserts to savory delights, spend quality time together while exploring the art of baking in this hands-on experience.",
       "image": "./images/BakingSession.jpg",
       "id": 24,
@@ -289,8 +289,8 @@
       "short": true
     },
     {
-      "title": "Cocktail mixology class",
-      "description": "Shake up your date  with a cocktail mixology class. Learn the art of crafting delicious and stylish cocktails from professional mixologists. Sip, shake, and stir your way through a variety of spirits, flavors, and techniques, creating memorable concoctions together in a fun and interactive setting.",
+      "title": "Cocktail Mixology Class",
+      "description": "Shake up your date with a cocktail mixology class. Learn the art of crafting delicious and stylish cocktails from professional mixologists. Sip, shake, and stir your way through a variety of spirits, flavors, and techniques, creating memorable concoctions together in a fun and interactive setting.",
       "image": "./images/CocktailSession.jpg",
       "id": 25,
       "indoor": true,
@@ -301,7 +301,7 @@
       "short": true
     },
     {
-      "title": "Local park walk",
+      "title": "Local Park Walk",
       "description": "Take a romantic stroll through a local park, hand in hand, as you immerse yourselves in the beauty of nature. Enjoy the serenity of lush greenery, fragrant flowers, and tranquil surroundings, creating cherished moments of togetherness and peaceful connection.",
       "image": "./images/LocalPark.jpg",
       "id": 26,
@@ -313,8 +313,8 @@
       "short": true
     },
     {
-      "title": "Bike ride",
-      "description": "Embark on a delightful bike ride adventure together, exploring scenic routes, picturesque landscapes, and feeling the exhilaration of the open road. Pedal side by side, creating memories while enjoying the fresh air, the freedom of movement, and the joy of shared experiences on two wheels.",
+      "title": "Bike Ride",
+      "description": "Embark on a delightful bike ride adventure together, exploring scenic routes, and picturesque landscapes, and feeling the exhilaration of the open road. Pedal side by side, creating memories while enjoying the fresh air, the freedom of movement, and the joy of shared experiences on two wheels.",
       "image": "./images/Cycling.jpg",
       "id": 27,
       "indoor": false,
@@ -337,7 +337,7 @@
       "short": true
     },
     {
-      "title": "Visit a farm",
+      "title": "Visit A Farm",
       "description": "Embark on a charming farm adventure with your partner, exploring the idyllic countryside and getting up close with adorable farm animals. Experience the joys of rural life as you feed, pet, and learn about the farm's inhabitants, while savoring the fresh air and picturesque landscapes. Let this wholesome date cultivate shared memories and a deeper appreciation for nature's wonders. ",
       "image": "./images/VisitAFarm.jpg",
       "id": 29,
@@ -350,7 +350,7 @@
     },
     {
       "title": "Skateboarding",
-      "description": "Embrace a fun and adventurous date on skateboards as you glide through the city streets or skate parks, sharing laughter and adrenaline-filled moments. Whether you're beginners or seasoned skaters, enjoy the thrill of learning new tricks, cheering each other on, and creating unforgettable memories on wheels. Let the skateboarding date spark a sense of freedom, camaraderie, and a shared passion for an active lifestyle.",
+      "description": "Embrace a fun and adventurous date on skateboards as you glide through the city streets or skate parks, sharing laughter and adrenaline-filled moments. Whether you're a beginner or a seasoned skaters, enjoy the thrill of learning new tricks, cheering each other on, and creating unforgettable memories on wheels. Let the skateboarding date spark a sense of freedom, camaraderie, and a shared passion for an active lifestyle.",
       "image": "./images/SkateBoarding.jpg",
       "id": 30,
       "indoor": true,
@@ -457,7 +457,7 @@
       "short": true
     },
     {
-      "title": "Amusement park",
+      "title": "Amusement Park",
       "description": "Brace yourselves for an adrenaline-filled rendezvous as you indulge in thrilling rides, delightful games, and shared laughter, immersing yourselves in a world of pure joy and excitement, where the magic of childhood blends with the spark of romance. ",
       "image": "./images/AmusementPark.jpg",
       "id": 39,
@@ -506,7 +506,7 @@
     },
     {
       "title": "Skiing",
-      "description": "Glide into romance  as you carve your way through powdery slopes, embracing the winter wonderland together. Feel the rush of the cold wind on your faces and the warmth of each other's company, creating unforgettable memories amidst the snowy peaks.",
+      "description": "Glide into romance as you carve your way through powdery slopes, embracing the winter wonderland together. Feel the rush of the cold wind on your faces and the warmth of each other's company, creating unforgettable memories amidst the snowy peaks.",
       "image": "./images/Skiing.jpg",
       "id": 43,
       "indoor": true,
@@ -673,8 +673,8 @@
       "short": true
     },
     {
-      "title": "ScreamPark",
-      "description": "A screampark is an entertainment venue or attraction that offers a combination of haunted houses, scare zones, and other frightening experiences. It aims to provide a thrilling and immersive environment where visitors can experience fear and adrenaline-inducing encounters.",
+      "title": "Scream Park",
+      "description": "A scream park is an entertainment venue or attraction that offers a combination of haunted houses, scare zones, and other frightening experiences. It aims to provide a thrilling and immersive environment where visitors can experience fear and adrenaline-inducing encounters.",
       "image": "./images/ScreamPark.jpeg",
       "id": 57,
       "indoor": false,

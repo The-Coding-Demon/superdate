@@ -25,7 +25,7 @@ export const QuestionsBox = () => {
       city: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
-      // user can navigate back to this form and edit choices, but choices will expire after 1 hour
+      Object.assign(values, {cameFromForm:true})
       localStorage.setItem(
         "userDatePreferences",
         JSON.stringify({ ...values, expiresAt: Date.now() + 3600 * 60 * 60 })

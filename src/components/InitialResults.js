@@ -81,7 +81,17 @@ export const InitialResults = () => {
     finalSelectionArray.push(arr[randomiser4]);
     return finalSelectionArray;
   };
-  JsonPicker();
+  const refreshCheck = () => {
+    if (userDatePreferences.cameFromForm == true) {
+      JsonPicker();
+      userDatePreferences.cameFromForm = false;
+      localStorage.setItem(
+        "userDatePreferences",
+        JSON.stringify(userDatePreferences)
+      );
+    }
+  };
+  refreshCheck();
   const getCurrentSelection = JSON.parse(localStorage.getItem("currentSelect"));
   return (
     <div
