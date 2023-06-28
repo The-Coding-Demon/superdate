@@ -131,6 +131,12 @@ video {
   font-family: DM Sans;
 }
 
+#city,
+select,
+textarea {
+  color: gray;
+}
+
 .InputBoxes {
   width: 90%;
   padding: 10px;
@@ -192,6 +198,10 @@ input {
   width: 70%;
   margin-top: 6em;
   margin-bottom: 3em;
+}
+
+#city {
+  color: gray;
 }
 
 /* Initial Details */
@@ -551,6 +561,7 @@ input {
   justify-content: center;
   font-family: Poppins;
   height: 25px;
+  padding: 15px;
 }
 
 .footerText {

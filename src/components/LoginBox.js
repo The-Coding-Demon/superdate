@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 const LoginCheck = (values) => {
   Object.assign(values, { userFavourites: [] });
   localStorage.setItem("userList", JSON.stringify(values));
+  console.log(values);
 };
 export const LoginBox = () => {
   const Navigate = useNavigate();

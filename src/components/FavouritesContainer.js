@@ -1,23 +1,16 @@
+import { FavouritesCard } from "./FavouritesCard";
+
 export const FavouritesContainer = () => {
+  const userFindings = JSON.parse(localStorage.getItem("userList"));
+  const FavouritesItem = userFindings.userFavourites;
   return (
     <div>
       <h1 className="FavouritesTitle text-white text-center pt-4">
         My Favourites
       </h1>
-      <div>
-        <ul className="text-white FavouritesBox">
-          <li></li>
-        </ul>
-        <ul className="text-white FavouritesBox">
-          <li></li>
-        </ul>
-        <ul className="text-white FavouritesBox">
-          <li></li>
-        </ul>
-        <ul className="text-white FavouritesBox">
-          <li></li>
-        </ul>
-      </div>
+      {FavouritesItem.map((activityitem) => (
+        <FavouritesCard favourites={activityitem} />
+      ))}
     </div>
   );
 };
