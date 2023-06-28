@@ -38,11 +38,14 @@ export const FullDescription = () => {
           //     },
           //   }
           // );
+          const data = "Hello I work";
           if (data.length === undefined) {
             throw new Error();
           } else {
+            console.log(viewmap);
             mapchange(data);
-            Navigate(mapresponse("/MapDetails"));
+            console.log(mapresponse);
+            Navigate("/MapDirections", { state: { mystuff: data } });
           }
         } catch {
           console.log();
@@ -51,7 +54,7 @@ export const FullDescription = () => {
 
       fetchData();
     }
-  }, [keywords]);
+  }, [viewmap, mapresponse]);
   return (
     <div class="p-2 DetailedDesc">
       <img

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Axios } from "axios";
 
 export const MapDetails = () => {
+  console.log("Check 2");
   const Navigate = useNavigate();
   return (
     <div class="p-2 MapDetails">
