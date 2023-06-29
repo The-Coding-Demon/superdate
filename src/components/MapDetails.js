@@ -1,8 +1,6 @@
 import Map from "./assets/MapImage.png";
 import BackArrow from "./assets/circle-arrow-left-solid.png";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import { Axios } from "axios";
 
 export const MapDetails = () => {
   console.log("Check 2");

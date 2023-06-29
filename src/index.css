@@ -249,8 +249,8 @@ input {
 .BackButton {
   display: block;
   position: absolute;
-  top: 1%;
-  left: 5%;
+  top: 1.5%;
+  left: 1%;
   max-height: 35px;
   max-width: 35px;
 }
@@ -271,7 +271,7 @@ input {
   display: block;
   position: absolute;
   bottom: 1%;
-  right: 8%;
+  right: 3%;
   max-height: 35px;
   max-width: 35px;
 }
@@ -431,6 +431,50 @@ input {
 
 .FavouritesTitle {
   font-family: Poppins;
+}
+
+.BackButtonFavouritesPage {
+  display: block;
+  position: absolute;
+  top: 6%;
+  left: 2%;
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.BackButtonFavouritesPage:hover {
+  background-color: var(--Primary);
+  box-shadow: 3px 3px var(--Primary);
+  border-radius: 50%;
+}
+
+.BackButtonFavouritesPage:active {
+  background-color: var(--Quartenary);
+  box-shadow: 3px 3px var(--Quartenary);
+  border-radius: 50%;
+}
+
+.DeleteTrashIcon {
+  display: block;
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.DeleteTrashIcon:hover {
+  background-color: var(--Primary);
+  border-radius: 50%;
+}
+
+.DeleteTrashIcon:active {
+  background-color: var(--Quartenary);
+  border-radius: 50%;
+}
+
+.Detailedtext {
+  padding-top: 2%;
 }
 
 /* Contact */

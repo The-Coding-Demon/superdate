@@ -3,10 +3,12 @@ import Location from "./assets/location-dot-solid.png";
 import HeartLogo from "./assets/HeartLogo.png";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Axios } from "axios";
 
 export const FullDescription = () => {
   const [viewmap, altermap] = useState("");
   const [mapresponse, mapchange] = useState("");
+  const [data, setData] = useState(null);
   const Navigate = useNavigate();
   const SelectedActivity = JSON.parse(localStorage.getItem("SelectedActivity"));
   const SelectedActivityItem = SelectedActivity[0];
@@ -25,20 +27,16 @@ export const FullDescription = () => {
     if (viewmap) {
       const fetchData = async () => {
         try {
-          // const { data } = await axios.get(
-          //   "https://amazon-price1.p.rapidapi.com/search",
-          //   {
-          //     params: {
-          //       keywords,
-          //       marketplace: "GB",
-          //     },
-          //     headers: {
-          //       "X-RapidAPI-Key": process.env.REACT_APP_X_RAPID_API_KEY,
-          //       "X-RapidAPI-Host": process.env.REACT_APP_X_RAPID_API_HOST,
-          //     },
-          //   }
-          // );
-          const data = "Hello I work";
+          const response = await fetch(
+            "http://dev.virtualearth.net/REST/v1/Locations?query={Nottingham}&include={SelectedActivityItem.title}&maxResults={1}&key={process.env.API_KEY} "
+          );
+          const json = await response.json();
+          setData(json);
+          const { data } = await Axios.get(
+            "http://dev.virtualearth.net/REST/v1/Locations?query={Nottingham}&include={SelectedActivityItem.title}&maxResults={1}&key={ArIbT5hYpGuKJXd3qV3HCRfEq1FBkagJ-dKJVVdF92Ur6Fz0wPiTHanbiV1lPlwD}"
+          ).then((response) => {
+          setData(response.data);
+          // const data = "Hello I work";
           if (data.length === undefined) {
             throw new Error();
           } else {
