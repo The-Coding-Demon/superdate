@@ -26,23 +26,13 @@ export const FullDescription = () => {
   useEffect(() => {
     if (viewmap) {
       const fetchData = async () => {
+        console.log("???");
         try {
-          const response = await fetch(
-            "http://dev.virtualearth.net/REST/v1/Locations?query={Nottingham}&include={SelectedActivityItem.title}&maxResults={1}&key={process.env.API_KEY} "
-          );
-          const json = await response.json();
-          setData(json);
-          const { data } = await Axios.get(
-            "http://dev.virtualearth.net/REST/v1/Locations?query={Nottingham}&include={SelectedActivityItem.title}&maxResults={1}&key={ArIbT5hYpGuKJXd3qV3HCRfEq1FBkagJ-dKJVVdF92Ur6Fz0wPiTHanbiV1lPlwD}"
-          ).then((response) => {
-          setData(response.data);
-          // const data = "Hello I work";
-          if (data.length === undefined) {
+          const data = "im some data";
+          if (!data) {
             throw new Error();
           } else {
-            console.log(viewmap);
             mapchange(data);
-            console.log(mapresponse);
             Navigate("/MapDirections", { state: { mystuff: data } });
           }
         } catch {
