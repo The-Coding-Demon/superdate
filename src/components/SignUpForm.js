@@ -7,7 +7,7 @@ const LoginCheck = (values) => {
   localStorage.setItem("userList", JSON.stringify(values));
   console.log(values);
 };
-export const LoginBox = () => {
+export const SignUpForm = () => {
   const Navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
@@ -71,16 +71,6 @@ export const LoginBox = () => {
         }}
       >
         Login{" "}
-      </button>
-      <p id="signUpPrompt">Don't have an account</p>
-      <button
-        className="btn btn-info text-white InputButton"
-        type="submit"
-        onClick={() => {
-          Navigate("/SignUp");
-        }}
-      >
-        SignUp{" "}
       </button>
     </form>
   );

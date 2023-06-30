@@ -204,6 +204,14 @@ input {
   color: gray;
 }
 
+/* Login Page */
+
+#signUpPrompt {
+  font-size: 15px;
+  padding: 5px;
+  margin: 0;
+}
+
 /* Initial Details */
 
 .InitialResultsCards {
@@ -627,16 +635,31 @@ input {
   background-color: var(--Primary);
   justify-content: center;
   font-family: Poppins;
-  height: 25px;
-  padding: 15px;
+  height: 50px;
+  padding: 0px;
 }
 
 .footerText {
   color: #fff;
   position: absolute;
   padding-top: 15px;
+  font-size: 18px;
 }
 
 .navbar-brand {
+  color: #fff;
+}
+
+.logOutButton {
+  background-color: var(--Primary);
+  border: none;
+  font-family: Poppins;
+  color: #fff;
+  margin-left: auto;
+  padding-bottom: 10px;
+}
+
+.logOutButton:hover {
+  background-color: var(--Quartenary);
   color: #fff;
 }

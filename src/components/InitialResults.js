@@ -58,27 +58,15 @@ export const InitialResults = () => {
   };
   const createNewList = (arr) => {
     const finalSelectionArray = [];
-    const randomiser = Math.floor(Math.random() * arr.length);
-    finalSelectionArray.push(arr[randomiser]);
-    let randomiser2 = Math.floor(Math.random() * arr.length);
-    if (randomiser == randomiser2) {
-      randomiser2 = Math.floor(Math.random() * arr.length);
+    const numberHolder = [];
+    while (finalSelectionArray.length < 4) {
+      let mySelection = Math.floor(Math.random() * arr.length);
+      let result = numberHolder.includes(mySelection);
+      if (!result) {
+        numberHolder.push(mySelection);
+        finalSelectionArray.push(arr[mySelection]);
+      }
     }
-    finalSelectionArray.push(arr[randomiser2]);
-    let randomiser3 = Math.floor(Math.random() * arr.length);
-    if (randomiser3 == randomiser || randomiser3 == randomiser2) {
-      randomiser3 = Math.floor(Math.random() * arr.length);
-    }
-    finalSelectionArray.push(arr[randomiser3]);
-    let randomiser4 = Math.floor(Math.random() * arr.length);
-    if (
-      randomiser4 == randomiser ||
-      randomiser4 == randomiser2 ||
-      randomiser4 == randomiser3
-    ) {
-      randomiser4 = Math.floor(Math.random() * arr.length);
-    }
-    finalSelectionArray.push(arr[randomiser4]);
     return finalSelectionArray;
   };
   const refreshCheck = () => {
