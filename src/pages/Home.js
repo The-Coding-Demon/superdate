@@ -1,11 +1,8 @@
 import { BackingLayerBoxes } from "../components/BackingLayerBoxes";
 
 const CheckLogin = () => {
-  const GetLogin = localStorage.getItem(
-    "userList",
-    JSON.parse(localStorage.getItem("userList"))
-  );
-  if (!GetLogin) {
+  const GetLogin = JSON.parse(localStorage.getItem("userList")) || [];
+  if (GetLogin.length == 0) {
     window.location.href = "/Login";
   }
 };

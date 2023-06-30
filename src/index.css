@@ -212,6 +212,10 @@ input {
   margin: 0;
 }
 
+#account-Button {
+  margin-top: 7px;
+}
+
 /* Initial Details */
 
 .InitialResultsCards {

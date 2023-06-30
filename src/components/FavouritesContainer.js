@@ -15,7 +15,7 @@ export const FavouritesContainer = () => {
         src={BackArrow}
         className="BackButtonFavouritesPage CursorChange"
         onClick={() => {
-          Navigate("/DetailedResults");
+          Navigate("/Results");
         }}
       ></img>
       {FavouritesItem.map((activityitem) => (

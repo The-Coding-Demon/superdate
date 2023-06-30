@@ -17,7 +17,16 @@ export const FullDescription = () => {
     const ItemValue = userFindings.userFavourites;
     ItemValue.push(SelectedActivityItem);
     localStorage.setItem("userList", JSON.stringify(userFindings));
+    const theCurrentUsers =
+      JSON.parse(localStorage.getItem("userCollection")) || [];
+    const makeArray = [userFindings];
+    const result = theCurrentUsers.filter((bigList) =>
+      makeArray.some((currentUser) => bigList.email !== currentUser.email)
+    );
+    console.log(result);
+    result.push(userFindings);
     console.log(SelectedActivityItem);
+    localStorage.setItem("userCollection", JSON.stringify(result));
   };
   const handleSubmit = () => {
     altermap(SelectedActivityItem.title);

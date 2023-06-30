@@ -3,26 +3,35 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
 const LoginCheck = (values) => {
-  Object.assign(values, { userFavourites: [] });
-  localStorage.setItem("userList", JSON.stringify(values));
-  console.log(values);
+  const theCurrentUsers =
+    JSON.parse(localStorage.getItem("userCollection")) || [];
+  const checkLogin = [values];
+  const result = theCurrentUsers.filter((bigList) =>
+    checkLogin.some(
+      (singleUser) =>
+        bigList.email === singleUser.email &&
+        bigList.password === singleUser.password
+    )
+  );
+  if (result.length == 0) {
+    console.log("No user exists");
+  } else {
+    localStorage.setItem("userList", JSON.stringify(result[0]));
+    window.location.href = "/";
+  }
 };
 export const LoginBox = () => {
   const Navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
-      firstName: "",
-      password: "",
       email: "",
+      password: "",
     },
     validationSchema: Yup.object({
-      firstName: Yup.string()
-        .max(15, "Must be 15 characters or less")
-        .required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
       password: Yup.string()
         .max(20, "Must be 20 characters or less")
         .required("Required"),
-      email: Yup.string().email("Invalid email address").required("Required"),
     }),
     onSubmit: (values) => {
       LoginCheck(values);
@@ -32,13 +41,13 @@ export const LoginBox = () => {
     <form className="QuestionForm" onSubmit={formik.handleSubmit}>
       <input
         className="InputBoxes"
-        id="firstName"
-        type="text"
-        {...formik.getFieldProps("firstName")}
-        placeholder="Name"
+        id="email"
+        type="email"
+        placeholder="Enter Email"
+        {...formik.getFieldProps("email")}
       />
-      {formik.touched.firstName && formik.errors.firstName ? (
-        <div>{formik.errors.firstName}</div>
+      {formik.touched.email && formik.errors.email ? (
+        <div>{formik.errors.email}</div>
       ) : null}
 
       <input
@@ -52,24 +61,7 @@ export const LoginBox = () => {
         <div>{formik.errors.lastName}</div>
       ) : null}
 
-      <input
-        className="InputBoxes"
-        id="email"
-        type="email"
-        placeholder="Enter Email"
-        {...formik.getFieldProps("email")}
-      />
-      {formik.touched.email && formik.errors.email ? (
-        <div>{formik.errors.email}</div>
-      ) : null}
-
-      <button
-        className="btn btn-info text-white InputButton"
-        type="submit"
-        onClick={() => {
-          Navigate("/");
-        }}
-      >
+      <button className="btn btn-info text-white InputButton" type="submit">
         Login{" "}
       </button>
       <p id="signUpPrompt">Don't have an account</p>

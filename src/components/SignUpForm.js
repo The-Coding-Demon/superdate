@@ -3,9 +3,11 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
 const LoginCheck = (values) => {
+  const theCurrentUsers =
+    JSON.parse(localStorage.getItem("userCollection")) || [];
   Object.assign(values, { userFavourites: [] });
-  localStorage.setItem("userList", JSON.stringify(values));
-  console.log(values);
+  theCurrentUsers.push(values);
+  localStorage.setItem("userCollection", JSON.stringify(theCurrentUsers));
 };
 export const SignUpForm = () => {
   const Navigate = useNavigate();
@@ -70,7 +72,17 @@ export const SignUpForm = () => {
           Navigate("/");
         }}
       >
-        Login{" "}
+        SignUp{" "}
+      </button>
+      <button
+        id="account-Button"
+        className="btn btn-info text-white InputButton"
+        type="submit"
+        onClick={() => {
+          Navigate("/Login");
+        }}
+      >
+        Already have an Account{" "}
       </button>
     </form>
   );
