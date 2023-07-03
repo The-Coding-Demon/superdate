@@ -13,13 +13,13 @@ export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Login" element={<Login />} />
-      <Route path="/SignUp" element={<SignUp />} />
-      <Route path="/Results" element={<Results />} />
-      <Route path="/DetailedResults" element={<DetailedResults />} />
-      <Route path="/MyFavourites" element={<MyFavourites />} />
-      <Route path="/MapDirections" element={<MapDirections />} />
-      <Route path="/Contact" element={<Contact />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/results" element={<Results />} />
+      <Route path="/detailed-results" element={<DetailedResults />} />
+      <Route path="/my-favourites" element={<MyFavourites />} />
+      <Route path="/map-directions" element={<MapDirections />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };

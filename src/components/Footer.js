@@ -6,14 +6,14 @@ export const Footer = () => {
     let userFindings = JSON.parse(localStorage.getItem("userList"));
     userFindings = [];
     localStorage.setItem("userList", JSON.stringify(userFindings));
-    Navigate("./Login");
+    Navigate("./login");
   };
   return (
-    <nav class="navbar fixed-bottom text-center footer">
-      <p className="footerText">©SuperDate</p>
+    <nav className="navbar fixed-bottom text-center footer">
+      <p className="footer-text">©SuperDate</p>
       <div className="container-fluid">
         <button
-          className="btn btn-info text-white button-nav logOutButton CursorChange"
+          className="btn btn-info text-white button-nav log-out-button cursor-change"
           type="submit"
           onClick={handleOnClick}
         >

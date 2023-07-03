@@ -15,22 +15,22 @@ export const FavouritesCard = (favourites) => {
   };
   return (
     <div>
-      <div className="text-white FavouritesBox">
-        <div class="p-3">
+      <div className="text-white favourites-box">
+        <div className="p-3">
           <img
             src={favouritesFindings.image}
-            className="MainIMGResult FavouritesIMGResult"
+            className="main-img-result favourites-img-result"
           ></img>
         </div>
         <div>
-          <h2 className="Detailedtext">{favouritesFindings.title}</h2>
+          <h2 className="detailed-text">{favouritesFindings.title}</h2>
           <p>{favouritesFindings.description}</p>
         </div>
         <div>
           <img
             src={DeleteTrash}
             alt="deleteicon"
-            className="DeleteTrashIcon CursorChange"
+            className="delete-trash-icon cursor-change"
             onClick={handleDelete}
           ></img>
         </div>

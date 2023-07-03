@@ -33,7 +33,7 @@ export const SignUpForm = () => {
   return (
     <form className="QuestionForm" onSubmit={formik.handleSubmit}>
       <input
-        className="InputBoxes"
+        className="input-boxes"
         id="firstName"
         type="text"
         {...formik.getFieldProps("firstName")}
@@ -44,7 +44,7 @@ export const SignUpForm = () => {
       ) : null}
 
       <input
-        className="InputBoxes"
+        className="input-boxes"
         id="password"
         type="password"
         placeholder="Enter Password"
@@ -55,7 +55,7 @@ export const SignUpForm = () => {
       ) : null}
 
       <input
-        className="InputBoxes"
+        className="input-boxes"
         id="email"
         type="email"
         placeholder="Enter Email"
@@ -66,7 +66,7 @@ export const SignUpForm = () => {
       ) : null}
 
       <button
-        className="btn btn-info text-white InputButton"
+        className="btn btn-info text-white input-button"
         type="submit"
         onClick={() => {
           Navigate("/");
@@ -75,11 +75,11 @@ export const SignUpForm = () => {
         SignUp{" "}
       </button>
       <button
-        id="account-Button"
-        className="btn btn-info text-white InputButton"
+        id="account-button"
+        className="btn btn-info text-white input-button"
         type="submit"
         onClick={() => {
-          Navigate("/Login");
+          Navigate("/login");
         }}
       >
         Already have an Account{" "}

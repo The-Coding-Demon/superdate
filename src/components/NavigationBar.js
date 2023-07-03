@@ -12,16 +12,16 @@ export const NavigationBar = () => {
           alt="Logo"
           width="150"
           height="24"
-          class="d-inline-block align-text-top CursorChange"
+          className="d-inline-block align-text-top cursor-change"
           onClick={() => {
             Navigate("/");
           }}
         />
         <button
-          className="btn btn-info text-white button-nav-favourites CursorChange"
+          className="btn btn-info text-white button-nav-favourites cursor-change"
           type="submit"
           onClick={() => {
-            Navigate("/MyFavourites");
+            Navigate("/my-favourites");
           }}
         >
           <img
@@ -29,15 +29,15 @@ export const NavigationBar = () => {
             alt="HeartLogo"
             width="24"
             height="24"
-            class="HeartLogo CursorChange"
+            className="heart-logo cursor-change"
           />
           Favourites
         </button>
         <button
-          className="btn btn-info text-white button-nav CursorChange"
+          className="btn btn-info text-white button-nav cursor-change"
           type="submit"
           onClick={() => {
-            Navigate("./Contact");
+            Navigate("./contact");
           }}
         >
           Contact Us

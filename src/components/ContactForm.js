@@ -4,57 +4,57 @@ import * as Yup from "yup";
 export const ContactForm = () => {
   const formik = useFormik({
     initialValues: {
-      FullName: "",
-      Email: "",
-      Message: "",
+      fullName: "",
+      email: "",
+      message: "",
     },
     validationSchema: Yup.object({
-      FullName: Yup.string()
+      fullName: Yup.string()
         .max(15, "Must be 15 characters or less")
         .required("Required"),
-      Email: Yup.string().email("Invalid email address").required("Required"),
-      Message: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      message: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
     },
   });
   return (
-    <form className="ContactForm" onSubmit={formik.handleSubmit}>
+    <form className="contact-form" onSubmit={formik.handleSubmit}>
       <input
-        className="ContactFormInputs"
-        id="FullName"
+        className="contact-form-inputs"
+        id="fullName"
         type="text"
         {...formik.getFieldProps("FullName")}
         placeholder="FullName"
       />
-      {formik.touched.FullName && formik.errors.FullName ? (
-        <div>{formik.errors.FullName}</div>
+      {formik.touched.fullName && formik.errors.fullName ? (
+        <div>{formik.errors.fullName}</div>
       ) : null}
 
       <input
-        id="Email"
-        className="ContactFormInputs"
+        id="email"
+        className="contact-form-inputs"
         type="text"
         placeholder="Email"
-        {...formik.getFieldProps("Email")}
+        {...formik.getFieldProps("email")}
       />
-      {formik.touched.Email && formik.errors.Email ? (
-        <div>{formik.errors.Email}</div>
+      {formik.touched.email && formik.errors.email ? (
+        <div>{formik.errors.email}</div>
       ) : null}
 
       <input
-        id="Message"
-        className="ContactFormInputs"
+        id="message"
+        className="contact-form-inputs"
         type="textarea"
         placeholder="Message"
-        {...formik.getFieldProps("Message")}
+        {...formik.getFieldProps("message")}
       />
-      {formik.touched.Message && formik.errors.Message ? (
-        <div>{formik.errors.Message}</div>
+      {formik.touched.message && formik.errors.message ? (
+        <div>{formik.errors.message}</div>
       ) : null}
 
-      <button type="submit" className="btn btn-info text-white ContactButton">
+      <button type="submit" className="btn btn-info text-white contact-button">
         Submit
       </button>
     </form>

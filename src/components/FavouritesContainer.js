@@ -8,14 +8,14 @@ export const FavouritesContainer = () => {
   const FavouritesItem = userFindings.userFavourites;
   return (
     <div>
-      <h1 className="FavouritesTitle text-white text-center pt-4">
+      <h1 className="favourites-title text-white text-center pt-4">
         My Favourites
       </h1>
       <img
         src={BackArrow}
-        className="BackButtonFavouritesPage CursorChange"
+        className="back-button-favourites-page cursor-change"
         onClick={() => {
-          Navigate("/Results");
+          Navigate("/results");
         }}
       ></img>
       {FavouritesItem.map((activityitem) => (

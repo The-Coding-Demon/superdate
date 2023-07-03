@@ -42,7 +42,7 @@ export const FullDescription = () => {
             throw new Error();
           } else {
             mapchange(data);
-            Navigate("/MapDirections", { state: { mystuff: data } });
+            Navigate("/map-directions", { state: { mystuff: data } });
           }
         } catch {
           console.log();
@@ -53,29 +53,29 @@ export const FullDescription = () => {
     }
   }, [viewmap, mapresponse]);
   return (
-    <div class="p-2 DetailedDesc">
+    <div className="p-2 detailed-desc">
       <img
         src={BackArrow}
-        className="BackButton CursorChange"
+        className="back-button cursor-change"
         onClick={() => {
           Navigate("/results");
         }}
       ></img>
-      <div class="p-3">
-        <img src={SelectedActivityItem.image} className="MainIMGResult"></img>
+      <div className="p-3">
+        <img src={SelectedActivityItem.image} className="main-img-result"></img>
       </div>
-      <div class="p-3">
+      <div className="p-3">
         <h2>{SelectedActivityItem.title}</h2>
-        <p className="Detailedtext">{SelectedActivityItem.description}</p>
+        <p className="detailed-text">{SelectedActivityItem.description}</p>
       </div>
       <img
         src={HeartLogo}
-        className="HeartButton CursorChange"
+        className="heart-button cursor-change"
         onClick={handleOnClick}
       ></img>
       <img
         src={Location}
-        className="LocationButton CursorChange"
+        className="location-button cursor-change"
         onClick={handleSubmit}
       ></img>
     </div>

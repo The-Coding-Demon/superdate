@@ -7,17 +7,17 @@ export const ResultCard = ({ activity }) => {
     const asArray = [activity];
     const result = asArray.filter((val) => itemID.includes(val.id));
     localStorage.setItem("SelectedActivity", JSON.stringify(result));
-    Navigate("/DetailedResults");
+    Navigate("/detailed-results");
   };
   return (
-    <div class="card CursorChange" onClick={handleOnClick}>
+    <div className="card cursor-change" onClick={handleOnClick}>
       <img
         src={activity.image}
-        class="card-img-top IMGResults"
+        className="card-img-top img-results"
         alt={activity.title}
       />
-      <div class="card-body">
-        <h5 class="card-title text-center">{activity.title}</h5>
+      <div className="card-body">
+        <h5 className="card-title text-center">{activity.title}</h5>
       </div>
     </div>
   );

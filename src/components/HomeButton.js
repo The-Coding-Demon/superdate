@@ -3,7 +3,7 @@ import MainLogo from "./assets/MainLogo.png";
 export const HomeButton = () => {
   const Navigate = useNavigate();
   return (
-    <div className="container-fluid HomeButton">
+    <div className="container-fluid home-button">
       <img
         onClick={() => {
           Navigate("/");
@@ -12,7 +12,7 @@ export const HomeButton = () => {
         alt="Logo"
         width="250"
         height="40"
-        class="d-inline-block align-text-top"
+        className="d-inline-block align-text-top"
       />
     </div>
   );

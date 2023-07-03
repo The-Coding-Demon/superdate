@@ -7,7 +7,7 @@
 
 /* Main */
 
-.CursorChange {
+.cursor-change {
   cursor: pointer;
 }
 
@@ -63,7 +63,7 @@ video {
   color: #fff;
 }
 
-.HomeButton {
+.home-button {
   padding-top: 3em;
   padding-left: 3em;
 }
@@ -92,32 +92,32 @@ video {
   color: #fff;
 }
 
-.HeartLogo {
+.heart-logo {
   margin-right: 7px;
 }
 
 /* Question Box */
 
 @media only screen and (max-width: 1820px) {
-  .InputBoxes {
+  .input-boxes {
     display: block;
     width: 100%;
     height: auto;
     min-width: 0;
   }
 
-  .QuestionForm {
+  .question-form {
     margin-top: 10px;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  .BackContainer {
+  .back-container {
     min-width: 70%;
   }
 }
 
-.QuestionForm {
+.question-form {
   display: block;
   text-align: center;
   padding: 1.5em;
@@ -137,7 +137,7 @@ textarea {
   color: gray;
 }
 
-.InputBoxes {
+.input-boxes {
   width: 90%;
   padding: 10px;
   border-style: none;
@@ -158,19 +158,19 @@ input {
   margin-bottom: 10px;
 }
 
-.InputButton {
+.input-button {
   background-color: var(--Primary);
   border: none;
   width: 90%;
   color: #fff;
 }
 
-.InputButton:hover {
+.input-button:hover {
   background-color: #9163aa;
   color: #fff;
 }
 
-.BackContainer {
+.back-container {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -187,13 +187,13 @@ input {
   transform: translate(-50%, -50%);
 }
 
-.BackContainer p {
+.back-container p {
   font-family: Poppins;
   font-size: 1.5rem;
   padding-top: 20px;
 }
 
-.BackingLayer {
+.backing-layer {
   min-height: 20%;
   width: 70%;
   margin-top: 6em;
@@ -206,25 +206,27 @@ input {
 
 /* Login Page */
 
-#signUpPrompt {
+#sign-up-prompt {
   font-size: 15px;
   padding: 5px;
   margin: 0;
 }
 
-#account-Button {
+/* Sign Up Page */
+
+#account-button {
   margin-top: 7px;
 }
 
 /* Initial Details */
 
-.InitialResultsCards {
+.initial-results-cards {
   margin-left: 5em;
   margin-right: 5em;
   margin-top: 2%;
 }
 
-.IMGResults {
+.img-results {
   display: flex;
   height: 475px;
   width: 800px;
@@ -243,7 +245,7 @@ input {
 }
 
 @media only screen and (max-width: 990px) {
-  .IMGResults {
+  .img-results {
     display: block;
     width: auto;
     height: auto;
@@ -251,14 +253,14 @@ input {
 }
 
 @media only screen and (max-width: 1810px) {
-  .InitialResultsCards {
+  .initial-results-cards {
     margin-bottom: 10%;
   }
 }
 
 /* Details Page */
 
-.BackButton {
+.back-button {
   display: block;
   position: absolute;
   top: 1.5%;
@@ -267,19 +269,19 @@ input {
   max-width: 35px;
 }
 
-.BackButton:hover {
+.back-button:hover {
   background-color: var(--Primary);
   box-shadow: 3px 3px var(--Primary);
   border-radius: 50%;
 }
 
-.BackButton:active {
+.back-button:active {
   background-color: var(--Quartenary);
   box-shadow: 3px 3px var(--Quartenary);
   border-radius: 50%;
 }
 
-.HeartButton {
+.heart-button {
   display: block;
   position: absolute;
   bottom: 1%;
@@ -288,7 +290,7 @@ input {
   max-width: 35px;
 }
 
-.HeartButton:hover {
+.heart-button:hover {
   background-color: var(--Primary);
   box-shadow: 3px 3px var(--Primary);
   border-radius: 20%;
@@ -302,7 +304,7 @@ input {
   margin: 2px;
 }
 
-.LocationButton {
+.location-button {
   display: block;
   position: absolute;
   bottom: 1%;
@@ -311,21 +313,21 @@ input {
   max-width: 35px;
 }
 
-.LocationButton:hover {
+.location-button:hover {
   background-color: var(--Primary);
   box-shadow: 3px 3px var(--Primary);
   border-radius: 20%;
   margin: 2px;
 }
 
-.LocationButton:active {
+.location-button:active {
   background-color: var(--Quartenary);
   box-shadow: 3px 3px var(--Quartenary);
   border-radius: 20%;
   margin: 2px;
 }
 
-.DetailedDesc {
+.detailed-desc {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -344,56 +346,56 @@ input {
   transform: translate(-50%, -50%);
 }
 
-.MainIMGResult {
+.main-img-result {
   max-height: 600px;
 }
 
-.DetailedTitle {
+.detailed-title {
   font-family: Poppins;
 }
 
-.Detailedtext {
+.detailed-text {
   text-align: justify;
 }
 
 @media only screen and (max-width: 1550px) {
-  .DetailedDesc {
+  .detailed-desc {
     display: block;
     height: auto;
   }
 
-  .MainIMGResult {
+  .main-img-result {
     display: block;
     width: 100%;
     height: auto;
     text-align: center;
   }
 
-  .BackButton {
+  .back-button {
     display: block;
     position: static;
   }
 
-  .LocationButton {
+  .location-button {
     display: block;
     position: static;
     float: right;
   }
 
-  .HeartButton {
+  .heart-button {
     right: 5%;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  .HeartButton {
+  .heart-button {
     right: 10%;
   }
 }
 
 /* Map Page */
 
-.MapDetails {
+.map-details {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -412,25 +414,25 @@ input {
   transform: translate(-50%, -50%);
 }
 
-.MainIMGMap {
+.main-img-map {
   height: 100%;
 }
 
-.MapTitle {
+.map-title {
   font-family: Poppins;
 }
 
-.Maptext {
+.map-text {
   text-align: justify;
 }
 
 @media only screen and (max-width: 1700px) {
-  .MapDetails {
+  .map-details {
     display: block;
     height: auto;
   }
 
-  .MainIMGMap {
+  .main-img-map {
     display: block;
     width: 100%;
     height: auto;
@@ -440,7 +442,7 @@ input {
 
 /* Favourites */
 
-.FavouritesBox {
+.favourites-box {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -453,15 +455,15 @@ input {
   text-align: justify;
 }
 
-.FavouritesTitle {
+.favourites-title {
   font-family: Poppins;
 }
 
-.FavouritesIMGResult {
+.favourites-img-result {
   max-width: 400px;
 }
 
-.BackButtonFavouritesPage {
+.back-button-favourites-page {
   display: block;
   position: absolute;
   top: 6%;
@@ -470,19 +472,19 @@ input {
   max-width: 35px;
 }
 
-.BackButtonFavouritesPage:hover {
+.back-button-favourites-page:hover {
   background-color: var(--Primary);
   box-shadow: 3px 3px var(--Primary);
   border-radius: 50%;
 }
 
-.BackButtonFavouritesPage:active {
+.back-button-favourites-page:active {
   background-color: var(--Quartenary);
   box-shadow: 3px 3px var(--Quartenary);
   border-radius: 50%;
 }
 
-.DeleteTrashIcon {
+.delete-trash-icon {
   display: block;
   position: absolute;
   top: 4%;
@@ -491,30 +493,30 @@ input {
   max-width: 50px;
 }
 
-.DeleteTrashIcon:hover {
+.delete-trash-icon:hover {
   background-color: var(--Primary);
   border-radius: 50%;
 }
 
-.DeleteTrashIcon:active {
+.delete-trash-icon:active {
   background-color: var(--Quartenary);
   border-radius: 50%;
 }
 
-.Detailedtext {
+.detailed-text {
   padding-top: 80px;
   text-align: justify;
 }
 
 @media only screen and (max-width: 1550px) {
-  .FavouritesBox {
+  .favourites-box {
     display: block;
   }
 }
 
 /* Contact */
 
-.ContactInfoContainer {
+.contact-info-container {
   display: block;
   position: fixed;
   text-align: center;
@@ -524,7 +526,7 @@ input {
   font-family: Poppins;
 }
 
-.ContactTitle {
+.contact-title {
   color: #fff;
   text-align: center;
   padding-top: 75px;
@@ -533,33 +535,33 @@ input {
   font-size: 3.5rem;
 }
 
-.ContactInfo {
+.contact-info {
   padding: 5%;
   line-height: 50px;
   font-family: DM Sans;
   font-size: 2.5rem;
 }
 
-.ContactEmail .ContactPhone {
+.contact-email .contact-phone {
   font-family: DM Sans;
 }
 
-.ContactPhoneImg {
+.contact-phone-img {
   max-height: 22px;
   max-width: 22px;
 }
 
-.ContactEmailImg {
+.contact-email-img {
   max-height: 30px;
   max-width: 30px;
   padding-right: 7px;
 }
 
-.ContactDetails {
+.contact-details {
   padding-top: 65px;
 }
 
-.ContactForm {
+.contact-form {
   display: block;
   position: fixed;
   text-align: center;
@@ -569,7 +571,7 @@ input {
   font-family: DM Sans;
 }
 
-.ContactFormInputs {
+.contact-form-inputs {
   display: block;
   width: 500px;
   padding: 5%;
@@ -580,7 +582,7 @@ input {
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 }
 
-.ContactButton {
+.contact-button {
   background-color: var(--Quartenary);
   border: none;
   padding: 15px;
@@ -590,24 +592,24 @@ input {
   font-family: DM Sans;
 }
 
-.ContactButton:hover {
+.contact-button:hover {
   background-color: var(--Primary);
   color: #fff;
 }
 
 @media only screen and (max-width: 1400px) {
-  .MainContactContainer {
+  .main-contact-container {
     display: block;
     text-align: center;
     position: static;
   }
 
-  .ContactInfoContainer {
+  .contact-info-container {
     display: block;
     position: static;
     padding: 0;
   }
-  .ContactForm {
+  .contact-form {
     display: block;
     position: absolute;
     top: 50%;
@@ -619,14 +621,14 @@ input {
     width: 80%;
   }
 
-  .ContactFormInputs {
+  .contact-form-inputs {
     display: block;
     padding: 15px;
     margin: auto;
     width: 80%;
   }
 
-  .ContactButton {
+  .contact-button {
     display: block;
     padding: 15px;
     margin-right: 10%;
@@ -643,7 +645,7 @@ input {
   padding: 0px;
 }
 
-.footerText {
+.footer-text {
   color: #fff;
   position: absolute;
   padding-top: 15px;
@@ -654,7 +656,7 @@ input {
   color: #fff;
 }
 
-.logOutButton {
+.log-out-button {
   background-color: var(--Primary);
   border: none;
   font-family: Poppins;
@@ -663,7 +665,7 @@ input {
   padding-bottom: 10px;
 }
 
-.logOutButton:hover {
+.log-out-button:hover {
   background-color: var(--Quartenary);
   color: #fff;
 }

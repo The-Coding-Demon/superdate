@@ -38,9 +38,9 @@ export const LoginBox = () => {
     },
   });
   return (
-    <form className="QuestionForm" onSubmit={formik.handleSubmit}>
+    <form className="question-form" onSubmit={formik.handleSubmit}>
       <input
-        className="InputBoxes"
+        className="input-boxes"
         id="email"
         type="email"
         placeholder="Enter Email"
@@ -51,7 +51,7 @@ export const LoginBox = () => {
       ) : null}
 
       <input
-        className="InputBoxes"
+        className="input-boxes"
         id="password"
         type="password"
         placeholder="Enter Password"
@@ -61,15 +61,15 @@ export const LoginBox = () => {
         <div>{formik.errors.lastName}</div>
       ) : null}
 
-      <button className="btn btn-info text-white InputButton" type="submit">
+      <button className="btn btn-info text-white input-button" type="submit">
         Login{" "}
       </button>
-      <p id="signUpPrompt">Don't have an account</p>
+      <p id="sign-up-prompt">Don't have an account</p>
       <button
-        className="btn btn-info text-white InputButton"
+        className="btn btn-info text-white input-button"
         type="submit"
         onClick={() => {
-          Navigate("/SignUp");
+          Navigate("/sign-up");
         }}
       >
         SignUp{" "}

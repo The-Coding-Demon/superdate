@@ -83,8 +83,8 @@ export const InitialResults = () => {
   const getCurrentSelection = JSON.parse(localStorage.getItem("currentSelect"));
   return (
     <div
-      class="d-flex justify-content-evenly flex-wrap gap-5
-     InitialResultsCards"
+      className="d-flex justify-content-evenly flex-wrap gap-5
+     initial-results-cards"
     >
       {getCurrentSelection.map((activitystuff) => (
         <ResultCard activity={activitystuff} />

@@ -3,8 +3,8 @@ import { LoginBox } from "./LoginBox";
 
 export const LoginBackingLayerBoxes = () => {
   return (
-    <div className="BackContainer">
-      <img className="BackingLayer" src={MainLogo}></img>
+    <div className="back-container">
+      <img className="backing-layer" src={MainLogo}></img>
       <p>Your next date is a touch away</p>
       <LoginBox />
     </div>

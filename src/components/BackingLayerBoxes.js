@@ -3,8 +3,8 @@ import { QuestionsBox } from "./QuestionsBox";
 
 export const BackingLayerBoxes = () => {
   return (
-    <div className="BackContainer">
-      <img className="BackingLayer" src={MainLogo}></img>
+    <div className="back-container">
+      <img className="backing-layer" src={MainLogo}></img>
       <p>Your next date is a touch away</p>
       <QuestionsBox />
     </div>

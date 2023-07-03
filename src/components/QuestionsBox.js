@@ -25,7 +25,7 @@ export const QuestionsBox = () => {
       city: Yup.string().required("Required"),
     }),
     onSubmit: (values) => {
-      Object.assign(values, {cameFromForm:true})
+      Object.assign(values, { cameFromForm: true });
       localStorage.setItem(
         "userDatePreferences",
         JSON.stringify({ ...values, expiresAt: Date.now() + 3600 * 60 * 60 })
@@ -34,9 +34,9 @@ export const QuestionsBox = () => {
     },
   });
   return (
-    <form className="QuestionForm" onSubmit={formik.handleSubmit}>
+    <form className="question-form" onSubmit={formik.handleSubmit}>
       <select
-        className="InputBoxes"
+        className="input-boxes"
         id="venueCategoryChoice"
         type="text"
         {...formik.getFieldProps("venueCategoryChoice")}
@@ -52,7 +52,7 @@ export const QuestionsBox = () => {
 
       <select
         id="timeCategoryChoice"
-        className="InputBoxes"
+        className="input-boxes"
         type="text"
         placeholder="Day or Night"
         {...formik.getFieldProps("timeCategoryChoice")}
@@ -66,7 +66,7 @@ export const QuestionsBox = () => {
 
       <select
         id="lengthCategoryChoice"
-        className="InputBoxes"
+        className="input-boxes"
         type="lengthCategoryChoice"
         placeholder="Short or Long"
         {...formik.getFieldProps("lengthCategoryChoice")}
@@ -80,7 +80,7 @@ export const QuestionsBox = () => {
       ) : null}
 
       <input
-        className="InputBoxes"
+        className="input-boxes"
         id="city"
         type="text"
         {...formik.getFieldProps("city")}
@@ -90,7 +90,7 @@ export const QuestionsBox = () => {
         <div>{formik.errors.city}</div>
       ) : null}
 
-      <button type="submit" className="btn btn-info text-white InputButton">
+      <button type="submit" className="btn btn-info text-white input-button">
         Submit
       </button>
     </form>
