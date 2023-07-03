@@ -10,7 +10,7 @@ const LoginCheck = (values) => {
   localStorage.setItem("userCollection", JSON.stringify(theCurrentUsers));
 };
 export const SignUpForm = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -69,7 +69,7 @@ export const SignUpForm = () => {
         className="btn btn-info text-white input-button"
         type="submit"
         onClick={() => {
-          Navigate("/");
+          navigate("/");
         }}
       >
         SignUp{" "}
@@ -79,7 +79,7 @@ export const SignUpForm = () => {
         className="btn btn-info text-white input-button"
         type="submit"
         onClick={() => {
-          Navigate("/login");
+          navigate("/login");
         }}
       >
         Already have an Account{" "}

@@ -6,7 +6,7 @@ export const ResultCard = ({ activity }) => {
     const itemID = [activity.id];
     const asArray = [activity];
     const result = asArray.filter((val) => itemID.includes(val.id));
-    localStorage.setItem("SelectedActivity", JSON.stringify(result));
+    localStorage.setItem("selectedActivity", JSON.stringify(result));
     Navigate("/detailed-results");
   };
   return (

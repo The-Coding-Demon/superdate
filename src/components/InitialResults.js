@@ -9,11 +9,11 @@ export const InitialResults = () => {
 
   const JsonPicker = () => {
     const newArray = [];
-    const Jsoncards = JsonData.data;
+    const jsonCards = JsonData.data;
 
     if (userDatePreferences.venueCategoryChoice == "Indoor") {
-      for (let i = 0; i < Jsoncards.length; i++) {
-        let currentItem = Jsoncards[i];
+      for (let i = 0; i < jsonCards.length; i++) {
+        let currentItem = jsonCards[i];
         let checkindoor = currentItem.indoor;
         if (checkindoor == true) {
           newArray.push(currentItem);
@@ -21,10 +21,10 @@ export const InitialResults = () => {
       }
       console.log(newArray);
     } else {
-      for (let i = 0; i < Jsoncards.length; i++) {
-        let currentItem = Jsoncards[i];
-        let checkindoor = currentItem.indoor;
-        if (checkindoor == false) {
+      for (let i = 0; i < jsonCards.length; i++) {
+        let currentItem = jsonCards[i];
+        let checkIndoor = currentItem.indoor;
+        if (checkIndoor == false) {
           newArray.push(currentItem);
         }
       }
@@ -36,16 +36,16 @@ export const InitialResults = () => {
     if (userDatePreferences.timeCategoryChoice == "Day") {
       for (let i = 0; i < arr.length; i++) {
         let currentItem = arr[i];
-        let checkday = currentItem.day;
-        if (checkday == true) {
+        let checkDay = currentItem.day;
+        if (checkDay == true) {
           newArray.push(currentItem);
         }
       }
     } else {
       for (let i = 0; i < arr.length; i++) {
         let currentItem = arr[i];
-        let checkday = currentItem.day;
-        if (checkday == false) {
+        let checkDay = currentItem.day;
+        if (checkDay == false) {
           newArray.push(currentItem);
         }
       }

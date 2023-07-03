@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 
 export const Footer = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const handleOnClick = () => {
     let userFindings = JSON.parse(localStorage.getItem("userList"));
     userFindings = [];
     localStorage.setItem("userList", JSON.stringify(userFindings));
-    Navigate("./login");
+    navigate("./login");
   };
   return (
     <nav className="navbar fixed-bottom text-center footer">

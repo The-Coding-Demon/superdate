@@ -4,9 +4,9 @@ export const FavouritesCard = (favourites) => {
   const currentItemAsArray = [favourites.favourites];
   const favouritesFindings = favourites.favourites;
   const userFindings = JSON.parse(localStorage.getItem("userList"));
-  let FavouritesItem = userFindings.userFavourites;
+  let favouritesItem = userFindings.userFavourites;
   const handleDelete = () => {
-    const result = FavouritesItem.filter((listItem) =>
+    const result = favouritesItem.filter((listItem) =>
       currentItemAsArray.some((favItem) => listItem.title !== favItem.title)
     );
     userFindings.userFavourites = result;

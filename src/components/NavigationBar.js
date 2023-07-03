@@ -3,7 +3,7 @@ import MainLogo from "./assets/MainLogo.png";
 import HeartLogo from "./assets/HeartLogo.png";
 
 export const NavigationBar = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <nav className="navbar">
       <div className="container-fluid">
@@ -14,14 +14,14 @@ export const NavigationBar = () => {
           height="24"
           className="d-inline-block align-text-top cursor-change"
           onClick={() => {
-            Navigate("/");
+            navigate("/");
           }}
         />
         <button
           className="btn btn-info text-white button-nav-favourites cursor-change"
           type="submit"
           onClick={() => {
-            Navigate("/my-favourites");
+            navigate("/my-favourites");
           }}
         >
           <img
@@ -37,7 +37,7 @@ export const NavigationBar = () => {
           className="btn btn-info text-white button-nav cursor-change"
           type="submit"
           onClick={() => {
-            Navigate("./contact");
+            navigate("./contact");
           }}
         >
           Contact Us

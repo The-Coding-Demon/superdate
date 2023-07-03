@@ -9,13 +9,13 @@ export const FullDescription = () => {
   const [viewmap, altermap] = useState("");
   const [mapresponse, mapchange] = useState("");
   const [data, setData] = useState(null);
-  const Navigate = useNavigate();
-  const SelectedActivity = JSON.parse(localStorage.getItem("SelectedActivity"));
-  const SelectedActivityItem = SelectedActivity[0];
+  const navigate = useNavigate();
+  const selectedActivity = JSON.parse(localStorage.getItem("selectedActivity"));
+  const selectedActivityItem = selectedActivity[0];
   const handleOnClick = () => {
     const userFindings = JSON.parse(localStorage.getItem("userList"));
-    const ItemValue = userFindings.userFavourites;
-    ItemValue.push(SelectedActivityItem);
+    const itemValue = userFindings.userFavourites;
+    itemValue.push(selectedActivityItem);
     localStorage.setItem("userList", JSON.stringify(userFindings));
     const theCurrentUsers =
       JSON.parse(localStorage.getItem("userCollection")) || [];
@@ -25,11 +25,11 @@ export const FullDescription = () => {
     );
     console.log(result);
     result.push(userFindings);
-    console.log(SelectedActivityItem);
+    console.log(selectedActivityItem);
     localStorage.setItem("userCollection", JSON.stringify(result));
   };
   const handleSubmit = () => {
-    altermap(SelectedActivityItem.title);
+    altermap(selectedActivityItem.title);
   };
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export const FullDescription = () => {
             throw new Error();
           } else {
             mapchange(data);
-            Navigate("/map-directions", { state: { mystuff: data } });
+            navigate("/map-directions", { state: { mystuff: data } });
           }
         } catch {
           console.log();
@@ -58,15 +58,15 @@ export const FullDescription = () => {
         src={BackArrow}
         className="back-button cursor-change"
         onClick={() => {
-          Navigate("/results");
+          navigate("/results");
         }}
       ></img>
       <div className="p-3">
-        <img src={SelectedActivityItem.image} className="main-img-result"></img>
+        <img src={selectedActivityItem.image} className="main-img-result"></img>
       </div>
       <div className="p-3">
-        <h2>{SelectedActivityItem.title}</h2>
-        <p className="detailed-text">{SelectedActivityItem.description}</p>
+        <h2>{selectedActivityItem.title}</h2>
+        <p className="detailed-text">{selectedActivityItem.description}</p>
       </div>
       <img
         src={HeartLogo}

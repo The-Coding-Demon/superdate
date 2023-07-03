@@ -4,14 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 export const MapDetails = () => {
   console.log("Check 2");
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div class="p-2 map-details">
       <img
         src={BackArrow}
         className="back-button cursor-change"
         onClick={() => {
-          Navigate("/detailed-results");
+          navigate("/detailed-results");
         }}
       ></img>
       <div className="p-3">

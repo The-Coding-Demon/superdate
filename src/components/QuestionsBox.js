@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
 export const QuestionsBox = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   let userDatePreferences = JSON.parse(
     localStorage.getItem("userDatePreferences")
   );
@@ -30,7 +30,7 @@ export const QuestionsBox = () => {
         "userDatePreferences",
         JSON.stringify({ ...values, expiresAt: Date.now() + 3600 * 60 * 60 })
       );
-      Navigate("./Results");
+      navigate("./results");
     },
   });
   return (

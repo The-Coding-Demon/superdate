@@ -21,7 +21,7 @@ const LoginCheck = (values) => {
   }
 };
 export const LoginBox = () => {
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -69,7 +69,7 @@ export const LoginBox = () => {
         className="btn btn-info text-white input-button"
         type="submit"
         onClick={() => {
-          Navigate("/sign-up");
+          navigate("/sign-up");
         }}
       >
         SignUp{" "}
