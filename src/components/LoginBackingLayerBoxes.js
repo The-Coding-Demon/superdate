@@ -1,12 +1,12 @@
 import MainLogo from "./assets/MainLogo.png";
 import { LoginBox } from "./LoginBox";
 
-export const LoginBackingLayerBoxes = () => {
+export const LoginBackingLayerBoxes = ({ stateProps }) => {
   return (
     <div className="back-container">
       <img className="backing-layer" src={MainLogo}></img>
       <p>Your next date is a touch away</p>
-      <LoginBox />
+      <LoginBox stateProps={stateProps} />
     </div>
   );
 };

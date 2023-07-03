@@ -1,12 +1,11 @@
 import JsonData from "./Dates.json";
 import { ResultCard } from "./ResultCard";
 
-export const InitialResults = () => {
-  console.log(JsonData);
+export const InitialResults = ({ stateProps }) => {
   const userDatePreferences = JSON.parse(
     localStorage.getItem("userDatePreferences")
   );
-
+  const { activityList, setActivityList } = stateProps;
   const JsonPicker = () => {
     const newArray = [];
     const jsonCards = JsonData.data;
@@ -54,7 +53,7 @@ export const InitialResults = () => {
   };
   const randomSelection = (arr) => {
     const newRandomList = createNewList(arr);
-    localStorage.setItem("currentSelect", JSON.stringify(newRandomList));
+    setActivityList(newRandomList);
   };
   const createNewList = (arr) => {
     const finalSelectionArray = [];
@@ -80,14 +79,13 @@ export const InitialResults = () => {
     }
   };
   refreshCheck();
-  const getCurrentSelection = JSON.parse(localStorage.getItem("currentSelect"));
   return (
     <div
       className="d-flex justify-content-evenly flex-wrap gap-5
      initial-results-cards"
     >
-      {getCurrentSelection.map((activitystuff) => (
-        <ResultCard activity={activitystuff} />
+      {activityList.map((activitystuff) => (
+        <ResultCard activity={activitystuff} stateProps={stateProps} />
       ))}
     </div>
   );

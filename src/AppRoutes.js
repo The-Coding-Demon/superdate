@@ -9,16 +9,25 @@ import { MapDirections } from "./pages/MapDirections";
 import { Contact } from "./pages/Contact";
 import { SignUp } from "./pages/SignUp";
 
-export const AppRoutes = () => {
+export const AppRoutes = ({ stateProps }) => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/sign-up" element={<SignUp />} />
-      <Route path="/results" element={<Results />} />
-      <Route path="/detailed-results" element={<DetailedResults />} />
-      <Route path="/my-favourites" element={<MyFavourites />} />
-      <Route path="/map-directions" element={<MapDirections />} />
+      <Route path="/" element={<Home stateProps={stateProps} />} />
+      <Route path="/login" element={<Login stateProps={stateProps} />} />
+      <Route path="/sign-up" element={<SignUp stateProps={stateProps} />} />
+      <Route path="/results" element={<Results stateProps={stateProps} />} />
+      <Route
+        path="/detailed-results"
+        element={<DetailedResults stateProps={stateProps} />}
+      />
+      <Route
+        path="/my-favourites"
+        element={<MyFavourites stateProps={stateProps} />}
+      />
+      <Route
+        path="/map-directions"
+        element={<MapDirections stateProps={stateProps} />}
+      />
       <Route path="/contact" element={<Contact />} />
     </Routes>
   );

@@ -1,9 +1,9 @@
 import { FavouritesContainer } from "../components/FavouritesContainer";
 
-export const MyFavourites = () => {
+export const MyFavourites = ({ stateProps }) => {
   return (
     <div>
-      <FavouritesContainer />
+      <FavouritesContainer stateProps={stateProps} />
     </div>
   );
 };

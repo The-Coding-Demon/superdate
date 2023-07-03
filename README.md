@@ -16,7 +16,7 @@ git clone https://github.com/The-Coding-Demon/superdate
 
 cd superdate
 
-npm i yup formik uuid
+npm i yup formik emailjs
 
 ```
 

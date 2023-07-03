@@ -1,9 +1,9 @@
 import { SignUpFormBackingContainer } from "../components/SignUpFormBackingContainer";
 
-export const SignUp = () => {
+export const SignUp = ({ stateProps }) => {
   return (
     <div>
-      <SignUpFormBackingContainer />
+      <SignUpFormBackingContainer stateProps={stateProps} />
     </div>
   );
 };

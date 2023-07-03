@@ -1,16 +1,15 @@
 import { BackingLayerBoxes } from "../components/BackingLayerBoxes";
+import { useNavigate } from "react-router-dom";
 
-const CheckLogin = () => {
-  const GetLogin = JSON.parse(localStorage.getItem("userList")) || [];
-  if (GetLogin.length == 0) {
-    window.location.href = "/Login";
+export const Home = ({ stateProps }) => {
+  const navigate = useNavigate();
+  const { currentUser } = stateProps;
+  if (currentUser.length === 0) {
+    navigate("./login");
   }
-};
-export const Home = () => {
-  CheckLogin();
   return (
     <div>
-      <BackingLayerBoxes />
+      <BackingLayerBoxes stateProps={stateProps} />
     </div>
   );
 };

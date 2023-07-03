@@ -1,30 +1,31 @@
 import DeleteTrash from "./assets/DeleteTrash.png";
+import { useNavigate } from "react-router-dom";
 
-export const FavouritesCard = (favourites) => {
-  const currentItemAsArray = [favourites.favourites];
-  const favouritesFindings = favourites.favourites;
-  const userFindings = JSON.parse(localStorage.getItem("userList"));
-  let favouritesItem = userFindings.userFavourites;
+export const FavouritesCard = ({ stateProps, favourites }) => {
+  const navigate = useNavigate();
+  const { currentUser, changeCurrentUser } = stateProps;
+  let favList = currentUser.userFavourites;
+
   const handleDelete = () => {
-    const result = favouritesItem.filter((listItem) =>
-      currentItemAsArray.some((favItem) => listItem.title !== favItem.title)
+    const result = favList.filter((listItem) =>
+      [favourites].some((favItem) => listItem.title !== favItem.title)
     );
-    userFindings.userFavourites = result;
-    localStorage.setItem("userList", JSON.stringify(userFindings));
-    window.location.reload();
+    currentUser.userFavourites = result;
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    navigate("/my-favourites");
   };
   return (
     <div>
       <div className="text-white favourites-box">
         <div className="p-3">
           <img
-            src={favouritesFindings.image}
+            src={favourites.image}
             className="main-img-result favourites-img-result"
           ></img>
         </div>
         <div>
-          <h2 className="detailed-text">{favouritesFindings.title}</h2>
-          <p>{favouritesFindings.description}</p>
+          <h2 className="detailed-text">{favourites.title}</h2>
+          <p>{favourites.description}</p>
         </div>
         <div>
           <img

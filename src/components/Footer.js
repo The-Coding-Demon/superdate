@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-export const Footer = () => {
+export const Footer = ({ stateProps }) => {
   const navigate = useNavigate();
+  const { changeCurrentUser } = stateProps;
   const handleOnClick = () => {
-    let userFindings = JSON.parse(localStorage.getItem("userList"));
-    userFindings = [];
-    localStorage.setItem("userList", JSON.stringify(userFindings));
+    changeCurrentUser("");
+    localStorage.removeItem("currentUser");
     navigate("./login");
   };
   return (

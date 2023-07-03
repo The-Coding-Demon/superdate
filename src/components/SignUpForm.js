@@ -2,15 +2,18 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
-const LoginCheck = (values) => {
-  const theCurrentUsers =
-    JSON.parse(localStorage.getItem("userCollection")) || [];
-  Object.assign(values, { userFavourites: [] });
-  theCurrentUsers.push(values);
-  localStorage.setItem("userCollection", JSON.stringify(theCurrentUsers));
-};
-export const SignUpForm = () => {
+export const SignUpForm = ({ stateProps }) => {
+  const { changeCurrentUser } = stateProps;
   const navigate = useNavigate();
+  const checkCredentials = (values) => {
+    const theCurrentUsers =
+      JSON.parse(localStorage.getItem("userCollection")) || [];
+    values.userFavourites = [];
+    theCurrentUsers.push(values);
+    localStorage.setItem("userCollection", JSON.stringify(theCurrentUsers));
+    localStorage.setItem("currentUser", JSON.stringify(values));
+    changeCurrentUser(values);
+  };
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -27,11 +30,11 @@ export const SignUpForm = () => {
       email: Yup.string().email("Invalid email address").required("Required"),
     }),
     onSubmit: (values) => {
-      LoginCheck(values);
+      checkCredentials(values);
     },
   });
   return (
-    <form className="QuestionForm" onSubmit={formik.handleSubmit}>
+    <form className="question-form" onSubmit={formik.handleSubmit}>
       <input
         className="input-boxes"
         id="firstName"

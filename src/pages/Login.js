@@ -1,8 +1,8 @@
 import { LoginBackingLayerBoxes } from "../components/LoginBackingLayerBoxes";
-export const Login = () => {
+export const Login = ({ stateProps }) => {
   return (
     <div>
-      <LoginBackingLayerBoxes />
+      <LoginBackingLayerBoxes stateProps={stateProps} />
     </div>
   );
 };

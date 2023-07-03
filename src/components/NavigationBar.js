@@ -2,7 +2,8 @@ import { useNavigate } from "react-router-dom";
 import MainLogo from "./assets/MainLogo.png";
 import HeartLogo from "./assets/HeartLogo.png";
 
-export const NavigationBar = () => {
+export const NavigationBar = ({ stateProps }) => {
+  const { currentUser } = stateProps;
   const navigate = useNavigate();
   return (
     <nav className="navbar">
@@ -17,22 +18,26 @@ export const NavigationBar = () => {
             navigate("/");
           }}
         />
-        <button
-          className="btn btn-info text-white button-nav-favourites cursor-change"
-          type="submit"
-          onClick={() => {
-            navigate("/my-favourites");
-          }}
-        >
-          <img
-            src={HeartLogo}
-            alt="HeartLogo"
-            width="24"
-            height="24"
-            className="heart-logo cursor-change"
-          />
-          Favourites
-        </button>
+
+        {!!currentUser && (
+          <button
+            className="btn btn-info text-white button-nav-favourites cursor-change"
+            type="submit"
+            onClick={() => {
+              navigate("/my-favourites");
+            }}
+          >
+            <img
+              src={HeartLogo}
+              alt="HeartLogo"
+              width="24"
+              height="24"
+              className="heart-logo cursor-change"
+            />
+            Favourites
+          </button>
+        )}
+
         <button
           className="btn btn-info text-white button-nav cursor-change"
           type="submit"

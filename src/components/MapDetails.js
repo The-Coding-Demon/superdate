@@ -2,7 +2,7 @@ import Map from "./assets/MapImage.png";
 import BackArrow from "./assets/circle-arrow-left-solid.png";
 import { useNavigate } from "react-router-dom";
 
-export const MapDetails = () => {
+export const MapDetails = ({ stateProps }) => {
   console.log("Check 2");
   const navigate = useNavigate();
   return (

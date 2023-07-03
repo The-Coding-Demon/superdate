@@ -1,9 +1,9 @@
 import { FullDescription } from "../components/FullDescription";
 
-export const DetailedResults = () => {
+export const DetailedResults = ({ stateProps }) => {
   return (
     <div>
-      <FullDescription />
+      <FullDescription stateProps={stateProps} />
     </div>
   );
 };

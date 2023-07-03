@@ -2,26 +2,28 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
-const LoginCheck = (values) => {
-  const theCurrentUsers =
-    JSON.parse(localStorage.getItem("userCollection")) || [];
-  const checkLogin = [values];
-  const result = theCurrentUsers.filter((bigList) =>
-    checkLogin.some(
-      (singleUser) =>
-        bigList.email === singleUser.email &&
-        bigList.password === singleUser.password
-    )
-  );
-  if (result.length == 0) {
-    console.log("No user exists");
-  } else {
-    localStorage.setItem("userList", JSON.stringify(result[0]));
-    window.location.href = "/";
-  }
-};
-export const LoginBox = () => {
+export const LoginBox = ({ stateProps }) => {
+  const { changeCurrentUser } = stateProps;
   const navigate = useNavigate();
+  const checkCredentials = (values) => {
+    const theCurrentUsers =
+      JSON.parse(localStorage.getItem("userCollection")) || [];
+    const checkLogin = [values];
+    const result = theCurrentUsers.filter((bigList) =>
+      checkLogin.some(
+        (singleUser) =>
+          bigList.email === singleUser.email &&
+          bigList.password === singleUser.password
+      )
+    );
+    if (result.length == 0) {
+      console.log("No user exists");
+    } else {
+      changeCurrentUser(result[0]);
+      localStorage.setItem("currentUser", JSON.stringify(result[0]));
+      navigate("/");
+    }
+  };
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -34,7 +36,7 @@ export const LoginBox = () => {
         .required("Required"),
     }),
     onSubmit: (values) => {
-      LoginCheck(values);
+      checkCredentials(values);
     },
   });
   return (
