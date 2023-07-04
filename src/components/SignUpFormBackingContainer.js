@@ -5,7 +5,7 @@ export const SignUpFormBackingContainer = ({ stateProps }) => {
   return (
     <div className="back-container">
       <img className="backing-layer" src={MainLogo}></img>
-      <p>Your next date is a touch away</p>
+      <p id="slogan">Your next date is a touch away</p>
       <SignUpForm stateProps={stateProps} />
     </div>
   );

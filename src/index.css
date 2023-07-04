@@ -622,9 +622,10 @@ input {
   .contact-info-container {
     display: block;
     position: static;
+    text-align: center;
     padding: 0;
-    margin: 0%;
   }
+
   .contact-form {
     display: block;
     position: absolute;
