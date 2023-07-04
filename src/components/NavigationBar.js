@@ -6,6 +6,18 @@ export const NavigationBar = ({ stateProps }) => {
   const { currentUser } = stateProps;
   const navigate = useNavigate();
 
+  const goToHomePage = () => {
+    navigate("/");
+  };
+
+  const goToMyFavouritesPage = () => {
+    navigate("/my-favourites");
+  };
+
+  const goToContactPage = () => {
+    navigate("/contact");
+  };
+
   return (
     <nav className="navbar">
       <div className="container-fluid">
@@ -15,18 +27,14 @@ export const NavigationBar = ({ stateProps }) => {
           width="150"
           height="24"
           className="d-inline-block align-text-top cursor-change"
-          onClick={() => {
-            navigate("/");
-          }}
+          onClick={goToHomePage}
         />
 
         {!!currentUser && (
           <button
             className="btn btn-info text-white button-nav-favourites cursor-change"
             type="submit"
-            onClick={() => {
-              navigate("/my-favourites");
-            }}
+            onClick={goToMyFavouritesPage}
           >
             <img
               src={HeartLogo}
@@ -42,9 +50,7 @@ export const NavigationBar = ({ stateProps }) => {
         <button
           className="btn btn-info text-white button-nav cursor-change"
           type="submit"
-          onClick={() => {
-            navigate("./contact");
-          }}
+          onClick={goToContactPage}
         >
           Contact Us
         </button>

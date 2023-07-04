@@ -36,6 +36,14 @@ export const SignUpForm = ({ stateProps }) => {
     },
   });
 
+  const goToHomePage = () => {
+    navigate("/");
+  };
+
+  const goToLoginPage = () => {
+    navigate("/login");
+  };
+
   return (
     <form className="question-form" onSubmit={formik.handleSubmit}>
       <input
@@ -74,9 +82,7 @@ export const SignUpForm = ({ stateProps }) => {
       <button
         className="btn btn-info text-white input-button"
         type="submit"
-        onClick={() => {
-          navigate("/");
-        }}
+        onClick={goToHomePage}
       >
         SignUp{" "}
       </button>
@@ -84,9 +90,7 @@ export const SignUpForm = ({ stateProps }) => {
         id="account-button"
         className="btn btn-info text-white input-button"
         type="submit"
-        onClick={() => {
-          navigate("/login");
-        }}
+        onClick={goToLoginPage}
       >
         Already have an Account{" "}
       </button>

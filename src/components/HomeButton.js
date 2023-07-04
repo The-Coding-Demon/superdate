@@ -3,12 +3,14 @@ import MainLogo from "./assets/MainLogo.png";
 export const HomeButton = () => {
   const navigate = useNavigate();
 
+  const goToHomePage = () => {
+    navigate("/");
+  };
+
   return (
     <div className="container-fluid home-button">
       <img
-        onClick={() => {
-          navigate("/");
-        }}
+        onClick={goToHomePage}
         src={MainLogo}
         alt="Logo"
         width="250"

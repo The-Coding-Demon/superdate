@@ -26,6 +26,10 @@ export const LoginBox = ({ stateProps }) => {
     }
   };
 
+  const goToSignUpPage = () => {
+    navigate("/sign-up");
+  };
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -41,7 +45,7 @@ export const LoginBox = ({ stateProps }) => {
       checkCredentials(values);
     },
   });
-  
+
   return (
     <form className="question-form" onSubmit={formik.handleSubmit}>
       <input
@@ -73,9 +77,7 @@ export const LoginBox = ({ stateProps }) => {
       <button
         className="btn btn-info text-white input-button"
         type="submit"
-        onClick={() => {
-          navigate("/sign-up");
-        }}
+        onClick={goToSignUpPage}
       >
         SignUp{" "}
       </button>

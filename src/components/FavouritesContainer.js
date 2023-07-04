@@ -7,6 +7,10 @@ export const FavouritesContainer = ({ stateProps }) => {
   const { currentUser } = stateProps;
   const favouritesItem = currentUser.userFavourites;
 
+  const goBackAPage = () => {
+    navigate("/results");
+  };
+
   return (
     <div>
       <h1 className="favourites-title text-white text-center pt-4">
@@ -15,9 +19,7 @@ export const FavouritesContainer = ({ stateProps }) => {
       <img
         src={BackArrow}
         className="back-button-favourites-page cursor-change"
-        onClick={() => {
-          navigate("/results");
-        }}
+        onClick={goBackAPage}
       ></img>
       {favouritesItem.length === 0 && <h1>no favourites</h1>}
 

@@ -6,14 +6,16 @@ export const MapDetails = ({ stateProps }) => {
   console.log("Check 2");
   const navigate = useNavigate();
 
+  const goToDetailedResultsPage = () => {
+    navigate("/detailed-results");
+  };
+
   return (
     <div class="p-2 map-details">
       <img
         src={BackArrow}
         className="back-button cursor-change"
-        onClick={() => {
-          navigate("/detailed-results");
-        }}
+        onClick={goToDetailedResultsPage}
       ></img>
       <div className="p-3">
         <img src={Map} className="main-img-map"></img>

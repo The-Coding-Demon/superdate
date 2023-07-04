@@ -24,6 +24,10 @@ export const FullDescription = ({ stateProps }) => {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
   };
 
+  const goBackAPage = () => {
+    navigate("/results");
+  };
+
   const handleSubmit = () => {
     // altermap(selectedActivityItem.title);
   };
@@ -53,9 +57,7 @@ export const FullDescription = ({ stateProps }) => {
       <img
         src={BackArrow}
         className="back-button cursor-change"
-        onClick={() => {
-          navigate("/results");
-        }}
+        onClick={goBackAPage}
       ></img>
       <div className="p-3">
         <img src={currentActivity.image} className="main-img-result"></img>
