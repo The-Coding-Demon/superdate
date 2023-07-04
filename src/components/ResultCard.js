@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 export const ResultCard = ({ activity, stateProps }) => {
   const { setCurrentActivity } = stateProps;
   const navigate = useNavigate();
+
   const handleOnClick = () => {
     const itemID = [activity.id];
     const asArray = [activity];
@@ -10,6 +11,7 @@ export const ResultCard = ({ activity, stateProps }) => {
     setCurrentActivity(result[0]);
     navigate("/detailed-results");
   };
+
   return (
     <div className="card cursor-change" onClick={handleOnClick}>
       <img

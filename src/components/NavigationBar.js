@@ -5,6 +5,7 @@ import HeartLogo from "./assets/HeartLogo.png";
 export const NavigationBar = ({ stateProps }) => {
   const { currentUser } = stateProps;
   const navigate = useNavigate();
+
   return (
     <nav className="navbar">
       <div className="container-fluid">

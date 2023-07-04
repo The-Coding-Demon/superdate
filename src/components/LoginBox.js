@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const LoginBox = ({ stateProps }) => {
   const { changeCurrentUser } = stateProps;
   const navigate = useNavigate();
+
   const checkCredentials = (values) => {
     const theCurrentUsers =
       JSON.parse(localStorage.getItem("userCollection")) || [];
@@ -24,6 +25,7 @@ export const LoginBox = ({ stateProps }) => {
       navigate("/");
     }
   };
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -39,6 +41,7 @@ export const LoginBox = ({ stateProps }) => {
       checkCredentials(values);
     },
   });
+  
   return (
     <form className="question-form" onSubmit={formik.handleSubmit}>
       <input

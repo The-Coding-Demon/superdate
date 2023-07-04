@@ -10,6 +10,7 @@ export const QuestionsBox = ({ stateProps }) => {
   if (userDatePreferences && userDatePreferences.expiresAt < Date.now()) {
     userDatePreferences = {};
   }
+
   const formik = useFormik({
     initialValues: {
       venueCategoryChoice: userDatePreferences?.venueCategoryChoice || "Indoor",
@@ -33,6 +34,7 @@ export const QuestionsBox = ({ stateProps }) => {
       navigate("./results");
     },
   });
+
   return (
     <form className="question-form" onSubmit={formik.handleSubmit}>
       <select

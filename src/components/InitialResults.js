@@ -5,6 +5,7 @@ export const InitialResults = ({ stateProps }) => {
   const userDatePreferences = JSON.parse(
     localStorage.getItem("userDatePreferences")
   );
+
   const { activityList, setActivityList } = stateProps;
   const JsonPicker = () => {
     const newArray = [];
@@ -30,6 +31,7 @@ export const InitialResults = ({ stateProps }) => {
     }
     secondFilter(newArray);
   };
+
   const secondFilter = (arr) => {
     const newArray = [];
     if (userDatePreferences.timeCategoryChoice == "Day") {
@@ -51,10 +53,12 @@ export const InitialResults = ({ stateProps }) => {
     }
     randomSelection(newArray);
   };
+
   const randomSelection = (arr) => {
     const newRandomList = createNewList(arr);
     setActivityList(newRandomList);
   };
+
   const createNewList = (arr) => {
     const finalSelectionArray = [];
     const numberHolder = [];
@@ -68,6 +72,7 @@ export const InitialResults = ({ stateProps }) => {
     }
     return finalSelectionArray;
   };
+
   const refreshCheck = () => {
     if (userDatePreferences.cameFromForm == true) {
       JsonPicker();
@@ -79,6 +84,7 @@ export const InitialResults = ({ stateProps }) => {
     }
   };
   refreshCheck();
+
   return (
     <div
       className="d-flex justify-content-evenly flex-wrap gap-5

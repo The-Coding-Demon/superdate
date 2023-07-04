@@ -13,7 +13,6 @@ export const FullDescription = ({ stateProps }) => {
 
   const handleOnClick = () => {
     userFav.push(currentActivity);
-    // localStorage.setItem("currentUser", JSON.stringify(currentUser));
     const theCurrentUsers =
       JSON.parse(localStorage.getItem("userCollection")) || [];
     const makeArray = [currentUser];
@@ -24,6 +23,7 @@ export const FullDescription = ({ stateProps }) => {
     localStorage.setItem("userCollection", JSON.stringify(result));
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
   };
+
   const handleSubmit = () => {
     // altermap(selectedActivityItem.title);
   };

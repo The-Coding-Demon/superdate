@@ -6,6 +6,7 @@ export const FavouritesContainer = ({ stateProps }) => {
   const navigate = useNavigate();
   const { currentUser } = stateProps;
   const favouritesItem = currentUser.userFavourites;
+
   return (
     <div>
       <h1 className="favourites-title text-white text-center pt-4">

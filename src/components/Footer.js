@@ -3,11 +3,13 @@ import { useNavigate } from "react-router-dom";
 export const Footer = ({ stateProps }) => {
   const navigate = useNavigate();
   const { changeCurrentUser } = stateProps;
+
   const handleOnClick = () => {
     changeCurrentUser("");
     localStorage.removeItem("currentUser");
     navigate("./login");
   };
+
   return (
     <nav className="navbar fixed-bottom text-center footer">
       <p className="footer-text">©SuperDate</p>

@@ -14,6 +14,7 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
     navigate("/my-favourites");
   };
+
   return (
     <div>
       <div className="text-white favourites-box">

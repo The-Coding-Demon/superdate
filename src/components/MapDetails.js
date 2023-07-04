@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const MapDetails = ({ stateProps }) => {
   console.log("Check 2");
   const navigate = useNavigate();
+
   return (
     <div class="p-2 map-details">
       <img
