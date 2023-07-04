@@ -558,7 +558,8 @@ input {
 }
 
 .contact-details {
-  padding-top: 65px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form {
@@ -566,7 +567,7 @@ input {
   position: fixed;
   text-align: center;
   padding: 1em;
-  top: 40%;
+  top: 36%;
   right: 12%;
   font-family: DM Sans;
 }
@@ -608,11 +609,12 @@ input {
     display: block;
     position: static;
     padding: 0;
+    margin: 0%;
   }
   .contact-form {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0;
@@ -626,6 +628,7 @@ input {
     padding: 15px;
     margin: auto;
     width: 80%;
+    margin-bottom: 5px;
   }
 
   .contact-button {

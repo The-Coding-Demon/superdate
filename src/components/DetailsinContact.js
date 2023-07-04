@@ -13,7 +13,7 @@ export const DetailsinContact = () => {
           <div className="contact-email">
             <p className="contact-email">
               <img className="contact-email-img" src={EnvelopeSolid}></img>
-              superdate@gmail.com
+              superdate0@gmail.com
             </p>
           </div>
 
