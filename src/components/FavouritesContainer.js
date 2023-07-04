@@ -21,7 +21,9 @@ export const FavouritesContainer = ({ stateProps }) => {
         className="back-button-favourites-page cursor-change"
         onClick={goBackAPage}
       ></img>
-      {favouritesItem.length === 0 && <h1>no favourites</h1>}
+      {favouritesItem.length === 0 && (
+        <h1 className="empty-favourites">no favourites</h1>
+      )}
 
       {favouritesItem.map((activityitem) => (
         <FavouritesCard favourites={activityitem} stateProps={stateProps} />

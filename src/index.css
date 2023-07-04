@@ -111,9 +111,13 @@ video {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
   .back-container {
-    min-width: 70%;
+    min-width: 80%;
+  }
+
+  #slogan {
+    font-size: 18px;
   }
 }
 
@@ -202,6 +206,9 @@ input {
 
 #city {
   color: gray;
+}
+
+@media only screen and (max-width: 1300px) {
 }
 
 /* Login Page */
@@ -461,6 +468,13 @@ input {
 
 .favourites-img-result {
   max-width: 400px;
+}
+
+.empty-favourites {
+  padding-left: 2em;
+  padding-top: 1em;
+  color: #fff;
+  font-family: Prompt;
 }
 
 .back-button-favourites-page {
