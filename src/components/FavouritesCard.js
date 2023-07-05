@@ -65,7 +65,7 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
               ;
             </label>;
           })}
-          <p>Your rating is {rating}</p>
+          {/* <p>Your rating is {rating}</p> */}
         </div>
         <div className="date-picker">
           <DatePicker

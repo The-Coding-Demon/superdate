@@ -538,7 +538,8 @@ input[type="radio"] {
 .date-picker {
   display: block;
   position: absolute;
-  right: 90%;
+  top: 7%;
+  right: 6%;
 }
 
 /* Switch Button Favourites Page */
