@@ -75,7 +75,7 @@ export const LoginBox = ({ stateProps }) => {
       </button>
       <p id="sign-up-prompt">Don't have an account</p>
       <button
-        className="btn btn-info text-white input-button"
+        className="btn text-white input-button"
         type="submit"
         onClick={goToSignUpPage}
       >

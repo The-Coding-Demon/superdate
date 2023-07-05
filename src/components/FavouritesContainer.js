@@ -22,7 +22,7 @@ export const FavouritesContainer = ({ stateProps }) => {
         onClick={goBackAPage}
       ></img>
       {favouritesItem.length === 0 && (
-        <h1 className="empty-favourites">no favourites</h1>
+        <h1 className="empty-favourites">no favourites yet</h1>
       )}
 
       {favouritesItem.map((activityitem) => (

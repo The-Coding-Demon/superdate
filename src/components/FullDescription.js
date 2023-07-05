@@ -16,6 +16,7 @@ export const FullDescription = ({ stateProps }) => {
   };
 
   const handleOnClick = () => {
+    currentActivity.starRating = null
     userFav.push(currentActivity);
     const theCurrentUsers =
       JSON.parse(localStorage.getItem("userCollection")) || [];

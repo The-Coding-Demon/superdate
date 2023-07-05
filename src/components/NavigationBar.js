@@ -32,7 +32,7 @@ export const NavigationBar = ({ stateProps }) => {
 
         {!!currentUser && (
           <button
-            className="btn btn-info text-white button-nav-favourites cursor-change"
+            className="btn text-white button-nav-favourites cursor-change"
             type="submit"
             onClick={goToMyFavouritesPage}
           >

@@ -6,7 +6,6 @@ export const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    e.target.reset();
 
     emailjs
       .sendForm(
@@ -18,11 +17,13 @@ export const ContactForm = () => {
       .then(
         (result) => {
           console.log(result.text);
+          alert("We have successfully recieved your email!");
         },
         (error) => {
           console.log(error.text);
         }
       );
+    e.target.reset();
   };
 
   return (
@@ -30,7 +31,7 @@ export const ContactForm = () => {
       <input
         className="contact-form-inputs"
         type="text"
-        placeholder="FullName"
+        placeholder="Full Name"
         name="user_name"
         required
       />
@@ -51,7 +52,7 @@ export const ContactForm = () => {
       <button
         type="submit"
         value="Send"
-        className="btn btn-info text-white contact-button"
+        className="btn text-white contact-button"
       >
         Send
       </button>

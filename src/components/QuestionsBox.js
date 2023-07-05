@@ -92,7 +92,7 @@ export const QuestionsBox = ({ stateProps }) => {
         <div>{formik.errors.city}</div>
       ) : null}
 
-      <button type="submit" className="btn btn-info text-white input-button">
+      <button type="submit" className="btn text-white input-button">
         Submit
       </button>
     </form>

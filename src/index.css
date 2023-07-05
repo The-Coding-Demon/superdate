@@ -208,9 +208,6 @@ input {
   color: gray;
 }
 
-@media only screen and (max-width: 1300px) {
-}
-
 /* Login Page */
 
 #sign-up-prompt {
@@ -477,9 +474,9 @@ input {
 .empty-favourites {
   padding-left: 2em;
   padding-top: 1em;
-  color: #fff;
+  color: #822659;
   font-family: Prompt;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .back-button-favourites-page {
@@ -506,7 +503,7 @@ input {
 .delete-trash-icon {
   display: block;
   position: absolute;
-  top: 4%;
+  top: 5%;
   right: 1%;
   max-height: 50px;
   max-width: 50px;
@@ -535,21 +532,29 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-.date-picker {
-  display: block;
-  position: absolute;
-  top: 7%;
-  right: 6%;
+.ratings {
+  display: flex;
+  justify-content: end;
+  flex-wrap: nowrap;
+  margin-right: auto;
+  z-index: -10;
+}
+
+.rating-tag {
+  white-space: nowrap;
+  margin-left: 10px;
+  margin-top: 14px;
+}
+
+.extras-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: auto;
+  padding-left: 10px;
+  z-index: -1;
 }
 
 /* Switch Button Favourites Page */
-
-.container {
-  display: flex;
-  position: absolute;
-  left: 92%;
-  top: 86%;
-}
 
 h5 {
   font-family: Poppins;
@@ -615,15 +620,38 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1750px) {
   .favourites-box {
     display: block;
   }
-  .container {
+
+  .date-guest {
+    display: block;
+    position: relative;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .extras-container {
+    margin-left: 0;
+  }
+
+  .ratings {
+    display: block;
+  }
+
+  h5 {
+    padding-right: 5px;
+    padding-top: 5px;
+  }
+
+  .delete-trash-icon {
     display: block;
     position: absolute;
-    margin-right: auto;
-    padding: 0;
+    top: 2%;
+    right: 2%;
+    max-height: 50px;
+    max-width: 50px;
   }
 }
 
@@ -728,7 +756,7 @@ input:checked + .slider:before {
   .contact-form {
     display: block;
     position: absolute;
-    top: 52%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0;
