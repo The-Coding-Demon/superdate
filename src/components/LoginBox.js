@@ -56,7 +56,7 @@ export const LoginBox = ({ stateProps }) => {
         {...formik.getFieldProps("email")}
       />
       {formik.touched.email && formik.errors.email ? (
-        <div>{formik.errors.email}</div>
+        <div className="error-validation">{formik.errors.email}</div>
       ) : null}
 
       <input
@@ -66,8 +66,8 @@ export const LoginBox = ({ stateProps }) => {
         placeholder="Enter Password"
         {...formik.getFieldProps("password")}
       />
-      {formik.touched.lastName && formik.errors.lastName ? (
-        <div>{formik.errors.lastName}</div>
+      {formik.touched.password && formik.errors.password ? (
+        <div className="error-validation">{formik.errors.password}</div>
       ) : null}
 
       <button className="btn btn-info text-white input-button" type="submit">

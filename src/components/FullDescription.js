@@ -2,14 +2,18 @@ import BackArrow from "./assets/circle-arrow-left-solid.png";
 import Location from "./assets/location-dot-solid.png";
 import HeartLogo from "./assets/HeartLogo.png";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Axios } from "axios";
 
 export const FullDescription = ({ stateProps }) => {
+  // const [data, setData] = stateProps;
   const navigate = useNavigate();
   const { currentActivity, currentUser, changeCurrentUser } = stateProps;
   const userFav = currentUser.userFavourites;
-  console.log(userFav);
+
+  const goBackAPage = () => {
+    navigate("/results");
+  };
 
   const handleOnClick = () => {
     userFav.push(currentActivity);
@@ -24,34 +28,6 @@ export const FullDescription = ({ stateProps }) => {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
   };
 
-  const goBackAPage = () => {
-    navigate("/results");
-  };
-
-  const handleSubmit = () => {
-    // altermap(selectedActivityItem.title);
-  };
-
-  // useEffect(() => {
-  //   if (viewmap) {
-  //     const fetchData = async () => {
-  //       console.log("???");
-  //       try {
-  //         const data = "im some data";
-  //         if (!data) {
-  //           throw new Error();
-  //         } else {
-  //           mapchange(data);
-  //           navigate("/map-directions", { state: { mystuff: data } });
-  //         }
-  //       } catch {
-  //         console.log();
-  //       }
-  //     };
-
-  //     fetchData();
-  //   }
-  // }, [viewmap, mapresponse]);
   return (
     <div className="p-2 detailed-desc">
       <img
@@ -74,7 +50,7 @@ export const FullDescription = ({ stateProps }) => {
       <img
         src={Location}
         className="location-button cursor-change"
-        onClick={handleSubmit}
+        // onClick={handleSubmit}
       ></img>
     </div>
   );

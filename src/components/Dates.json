@@ -10,7 +10,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Art Gallery ",
@@ -34,7 +34,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Board Game Cafe",
@@ -50,7 +50,7 @@
     },
     {
       "title": "Botanical Garden",
-      "description": "Escape into a lush oasis with a date to an indoor botanical garden. Stroll hand in hand amidst vibrant flora, immerse yourselves in the serene atmosphere and discover the beauty of nature together. A perfect setting for intimate conversations and creating lasting memories.",
+      "description": "Escape into a lush oasis with a date to a botanical garden. Stroll hand in hand amidst vibrant flora, immerse yourselves in the serene atmosphere and discover the beauty of nature together. A perfect setting for intimate conversations and creating lasting memories.",
       "image": "./images/BotanicalGarden.jpg",
       "id": 5,
       "indoor": true,
@@ -69,7 +69,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -81,7 +81,7 @@
       "outdoor": false,
       "night": true,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -103,9 +103,9 @@
       "id": 9,
       "indoor": true,
       "outdoor": true,
-      "night": true,
+      "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -114,7 +114,7 @@
       "image": "./images/WineTasting.jpg",
       "id": 10,
       "indoor": true,
-      "outdoor": true,
+      "outdoor": false,
       "night": true,
       "day": true,
       "long": true,
@@ -145,7 +145,7 @@
       "short": true
     },
     {
-      "title": "Karaoke",
+      "title": "Karaoke Bar",
       "description": "Unleash your inner rockstar and ignite the stage with a karaoke date. Belt out your favorite tunes, serenade each other with duets and embrace the joy of singing your hearts out. Let the music bring you closer as you create harmonious memories and celebrate the magic of karaoke together.",
       "image": "./images/Karaoke.jpg",
       "id": 13,
@@ -153,7 +153,7 @@
       "outdoor": false,
       "night": true,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -162,7 +162,7 @@
       "image": "./images/Theater.jpg",
       "id": 14,
       "indoor": true,
-      "outdoor": true,
+      "outdoor": false,
       "night": true,
       "day": true,
       "long": true,
@@ -175,7 +175,7 @@
       "id": 15,
       "indoor": true,
       "outdoor": true,
-      "night": true,
+      "night": false,
       "day": true,
       "long": true,
       "short": true
@@ -190,10 +190,10 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
-      "title": "Treasure Hunt",
+      "title": "Treasure Hunt Experience",
       "description": "Embark on an exhilarating treasure hunt with your date. Follow clues, uncover hidden surprises, and enjoy the thrill of unraveling mysteries together, creating unforgettable memories, and forging a deeper connection as you navigate through an adventure filled with excitement and anticipation.",
       "image": "./images/TreasureHunt.jpg",
       "id": 17,
@@ -210,14 +210,14 @@
       "image": "./images/YogaClass.jpg",
       "id": 18,
       "indoor": true,
-      "outdoor": true,
+      "outdoor": false,
       "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
-      "title": "Painting",
+      "title": "Painting Class",
       "description": "Unleash your creativity and embark on a vibrant artistic adventure with your date during a 3-6 hour painting session. Express yourselves through brushstrokes and colors, as you create unique masterpieces together, fostering a playful and inspiring atmosphere, where imagination knows no bounds.",
       "image": "./images/Painting.jpg",
       "id": 19,
@@ -226,7 +226,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Scuba Diving",
@@ -249,11 +249,11 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
-      "title": "Photography Course",
+      "title": "Photography Class",
       "description": "Capture precious moments together on a photography date. Join a course to learn the art of capturing stunning images, and exploring composition, lighting, and editing techniques. Spend 3-6 hours honing your skills, unleashing your creativity, and creating timeless memories through the lens. ",
       "image": "./images/Photography.jpg",
       "id": 22,
@@ -271,7 +271,7 @@
       "id": 23,
       "indoor": false,
       "outdoor": true,
-      "night": true,
+      "night": false,
       "day": true,
       "long": true,
       "short": true
@@ -286,7 +286,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Cocktail Mixology Class",
@@ -325,15 +325,15 @@
       "short": true
     },
     {
-      "title": "Gardening",
-      "description": "Unleash your green thumbs and connect with nature on a romantic gardening date. Plant seeds of love as you dig into the soil, nurture plants, and witness the beauty of growth together. Share laughter, bond over blooms, and cultivate a lasting connection while creating a flourishing garden paradise.",
-      "image": "./images/Gardening.jpg",
+      "title": "Axe Throwing",
+      "description": "Axe throwing is equally romantic and exciting, the perfect way to connect with your significant other. Axe throwing dates make for some really creative activities that allow you to get to know each other on a unique level! Engaging in something new will keep the date interesting and hard to forget.",
+      "image": "./images/AxeThrowing.jpg",
       "id": 28,
-      "indoor": false,
+      "indoor": true,
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -346,7 +346,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Skateboarding",
@@ -355,7 +355,7 @@
       "id": 30,
       "indoor": true,
       "outdoor": true,
-      "night": true,
+      "night": false,
       "day": true,
       "long": true,
       "short": true
@@ -370,7 +370,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Kayaking",
@@ -406,7 +406,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Go-Karting",
@@ -417,7 +417,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -430,7 +430,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Safari Tour",
@@ -442,7 +442,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Hot Air Balloon Ride",
@@ -463,7 +463,7 @@
       "id": 39,
       "indoor": false,
       "outdoor": true,
-      "night": true,
+      "night": false,
       "day": true,
       "long": true,
       "short": true
@@ -501,7 +501,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -511,9 +511,9 @@
       "id": 43,
       "indoor": true,
       "outdoor": true,
-      "night": true,
+      "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -525,7 +525,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -550,7 +550,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Laser Tag",
@@ -561,7 +561,7 @@
       "outdoor": false,
       "night": true,
       "day": true,
-      "long": true,
+      "long": false,
       "short": true
     },
     {
@@ -589,7 +589,7 @@
       "short": true
     },
     {
-      "title": "Ice Hockey",
+      "title": "Ice Hockey Match",
       "description": "Ice hockey is a fast-paced team sport played on ice, typically in an indoor arena. It involves two teams of skaters, each equipped with ice skates, hockey sticks, and protective gear. The objective is to score goals by shooting a rubber puck into the opponent's net while defending one's own net.",
       "image": "./images/IceHockey.jpg",
       "id": 50,
@@ -598,7 +598,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": true
+      "short": false
     },
     {
       "title": "Ice Skating",
@@ -683,6 +683,107 @@
       "day": false,
       "long": true,
       "short": true
+    },
+    {
+      "title": "Museum",
+      "description": "From the way museums are lit on evening tours to the salacious history behind different objects, museums are a great place to turn up the heat between you and your date. If you’re looking to keep the vibe more romantic and less school field trip, plan your first museum date at night. Many museums are open in the evening at least once per week and often have a totally different vibe at night than during the day.",
+      "image": "./images/Museum.jpg",
+      "id": 58,
+      "indoor": true,
+      "outdoor": false,
+      "night": true,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+
+    {
+      "title": "Beach",
+      "description": "Plan a day to relax in the sun, swim, and have a picnic by the shore. we recommend doing something active like beach volleyball or Frisbee. You can also go out on a sunset beach date by grabbing beach chairs and watching the sunset. There are lots of beach date ideas you can do at the beach with your partner.",
+      "image": "./images/Beach.jpg",
+      "id": 59,
+      "indoor": false,
+      "outdoor": true,
+      "night": false,
+      "day": true,
+      "long": true,
+      "short": false
+    },
+
+    {
+      "title": "Music Festival",
+      "description": "It's a great way to experience the local culture, try different foods, and enjoy live music or performances. It’s a festival. You’re surrounded by hundreds or thousands of people with a smile on their faces. That’s not something you’ll get the benefit of in your local, so feel free to enjoy the good vibes.",
+      "image": "./images/Festival.jpg",
+      "id": 60,
+      "indoor": false,
+      "outdoor": true,
+      "night": true,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+
+    {
+      "title": "Escape Room",
+      "description": "If you want to leave a lasting impression, you can't beat the Escape Room date. Navigating an Escape Room is a thrill that will give you plenty to talk about. Your date is going to remember this first date! It's such a unique, stand-out experience that you will make great memories together from the word go.",
+      "image": "./images/EscapeRoom.jpg",
+      "id": 61,
+      "indoor": true,
+      "outdoor": false,
+      "night": true,
+      "day": true,
+      "long": true,
+      "short": false
+    },
+
+    {
+      "title": "Cinema",
+      "description": "Dinner and movie is a classic for good reason — you get the best of both worlds: food and a good flick. A movie date can lead to a great time. For sure, it’s an evergreen teen date idea, but it’s something even older and seasoned daters have started using in recent times. That’s because this kind of date is easy, comfortable, and it has plenty of scope for sitting a little closer.",
+      "image": "./images/Cinema.jpg",
+      "id": 62,
+      "indoor": true,
+      "outdoor": false,
+      "night": true,
+      "day": true,
+      "long": true,
+      "short": false
+    },
+
+    {
+      "title": "Outdoor Cinema",
+      "description": "Dinner and movie is a classic for good reason — you get the best of both worlds: food and a good flick. A movie date can lead to a great time. For sure, it’s an evergreen teen date idea, but it’s something even older and seasoned daters have started using in recent times. That’s because this kind of date is easy, comfortable, and it has plenty of scope for sitting a little closer.",
+      "image": "./images/CinemaOutdoor.jpg",
+      "id": 63,
+      "indoor": false,
+      "outdoor": true,
+      "night": true,
+      "day": true,
+      "long": true,
+      "short": false
+    },
+    {
+      "title": "Salsa Dancing",
+      "description": "Spice up your evening with a salsa dancing lesson, learning sultry moves and enjoying the rhythm of Latin music.",
+      "image": "./images/SalsaDancing.jpg",
+      "id": 64,
+      "indoor": true,
+      "outdoor": false,
+      "night": true,
+      "day": false,
+      "long": false,
+      "short": true
+    },
+    {
+      "title": "Farmers Market Stroll",
+      "description": "Take a leisurely stroll through a local farmers market, exploring fresh produce, artisanal goods, and enjoying the vibrant atmosphere.",
+      "image": "./images/FarmersMarket.jpg",
+      "id": 65,
+      "indoor": false,
+      "outdoor": true,
+      "night": false,
+      "day": true,
+      "long": true,
+      "short": false
     }
   ]
 }

@@ -6,6 +6,7 @@ import { NavigationBar } from "./components/NavigationBar";
 import { useState } from "react";
 
 export const App = () => {
+  const [data, setData] = useState("");
   const [activityList, setActivityList] = useState([]);
   const [currentActivity, setCurrentActivity] = useState("");
   const checkLast = JSON.parse(localStorage.getItem("currentUser")) || [];
@@ -20,6 +21,8 @@ export const App = () => {
     setActivityList,
     currentActivity,
     setCurrentActivity,
+    data,
+    setData,
   };
   return (
     <div>

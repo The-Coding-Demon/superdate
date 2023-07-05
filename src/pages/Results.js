@@ -6,7 +6,9 @@ export const Results = ({ stateProps }) => {
     <div>
       {!!activityList && <InitialResults stateProps={stateProps} />}
       {activityList.length === 0 && (
-        <div className=".empty-favourites">Please do a search</div>
+        <div className="empty-favourites">
+          Please click on the home button and do another search
+        </div>
       )}
     </div>
   );
