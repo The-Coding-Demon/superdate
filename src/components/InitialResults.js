@@ -22,7 +22,6 @@ export const InitialResults = ({ stateProps }) => {
           newArray.push(currentItem);
         }
       }
-      console.log(newArray);
     } else {
       for (let i = 0; i < jsonCards.length; i++) {
         let currentItem = jsonCards[i];

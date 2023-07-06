@@ -49,6 +49,7 @@ export function useFetchGetFn() {
         const response = await fetch(url, options);
         const data = await response.json();
         setData(data);
+        localStorage.setItem("apiResult", JSON.stringify(data.results));
         console.log(data);
       } catch (error) {
         setError(error);

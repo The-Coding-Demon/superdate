@@ -1,14 +1,22 @@
 import Map from "./assets/MapImage.png";
 import BackArrow from "./assets/circle-arrow-left-solid.png";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export const MapDetails = ({ stateProps }) => {
-  console.log("Check 2");
+  const data = JSON.parse(localStorage.getItem("apiResult")) || [];
+  const [getData, setData] = useState(data);
+  const directionsURL = JSON.parse(localStorage.getItem("directionURL")) || [];
+  localStorage.removeItem("apiResult");
+  const firstItem = getData[0];
   const navigate = useNavigate();
 
   const goToDetailedResultsPage = () => {
     navigate("/detailed-results");
   };
+
+  console.log(getData);
+  console.log(directionsURL);
 
   return (
     <div class="p-2 map-details">
@@ -17,18 +25,18 @@ export const MapDetails = ({ stateProps }) => {
         src={BackArrow}
         className="back-button cursor-change"
         onClick={goToDetailedResultsPage}
-      ></img>
+      />
       <div className="p-3">
-        <img src={Map} className="main-img-map"></img>
+        {/* <img src={firstItem.photos} className="main-img-map" /> */}
       </div>
       <div className="p-3">
-        <div>
-          <img>icon</img>
-          <h2>Name Of Place</h2>
+        <div className="map-text">
+          <img src={firstItem.icon} />
+          <h2>Venue: {firstItem.name}</h2>
+          <p>Address: {firstItem.formatted_address}</p>
+          <p>Opening Times: {firstItem.opening_hours[0].open_now}</p>
+          <p>Rating: {firstItem.rating}</p>
         </div>
-        <p className="map-text">Formatted Address</p>
-        <p className="map-text">Opening Times</p>
-        <p className="map-text">Rating</p>
       </div>
     </div>
   );

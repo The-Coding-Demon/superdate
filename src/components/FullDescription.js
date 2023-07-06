@@ -59,7 +59,8 @@ export const FullDescription = ({ stateProps }) => {
       const destinationLat = firstHit.geometry.location.lat;
       const destinationLng = firstHit.geometry.location.lng;
       const url = `https://www.google.com/maps/dir/?api=1&destination=${destinationLat},${destinationLng}&destination_place_id=${placeId}&origin=${latitude},${longitude}`;
-      window.open(url, "_blank");
+      localStorage.setItem("directionURL", JSON.stringify(url));
+      navigate("/map-directions");
     }
   }, [apiCallLoading, error, data, longitude, latitude]);
 

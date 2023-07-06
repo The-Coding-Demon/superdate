@@ -465,6 +465,10 @@ input {
 
 .map-text {
   text-align: justify;
+  font-family: Poppins;
+  padding-right: 0;
+  margin: 0;
+  line-height: 50px;
 }
 
 @media only screen and (max-width: 1700px) {
