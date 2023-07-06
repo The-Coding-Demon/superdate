@@ -1,7 +1,5 @@
 import JsonData from "./Dates.json";
 import { ResultCard } from "./ResultCard";
-import useEffectOnce from "../hooks/useEffectOnce";
-import HeartLogo from "./assets/HeartLogo.png";
 import RefreshLogo from "./assets/RefreshLogo.png";
 
 export const InitialResults = ({ stateProps }) => {

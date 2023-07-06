@@ -1,9 +1,8 @@
-import Map from "./assets/MapImage.png";
 import BackArrow from "./assets/circle-arrow-left-solid.png";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import Directions from "./assets/Directions.jpg";
 
-export const MapDetails = ({ stateProps, firstItem }) => {
+export const MapDetails = ({ firstItem }) => {
   const navigate = useNavigate();
   const directionsURL = JSON.parse(localStorage.getItem("directionURL")) || [];
 
@@ -20,24 +19,22 @@ export const MapDetails = ({ stateProps, firstItem }) => {
         onClick={goToDetailedResultsPage}
       />
       <div className="p-3">
-        {/* <a href={directionsURL}>
-          <img
-            src={firstItem.photos.html_attributions[0]}
-            className="main-img-map"
-            alt="photo of venue"
-            target="_blank"
-          />
-        </a> */}
+        <img src={Directions} className="main-img-map" alt="directions" />
       </div>
       <div className="p-3">
         <div className="map-text">
-          <a href={directionsURL} target="_blank">
-            <img src={firstItem.icon} alt="icon" />
-          </a>
-          <h2>Venue: {firstItem.name}</h2>
+          <img src={firstItem.icon} alt="icon" />
+          <h2 className="map-venue">{firstItem.name}</h2>
           <p>Address: {firstItem.formatted_address}</p>
-          <p>Opening Times: {firstItem.opening_hours.open_now}</p>
           <p>Rating: {firstItem.rating}</p>
+          <a href={directionsURL} target="_blank">
+            <button
+              type="submit"
+              className="btn text-white direction-button cursor-change"
+            >
+              Get the directions on map
+            </button>
+          </a>
         </div>
       </div>
     </div>

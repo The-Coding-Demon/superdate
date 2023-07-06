@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export const FavouritesCard = ({ stateProps, favourites }) => {
-  const { currentUser, changeCurrentUser } = stateProps;
+  const { currentUser } = stateProps;
   let favList = currentUser.userFavourites;
   const [rating, setRating] = useState(favourites.starRating);
   const [hover, setHover] = useState(null);
@@ -148,6 +148,7 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
           <img
             src={favourites.image}
             className="main-img-result favourites-img-result"
+            alt="activityimage"
           ></img>
         </div>
         <div>

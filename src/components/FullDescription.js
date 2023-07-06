@@ -2,14 +2,13 @@ import BackArrow from "./assets/circle-arrow-left-solid.png";
 import Location from "./assets/location-dot-solid.png";
 import HeartLogo from "./assets/HeartLogo.png";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect, useCallback } from "react";
+import { useEffect, useCallback } from "react";
 import useGeoLocation from "../hooks/useGeoLocation";
 import { useFetchGetFn } from "../hooks/useFetch";
 
 export const FullDescription = ({ stateProps }) => {
-  // const [data, setData] = stateProps;
   const navigate = useNavigate();
-  const { currentActivity, currentUser, changeCurrentUser } = stateProps;
+  const { currentActivity, currentUser } = stateProps;
   const userFav = currentUser.userFavourites || [];
   const { loading: geoLocationLoading, latitude, longitude } = useGeoLocation();
   const { loading: apiCallLoading, data, error, sendRequest } = useFetchGetFn();
@@ -80,9 +79,14 @@ export const FullDescription = ({ stateProps }) => {
         src={BackArrow}
         className="back-button cursor-change"
         onClick={goBackAPage}
+        alt="back arrow"
       ></img>
       <div className="p-3">
-        <img src={currentActivity.image} className="main-img-result"></img>
+        <img
+          src={currentActivity.image}
+          className="main-img-result"
+          alt="currentactivity"
+        ></img>
       </div>
       <div className="p-3">
         <h2>{currentActivity.title}</h2>
@@ -92,11 +96,13 @@ export const FullDescription = ({ stateProps }) => {
         src={HeartLogo}
         className="heart-button cursor-change"
         onClick={handleOnClick}
+        alt="heart icon"
       ></img>
       <img
         src={Location}
         className="location-button cursor-change"
         onClick={handleGetDirections}
+        alt="location icon"
       ></img>
     </div>
   );

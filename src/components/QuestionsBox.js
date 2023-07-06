@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
-export const QuestionsBox = ({ stateProps }) => {
+export const QuestionsBox = () => {
   const navigate = useNavigate();
   let userDatePreferences = JSON.parse(
     localStorage.getItem("userDatePreferences")

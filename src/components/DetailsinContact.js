@@ -12,15 +12,23 @@ export const DetailsinContact = () => {
         <div className="contact-details">
           <div className="contact-email">
             <p className="contact-email">
-              <img className="contact-email-img" src={EnvelopeSolid}></img>
+              <img
+                className="contact-email-img"
+                src={EnvelopeSolid}
+                alt="envelope"
+              ></img>
               superdate@gmail.com
             </p>
           </div>
 
           <div className="contact-phone">
             <p className="contact-phone">
-              <img className="contact-phone-img" src={PhoneSolid}></img> +44
-              5395 2368
+              <img
+                className="contact-phone-img"
+                src={PhoneSolid}
+                alt="phone"
+              ></img>{" "}
+              +44 5395 2368
             </p>
           </div>
         </div>
