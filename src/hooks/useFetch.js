@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import useUpdateEffect from "./useUpdateEffect";
+import { useNavigate } from "react-router-dom";
 
 export function useFetchGet(url, options = {}) {
   const [data, setData] = useState(null);
@@ -42,6 +43,7 @@ export function useFetchGetFn() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const abortControllerRef = useRef(new AbortController());
+  const navigate = useNavigate();
 
   const sendRequest = useCallback(
     async (url, options = {}) => {
@@ -51,6 +53,7 @@ export function useFetchGetFn() {
         setData(data);
         localStorage.setItem("apiResult", JSON.stringify(data.results));
         console.log(data);
+        navigate("/map-directions");
       } catch (error) {
         setError(error);
       } finally {

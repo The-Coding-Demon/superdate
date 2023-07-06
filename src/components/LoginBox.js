@@ -23,7 +23,7 @@ export const LoginBox = ({ stateProps }) => {
       )
     );
     if (result.length == 0) {
-      console.log("No user exists");
+      alert("No user exists");
     } else {
       changeCurrentUser(result[0]);
       localStorage.setItem("currentUser", JSON.stringify(result[0]));
@@ -81,7 +81,7 @@ export const LoginBox = ({ stateProps }) => {
       <p id="sign-up-prompt">Don't have an account</p>
       <button
         className="btn text-white input-button"
-        type="submit"
+        type="button"
         onClick={goToSignUpPage}
       >
         SignUp{" "}

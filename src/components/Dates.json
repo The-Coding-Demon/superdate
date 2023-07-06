@@ -10,7 +10,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Art Gallery ",
@@ -34,7 +34,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Board Game Cafe",
@@ -69,7 +69,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -81,7 +81,7 @@
       "outdoor": false,
       "night": true,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -105,7 +105,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -153,7 +153,7 @@
       "outdoor": false,
       "night": true,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -190,7 +190,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Treasure Hunt Experience",
@@ -213,7 +213,7 @@
       "outdoor": false,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -226,7 +226,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Scuba Diving",
@@ -249,7 +249,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -286,7 +286,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Cocktail Mixology Class",
@@ -333,7 +333,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -346,7 +346,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Skateboarding",
@@ -370,7 +370,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Kayaking",
@@ -406,7 +406,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Go-Karting",
@@ -417,7 +417,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -430,7 +430,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Safari Tour",
@@ -442,7 +442,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Hot Air Balloon Ride",
@@ -501,7 +501,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -513,7 +513,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -525,7 +525,7 @@
       "outdoor": true,
       "night": false,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -550,7 +550,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Laser Tag",
@@ -561,7 +561,7 @@
       "outdoor": false,
       "night": true,
       "day": true,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -598,7 +598,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Ice Skating",
@@ -707,7 +707,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
 
     {
@@ -733,7 +733,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
 
     {
@@ -746,7 +746,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
 
     {
@@ -759,7 +759,7 @@
       "night": true,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     },
     {
       "title": "Salsa Dancing",
@@ -770,7 +770,7 @@
       "outdoor": false,
       "night": true,
       "day": false,
-      "long": false,
+      "long": true,
       "short": true
     },
     {
@@ -783,7 +783,7 @@
       "night": false,
       "day": true,
       "long": true,
-      "short": false
+      "short": true
     }
   ]
 }

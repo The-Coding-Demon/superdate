@@ -23,16 +23,27 @@ export const FullDescription = ({ stateProps }) => {
     currentActivity.dateTime = new Date();
     currentActivity.dateFriend = null;
     currentActivity.dateDone = false;
-    userFav.push(currentActivity);
-    const theCurrentUsers =
-      JSON.parse(localStorage.getItem("userCollection")) || [];
-    const makeArray = [currentUser];
-    const result = theCurrentUsers.filter((bigList) =>
-      makeArray.some((currentUser) => bigList.email !== currentUser.email)
+
+    const checkFav = userFav.filter((bigList) =>
+      [currentActivity].some(
+        (currentItem) => bigList.title === currentItem.title
+      )
     );
-    result.push(currentUser);
-    localStorage.setItem("userCollection", JSON.stringify(result));
-    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+    if (checkFav.length === 0) {
+      userFav.push(currentActivity);
+      const theCurrentUsers =
+        JSON.parse(localStorage.getItem("userCollection")) || [];
+      const makeArray = [currentUser];
+      const result = theCurrentUsers.filter((bigList) =>
+        makeArray.some((currentUser) => bigList.email !== currentUser.email)
+      );
+      result.push(currentUser);
+      localStorage.setItem("userCollection", JSON.stringify(result));
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    } else {
+      alert("Fav already exists");
+    }
   };
 
   const handleGetDirections = useCallback(() => {
@@ -60,7 +71,6 @@ export const FullDescription = ({ stateProps }) => {
       const destinationLng = firstHit.geometry.location.lng;
       const url = `https://www.google.com/maps/dir/?api=1&destination=${destinationLat},${destinationLng}&destination_place_id=${placeId}&origin=${latitude},${longitude}`;
       localStorage.setItem("directionURL", JSON.stringify(url));
-      navigate("/map-directions");
     }
   }, [apiCallLoading, error, data, longitude, latitude]);
 

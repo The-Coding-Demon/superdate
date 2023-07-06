@@ -9,13 +9,20 @@ export const SignUpForm = ({ stateProps }) => {
   const checkCredentials = (values) => {
     const theCurrentUsers =
       JSON.parse(localStorage.getItem("userCollection")) || [];
-    values.userFavourites = [];
-    theCurrentUsers.push(values);
-    localStorage.setItem("userCollection", JSON.stringify(theCurrentUsers));
-    localStorage.setItem("currentUser", JSON.stringify(values));
-    changeCurrentUser(values);
+    const result = theCurrentUsers.filter((bigList) =>
+      [values].some((currentUser) => bigList.email === currentUser.email)
+    );
+    if (result.length === 0) {
+      values.userFavourites = [];
+      theCurrentUsers.push(values);
+      localStorage.setItem("userCollection", JSON.stringify(theCurrentUsers));
+      localStorage.setItem("currentUser", JSON.stringify(values));
+      changeCurrentUser(values);
+      navigate("/");
+    } else {
+      alert("Email already in use");
+    }
   };
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -35,10 +42,6 @@ export const SignUpForm = ({ stateProps }) => {
       checkCredentials(values);
     },
   });
-
-  const goToHomePage = () => {
-    navigate("/");
-  };
 
   const goToLoginPage = () => {
     navigate("/login");
@@ -79,17 +82,13 @@ export const SignUpForm = ({ stateProps }) => {
         <div className="error-validation">{formik.errors.email}</div>
       ) : null}
 
-      <button
-        className="btn text-white input-button"
-        type="submit"
-        onClick={goToHomePage}
-      >
+      <button className="btn text-white input-button" type="submit">
         SignUp{" "}
       </button>
       <button
         id="account-button"
         className="btn text-white input-button"
-        type="submit"
+        type="button"
         onClick={goToLoginPage}
       >
         Already have an Account{" "}
