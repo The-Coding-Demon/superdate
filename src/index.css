@@ -560,10 +560,10 @@ input[type="radio"] {
 }
 
 .ratings {
-  display: flex;
-  justify-content: end;
-  flex-wrap: nowrap;
-  margin-right: auto;
+  display: block;
+  position: absolute;
+  right: 100px;
+  top: 20px;
   z-index: -10;
 }
 
@@ -665,21 +665,22 @@ input:checked + .slider:before {
 
   .ratings {
     display: block;
+    position: static;
   }
+}
 
-  h5 {
-    padding-right: 5px;
-    padding-top: 5px;
-  }
+h5 {
+  padding-right: 5px;
+  padding-top: 5px;
+}
 
-  .delete-trash-icon {
-    display: block;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    max-height: 50px;
-    max-width: 50px;
-  }
+.delete-trash-icon {
+  display: block;
+  position: absolute;
+  top: 4%;
+  right: 1.5%;
+  max-height: 50px;
+  max-width: 50px;
 }
 
 /* Contact */
@@ -705,7 +706,7 @@ input:checked + .slider:before {
 
 .contact-info {
   padding-top: 50px;
-  padding-bottom: 70px;
+  padding-bottom: 0px;
   line-height: 50px;
   font-family: DM Sans;
   font-size: 2.5rem;
