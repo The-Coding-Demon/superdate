@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export const MapDirections = ({ stateProps }) => {
   const data = JSON.parse(localStorage.getItem("apiResult")) || [];
-  const [getData, setData] = useState(data);
+  const [getData] = useState(data);
   localStorage.removeItem("apiResult");
   const firstItem = getData[0];
   return (
