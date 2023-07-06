@@ -89,7 +89,7 @@ export const QuestionsBox = ({ stateProps }) => {
         placeholder="Enter Your City"
       />
       {formik.touched.city && formik.errors.city ? (
-        <div>{formik.errors.city}</div>
+        <div className="error-validation">{formik.errors.city}</div>
       ) : null}
 
       <button type="submit" className="btn text-white input-button">

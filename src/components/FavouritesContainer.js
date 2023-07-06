@@ -17,6 +17,7 @@ export const FavouritesContainer = ({ stateProps }) => {
         My Favourites
       </h1>
       <img
+        alt="back arrow"
         src={BackArrow}
         className="back-button-favourites-page cursor-change"
         onClick={goBackAPage}

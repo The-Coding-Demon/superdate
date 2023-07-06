@@ -10,10 +10,8 @@ export const App = () => {
   const [activityList, setActivityList] = useState([]);
   const [currentActivity, setCurrentActivity] = useState("");
   const checkLast = JSON.parse(localStorage.getItem("currentUser")) || [];
-  const [currentUser, changeCurrentUser] = useState("");
-  if (checkLast.length > 0) {
-    changeCurrentUser(checkLast);
-  }
+  const [currentUser, changeCurrentUser] = useState(checkLast);
+
   const stateProps = {
     currentUser,
     changeCurrentUser,

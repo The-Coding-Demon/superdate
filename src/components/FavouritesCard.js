@@ -37,6 +37,7 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
 
     filterAccounts.push(currentUser);
     localStorage.setItem("userCollection", JSON.stringify(filterAccounts));
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
   };
 
   const handleDelete = () => {
@@ -46,6 +47,84 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
     currentUser.userFavourites = result;
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
     navigate("/my-favourites");
+  };
+
+  const getDate = (date) => {
+    setStartDate(date);
+    const result = favList.filter((listItem) =>
+      [favourites].some((favItem) => listItem.title === favItem.title)
+    );
+    result[0].dateTime = String(date);
+
+    const everyBut = favList.filter((listItem) =>
+      [favourites].some((favItem) => listItem.title !== favItem.title)
+    );
+
+    everyBut.push(result[0]);
+    favList = everyBut;
+
+    const theCurrentUsers =
+      JSON.parse(localStorage.getItem("userCollection")) || [];
+    const checkLogin = [currentUser];
+    const filterAccounts = theCurrentUsers.filter((bigList) =>
+      checkLogin.some((singleUser) => bigList.email !== singleUser.email)
+    );
+
+    filterAccounts.push(currentUser);
+    localStorage.setItem("userCollection", JSON.stringify(filterAccounts));
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  };
+
+  const setFriend = (e) => {
+    const result = favList.filter((listItem) =>
+      [favourites].some((favItem) => listItem.title === favItem.title)
+    );
+    result[0].dateFriend = e.target.value;
+
+    const everyBut = favList.filter((listItem) =>
+      [favourites].some((favItem) => listItem.title !== favItem.title)
+    );
+
+    everyBut.push(result[0]);
+    favList = everyBut;
+
+    const theCurrentUsers =
+      JSON.parse(localStorage.getItem("userCollection")) || [];
+    const checkLogin = [currentUser];
+    const filterAccounts = theCurrentUsers.filter((bigList) =>
+      checkLogin.some((singleUser) => bigList.email !== singleUser.email)
+    );
+
+    filterAccounts.push(currentUser);
+    localStorage.setItem("userCollection", JSON.stringify(filterAccounts));
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+  };
+
+  const dateDone = (e) => {
+    let isChecked = e.target.checked;
+    console.log(isChecked);
+    const result = favList.filter((listItem) =>
+      [favourites].some((favItem) => listItem.title === favItem.title)
+    );
+    result[0].dateDone = isChecked;
+
+    const everyBut = favList.filter((listItem) =>
+      [favourites].some((favItem) => listItem.title !== favItem.title)
+    );
+
+    everyBut.push(result[0]);
+    favList = everyBut;
+
+    const theCurrentUsers =
+      JSON.parse(localStorage.getItem("userCollection")) || [];
+    const checkLogin = [currentUser];
+    const filterAccounts = theCurrentUsers.filter((bigList) =>
+      checkLogin.some((singleUser) => bigList.email !== singleUser.email)
+    );
+
+    filterAccounts.push(currentUser);
+    localStorage.setItem("userCollection", JSON.stringify(filterAccounts));
+    localStorage.setItem("currentUser", JSON.stringify(currentUser));
   };
 
   return (
@@ -98,19 +177,23 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
         <div className="extras-container">
           <DatePicker
             selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            onChange={(date) => getDate(date)}
             showTimeSelect
             dateFormat="Pp"
           />
         </div>
         <div className="extras-container">
-          <input className="date-guest" placeholder="DateGuest"></input>
+          <input
+            className="date-guest"
+            placeholder="DateGuest"
+            onChange={setFriend}
+          ></input>
         </div>
         <div className="extras-container">
           <h5>Done?</h5>
           <label class="switch">
             {" "}
-            <input type="checkbox" />
+            <input type="checkbox" onChange={dateDone} />
             <span class="slider round"></span>
           </label>
         </div>

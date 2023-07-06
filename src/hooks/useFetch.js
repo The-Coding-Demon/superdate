@@ -50,7 +50,6 @@ export function useFetchGetFn() {
         const data = await response.json();
         setData(data);
         console.log(data);
-        console.log();
       } catch (error) {
         setError(error);
       } finally {

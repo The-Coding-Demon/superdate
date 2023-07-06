@@ -15,7 +15,7 @@ export const Footer = ({ stateProps }) => {
       <p className="footer-text">©SuperDate</p>
       <div className="container-fluid">
         <button
-          className="btn btn-info text-white button-nav log-out-button cursor-change"
+          className="btn text-white button-nav log-out-button cursor-change"
           type="submit"
           onClick={handleOnClick}
         >

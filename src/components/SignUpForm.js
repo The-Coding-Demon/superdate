@@ -80,7 +80,7 @@ export const SignUpForm = ({ stateProps }) => {
       ) : null}
 
       <button
-        className="btn btn-info text-white input-button"
+        className="btn text-white input-button"
         type="submit"
         onClick={goToHomePage}
       >

@@ -8,85 +8,83 @@ export const InitialResults = ({ stateProps }) => {
   );
 
   const { activityList, setActivityList } = stateProps;
-  useEffectOnce(() => {
-    const JsonPicker = () => {
-      const newArray = [];
-      const jsonCards = JsonData.data;
+  const JsonPicker = () => {
+    const newArray = [];
+    const jsonCards = JsonData.data;
 
-      if (userDatePreferences.venueCategoryChoice === "Indoor") {
-        for (let i = 0; i < jsonCards.length; i++) {
-          let currentItem = jsonCards[i];
-          let checkindoor = currentItem.indoor;
-          if (checkindoor) {
-            newArray.push(currentItem);
-          }
-        }
-        console.log(newArray);
-      } else {
-        for (let i = 0; i < jsonCards.length; i++) {
-          let currentItem = jsonCards[i];
-          let checkIndoor = currentItem.indoor;
-          if (!checkIndoor) {
-            newArray.push(currentItem);
-          }
+    if (userDatePreferences.venueCategoryChoice == "Indoor") {
+      for (let i = 0; i < jsonCards.length; i++) {
+        let currentItem = jsonCards[i];
+        let checkindoor = currentItem.indoor;
+        if (checkindoor == true) {
+          newArray.push(currentItem);
         }
       }
-      secondFilter(newArray);
-    };
-
-    const secondFilter = (arr) => {
-      const newArray = [];
-      if (userDatePreferences.timeCategoryChoice === "Day") {
-        for (let i = 0; i < arr.length; i++) {
-          let currentItem = arr[i];
-          let checkDay = currentItem.day;
-          if (checkDay) {
-            newArray.push(currentItem);
-          }
-        }
-      } else {
-        for (let i = 0; i < arr.length; i++) {
-          let currentItem = arr[i];
-          let checkDay = currentItem.day;
-          if (checkDay) {
-            newArray.push(currentItem);
-          }
+      console.log(newArray);
+    } else {
+      for (let i = 0; i < jsonCards.length; i++) {
+        let currentItem = jsonCards[i];
+        let checkIndoor = currentItem.indoor;
+        if (checkIndoor == false) {
+          newArray.push(currentItem);
         }
       }
-      randomSelection(newArray);
-    };
+    }
+    secondFilter(newArray);
+  };
 
-    const randomSelection = (arr) => {
-      const newRandomList = createNewList(arr);
-      setActivityList(newRandomList);
-    };
-
-    const createNewList = (arr) => {
-      const finalSelectionArray = [];
-      const numberHolder = [];
-      while (finalSelectionArray.length < 4) {
-        let mySelection = Math.floor(Math.random() * arr.length);
-        let result = numberHolder.includes(mySelection);
-        if (!result) {
-          numberHolder.push(mySelection);
-          finalSelectionArray.push(arr[mySelection]);
+  const secondFilter = (arr) => {
+    const newArray = [];
+    if (userDatePreferences.timeCategoryChoice == "Day") {
+      for (let i = 0; i < arr.length; i++) {
+        let currentItem = arr[i];
+        let checkDay = currentItem.day;
+        if (checkDay == true) {
+          newArray.push(currentItem);
         }
-        return finalSelectionArray;
       }
-
-      const refreshCheck = () => {
-        if (userDatePreferences.cameFromForm == true) {
-          JsonPicker();
-          userDatePreferences.cameFromForm = false;
-          localStorage.setItem(
-            "userDatePreferences",
-            JSON.stringify(userDatePreferences)
-          );
+    } else {
+      for (let i = 0; i < arr.length; i++) {
+        let currentItem = arr[i];
+        let checkDay = currentItem.day;
+        if (checkDay == false) {
+          newArray.push(currentItem);
         }
-      };
-      refreshCheck();
-    };
-  });
+      }
+    }
+    randomSelection(newArray);
+  };
+
+  const randomSelection = (arr) => {
+    const newRandomList = createNewList(arr);
+    setActivityList(newRandomList);
+  };
+
+  const createNewList = (arr) => {
+    const finalSelectionArray = [];
+    const numberHolder = [];
+    while (finalSelectionArray.length < 4) {
+      let mySelection = Math.floor(Math.random() * arr.length);
+      let result = numberHolder.includes(mySelection);
+      if (!result) {
+        numberHolder.push(mySelection);
+        finalSelectionArray.push(arr[mySelection]);
+      }
+    }
+    return finalSelectionArray;
+  };
+
+  const refreshCheck = () => {
+    if (userDatePreferences.cameFromForm == true) {
+      JsonPicker();
+      userDatePreferences.cameFromForm = false;
+      localStorage.setItem(
+        "userDatePreferences",
+        JSON.stringify(userDatePreferences)
+      );
+    }
+  };
+  refreshCheck();
   return (
     <div
       className="d-flex justify-content-evenly flex-wrap gap-5
@@ -95,6 +93,16 @@ export const InitialResults = ({ stateProps }) => {
       {activityList.map((activitystuff, i) => (
         <ResultCard key={i} activity={activitystuff} stateProps={stateProps} />
       ))}
+
+      <div>
+        <button
+          className="btn text-white refresh-button input-button"
+          type="submit"
+          onClick={JsonPicker}
+        >
+          RefreshResults
+        </button>
+      </div>
     </div>
   );
 };

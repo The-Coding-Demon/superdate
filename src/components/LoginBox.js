@@ -70,7 +70,7 @@ export const LoginBox = ({ stateProps }) => {
         <div className="error-validation">{formik.errors.password}</div>
       ) : null}
 
-      <button className="btn btn-info text-white input-button" type="submit">
+      <button className="btn text-white input-button" type="submit">
         Login{" "}
       </button>
       <p id="sign-up-prompt">Don't have an account</p>
