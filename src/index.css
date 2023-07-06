@@ -326,7 +326,7 @@ input {
   display: block;
   position: absolute;
   bottom: 1%;
-  right: 3%;
+  right: 50px;
   max-height: 35px;
   max-width: 35px;
 }
@@ -421,16 +421,6 @@ input {
     display: block;
     position: static;
     float: right;
-  }
-
-  .heart-button {
-    right: 5%;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .heart-button {
-    right: 10%;
   }
 }
 
