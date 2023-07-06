@@ -22,7 +22,7 @@ export const MapDetails = ({ stateProps, firstItem }) => {
       <div className="p-3">
         {/* <a href={directionsURL}>
           <img
-            src={firstItem.photos}
+            src={firstItem.photos.html_attributions[0]}
             className="main-img-map"
             alt="photo of venue"
             target="_blank"
