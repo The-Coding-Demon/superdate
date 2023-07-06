@@ -688,8 +688,8 @@ input:checked + .slider:before {
   display: block;
   position: fixed;
   text-align: center;
-  top: 40%;
-  left: 12%;
+  top: 540px;
+  left: 320px;
   color: #fff;
   font-family: Poppins;
 }
@@ -704,7 +704,8 @@ input:checked + .slider:before {
 }
 
 .contact-info {
-  padding: 5%;
+  padding-top: 50px;
+  padding-bottom: 70px;
   line-height: 50px;
   font-family: DM Sans;
   font-size: 2.5rem;
@@ -768,7 +769,7 @@ input:checked + .slider:before {
   color: #fff;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1700px) {
   .main-contact-container {
     display: block;
     text-align: center;
