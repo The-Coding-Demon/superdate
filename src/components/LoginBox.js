@@ -3,8 +3,13 @@ import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 
 export const LoginBox = ({ stateProps }) => {
-  const { changeCurrentUser } = stateProps;
+  const { changeCurrentUser, signedOut, setSignedOut } = stateProps;
   const navigate = useNavigate();
+
+  if (signedOut == true) {
+    changeCurrentUser("");
+    setSignedOut(false);
+  }
 
   const checkCredentials = (values) => {
     const theCurrentUsers =

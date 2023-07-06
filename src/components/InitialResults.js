@@ -1,6 +1,8 @@
 import JsonData from "./Dates.json";
 import { ResultCard } from "./ResultCard";
 import useEffectOnce from "../hooks/useEffectOnce";
+import HeartLogo from "./assets/HeartLogo.png";
+import RefreshLogo from "./assets/RefreshLogo.png";
 
 export const InitialResults = ({ stateProps }) => {
   const userDatePreferences = JSON.parse(
@@ -93,16 +95,20 @@ export const InitialResults = ({ stateProps }) => {
       {activityList.map((activitystuff, i) => (
         <ResultCard key={i} activity={activitystuff} stateProps={stateProps} />
       ))}
-
-      <div>
-        <button
-          className="btn text-white refresh-button input-button"
-          type="submit"
-          onClick={JsonPicker}
-        >
-          RefreshResults
-        </button>
-      </div>
+      <button
+        className="btn text-white refresh-button cursor-change"
+        type="submit"
+        onClick={JsonPicker}
+      >
+        <img
+          src={RefreshLogo}
+          alt="HeartLogo"
+          width="24"
+          height="24"
+          className="refresh-logo cursor-change"
+        />
+        RefreshResults
+      </button>
     </div>
   );
 };

@@ -11,6 +11,7 @@ export const App = () => {
   const [currentActivity, setCurrentActivity] = useState("");
   const checkLast = JSON.parse(localStorage.getItem("currentUser")) || [];
   const [currentUser, changeCurrentUser] = useState(checkLast);
+  const [signedOut, setSignedOut] = useState(false);
 
   const stateProps = {
     currentUser,
@@ -21,6 +22,8 @@ export const App = () => {
     setCurrentActivity,
     data,
     setData,
+    signedOut,
+    setSignedOut,
   };
   return (
     <div>

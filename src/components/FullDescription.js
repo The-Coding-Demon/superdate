@@ -20,7 +20,7 @@ export const FullDescription = ({ stateProps }) => {
 
   const handleOnClick = () => {
     currentActivity.starRating = null;
-    currentActivity.dateTime = null;
+    currentActivity.dateTime = new Date();
     currentActivity.dateFriend = null;
     currentActivity.dateDone = false;
     userFav.push(currentActivity);

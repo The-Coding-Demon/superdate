@@ -10,7 +10,9 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
   let favList = currentUser.userFavourites;
   const [rating, setRating] = useState(favourites.starRating);
   const [hover, setHover] = useState(null);
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date(favourites.dateTime));
+  const [checked, setChecked] = useState(favourites.dateDone);
+  const [friendName, setFriendName] = useState(favourites.dateFriend);
   const navigate = useNavigate();
   const myLength = [1, 2, 3, 4, 5];
 
@@ -44,8 +46,18 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
     const result = favList.filter((listItem) =>
       [favourites].some((favItem) => listItem.title !== favItem.title)
     );
+
+    const theCurrentUsers =
+      JSON.parse(localStorage.getItem("userCollection")) || [];
+    const checkLogin = [currentUser];
+    const filterAccounts = theCurrentUsers.filter((bigList) =>
+      checkLogin.some((singleUser) => bigList.email !== singleUser.email)
+    );
+
     currentUser.userFavourites = result;
+    filterAccounts.push(currentUser);
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    localStorage.setItem("userCollection", JSON.stringify(filterAccounts));
     navigate("/my-favourites");
   };
 
@@ -76,6 +88,7 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
   };
 
   const setFriend = (e) => {
+    setFriendName(e.target.value);
     const result = favList.filter((listItem) =>
       [favourites].some((favItem) => listItem.title === favItem.title)
     );
@@ -102,6 +115,7 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
 
   const dateDone = (e) => {
     let isChecked = e.target.checked;
+    setChecked(e.target.checked);
     console.log(isChecked);
     const result = favList.filter((listItem) =>
       [favourites].some((favItem) => listItem.title === favItem.title)
@@ -187,13 +201,14 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
             className="date-guest"
             placeholder="DateGuest"
             onChange={setFriend}
+            value={friendName}
           ></input>
         </div>
         <div className="extras-container">
           <h5>Done?</h5>
           <label class="switch">
             {" "}
-            <input type="checkbox" onChange={dateDone} />
+            <input type="checkbox" onChange={dateDone} checked={checked} />
             <span class="slider round"></span>
           </label>
         </div>
