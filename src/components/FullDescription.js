@@ -2,21 +2,24 @@ import BackArrow from "./assets/circle-arrow-left-solid.png";
 import Location from "./assets/location-dot-solid.png";
 import HeartLogo from "./assets/HeartLogo.png";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { Axios } from "axios";
+import { useState, useEffect, useCallback } from "react";
+import useGeoLocation from "../hooks/useGeoLocation";
+import { useFetchGetFn } from "../hooks/useFetch";
 
 export const FullDescription = ({ stateProps }) => {
   // const [data, setData] = stateProps;
   const navigate = useNavigate();
   const { currentActivity, currentUser, changeCurrentUser } = stateProps;
-  const userFav = currentUser.userFavourites;
+  const userFav = currentUser.userFavourites || [];
+  const { loading: geoLocationLoading, latitude, longitude } = useGeoLocation();
+  const { loading: apiCallLoading, data, error, sendRequest } = useFetchGetFn();
 
   const goBackAPage = () => {
     navigate("/results");
   };
 
   const handleOnClick = () => {
-    currentActivity.starRating = null
+    currentActivity.starRating = null;
     userFav.push(currentActivity);
     const theCurrentUsers =
       JSON.parse(localStorage.getItem("userCollection")) || [];
@@ -28,6 +31,34 @@ export const FullDescription = ({ stateProps }) => {
     localStorage.setItem("userCollection", JSON.stringify(result));
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
   };
+
+  const handleGetDirections = useCallback(() => {
+    if (geoLocationLoading) {
+      alert("Please allow location access");
+      return;
+    }
+    const url = `https://gmaps-places-api-corsproxy.thomace44.workers.dev/corsproxy/textsearch?key=AIzaSyD0KNQdQHzS3ZGi2L2TV6mW2cs8PGs7L3s&query=${encodeURIComponent(
+      currentActivity.title
+    )}%20near%20me&location=${latitude},${longitude}`;
+    sendRequest(url, { mode: "cors" });
+  }, [
+    geoLocationLoading,
+    latitude,
+    longitude,
+    currentActivity.title,
+    sendRequest,
+  ]);
+
+  useEffect(() => {
+    if (!apiCallLoading && !error && data && data.results.length > 0) {
+      const firstHit = data.results[0];
+      const placeId = firstHit.place_id;
+      const destinationLat = firstHit.geometry.location.lat;
+      const destinationLng = firstHit.geometry.location.lng;
+      const url = `https://www.google.com/maps/dir/?api=1&destination=${destinationLat},${destinationLng}&destination_place_id=${placeId}&origin=${latitude},${longitude}`;
+      window.open(url, "_blank");
+    }
+  }, [apiCallLoading, error, data, longitude, latitude]);
 
   return (
     <div className="p-2 detailed-desc">
@@ -51,7 +82,7 @@ export const FullDescription = ({ stateProps }) => {
       <img
         src={Location}
         className="location-button cursor-change"
-        // onClick={handleSubmit}
+        onClick={handleGetDirections}
       ></img>
     </div>
   );
