@@ -27,7 +27,7 @@ export const MapDetails = ({ firstItem }) => {
           <h2 className="map-venue">{firstItem.name}</h2>
           <p>Address: {firstItem.formatted_address}</p>
           <p>Rating: {firstItem.rating}</p>
-          <a href={directionsURL} target="_blank">
+          <a href={directionsURL} target="_blank" rel="noreferrer">
             <button
               type="submit"
               className="btn text-white direction-button cursor-change"

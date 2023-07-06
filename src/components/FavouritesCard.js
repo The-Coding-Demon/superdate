@@ -6,7 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export const FavouritesCard = ({ stateProps, favourites }) => {
-  const { currentUser } = stateProps;
+  const { currentUser, setCurrentActivity } = stateProps;
   let favList = currentUser.userFavourites;
   const [rating, setRating] = useState(favourites.starRating);
   const [hover, setHover] = useState(null);
@@ -141,14 +141,20 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
   };
 
+  const getDetails = () => {
+    setCurrentActivity(favourites);
+    navigate("/detailed-results");
+  };
+
   return (
     <div>
       <div className="text-white favourites-box">
         <div className="p-3">
           <img
             src={favourites.image}
-            className="main-img-result favourites-img-result"
+            className="main-img-result favourites-img-result cursor-change"
             alt="activityimage"
+            onClick={getDetails}
           ></img>
         </div>
         <div>

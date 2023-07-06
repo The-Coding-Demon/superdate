@@ -115,10 +115,6 @@ video {
   .back-container {
     min-width: 80%;
   }
-
-  #slogan {
-    font-size: 18px;
-  }
 }
 
 .question-form {
@@ -193,7 +189,7 @@ input {
 
 .back-container p {
   font-family: Poppins;
-  font-size: 1.5rem;
+  font-size: 20px;
   padding-top: 20px;
 }
 
