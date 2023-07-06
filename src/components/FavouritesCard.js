@@ -201,6 +201,24 @@ export const FavouritesCard = ({ stateProps, favourites }) => {
             onChange={(date) => getDate(date)}
             showTimeSelect
             dateFormat="Pp"
+            popperClassName="some-custom-class"
+            popperPlacement="top-end"
+            popperModifiers={[
+              {
+                name: "offset",
+                options: {
+                  offset: [5, 10],
+                },
+              },
+              {
+                name: "preventOverflow",
+                options: {
+                  rootBoundary: "viewport",
+                  tether: false,
+                  altAxis: true,
+                },
+              },
+            ]}
           />
         </div>
         <div className="extras-container">
