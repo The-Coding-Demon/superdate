@@ -50,7 +50,9 @@ export const FullDescription = ({ stateProps }) => {
       alert("Please allow location access");
       return;
     }
-    const url = `https://gmaps-places-api-corsproxy.thomace44.workers.dev/corsproxy/textsearch?key=AIzaSyD0KNQdQHzS3ZGi2L2TV6mW2cs8PGs7L3s&query=${encodeURIComponent(
+    const url = `https://gmaps-places-api-corsproxy.thomace44.workers.dev/corsproxy/textsearch?key=${
+      process.env.REACT_APP_API_KEY
+    }&query=${encodeURIComponent(
       currentActivity.title
     )}%20near%20me&location=${latitude},${longitude}`;
     sendRequest(url, { mode: "cors" });
