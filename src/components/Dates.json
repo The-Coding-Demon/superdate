@@ -784,6 +784,102 @@
       "day": true,
       "long": true,
       "short": true
+    },
+    {
+      "title": "Roller Disco",
+      "description": "Roller disco as a date is a fantastic choice for a fun and energetic outing. Picture this: you and your partner stepping into a retro-themed roller rink, surrounded by colorful lights and upbeat music. As you lace up your roller skates, the excitement builds.",
+      "image": "./images/RollerDisco.jpg",
+      "id": 66,
+      "indoor": true,
+      "outdoor": false,
+      "night": true,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+    {
+      "title": "Shooting Range",
+      "description": "Going to a shooting range as a date can be a thrilling and unique experience. You and your partner embark on an adventure to test your shooting skills in a safe and controlled environment. The shooting range offers a variety of firearms to choose from, allowing you to try different types and calibers.",
+      "image": "./images/ShootingRange.jpg",
+      "id": 67,
+      "indoor": true,
+      "outdoor": true,
+      "night": true,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+    {
+      "title": "Surfing",
+      "description": "Surfing as a date is an adventurous and exhilarating experience. You and your partner hit the beach with surfboards in hand, ready to ride the waves. You cheer each other on, laugh at wipeouts, and celebrate successful rides. The salty ocean air and warm sun create a relaxed atmosphere, perfect for bonding and enjoying each other's company.",
+      "image": "./images/Surfing.jpg",
+      "id": 68,
+      "indoor": true,
+      "outdoor": true,
+      "night": true,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+    {
+      "title": "Comic Con",
+      "description": "Surfing as a date is an adventurous and exhilarating experience. You and your partner hit the beach with surfboards in hand, ready to ride the waves. You cheer each other on, laugh at wipeouts, and celebrate successful rides. The salty ocean air and warm sun create a relaxed atmosphere, perfect for bonding and enjoying each other's company.",
+      "image": "./images/ComicCon.jpg",
+      "id": 69,
+      "indoor": true,
+      "outdoor": false,
+      "night": false,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+    {
+      "title": "Water Park",
+      "description": "A water park date is an exhilarating and refreshing choice for a fun-filled day. Imagine you and your partner arriving at the water park, excitedly donning your swimsuits and sunscreen. The air is filled with the sound of laughter and splashing water, setting the tone for a memorable adventure.",
+      "image": "./images/WaterPark.jpg",
+      "id": 70,
+      "indoor": false,
+      "outdoor": true,
+      "night": false,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+    {
+      "title": "Crystal Maze Experience",
+      "description": "The Crystal Maze Experience is based on the popular British TV show, The Crystal Maze. It's a real-life team challenge that involves various tasks in four themed zones: Aztec, Industrial, Futuristic and Medieval. It is an immersive experience and teams have to solve puzzles and take on challenges to earn crystals.",
+      "image": "./images/CrystalMaze.jpg",
+      "id": 71,
+      "indoor": true,
+      "outdoor": false,
+      "night": false,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+    {
+      "title": "Upside Down House",
+      "description": "Step inside the house, and let yourselves be immersed in the topsy-turvy world. Everything will be inverted, from the furniture to the decor on the walls. Encourage your partner to take playful pictures and have fun with the upside-down concept.",
+      "image": "./images/UpsideDownHouse.jpg",
+      "id": 72,
+      "indoor": true,
+      "outdoor": false,
+      "night": false,
+      "day": true,
+      "long": true,
+      "short": true
+    },
+    {
+      "title": "Indoor Skydiving",
+      "description": "Experience the thrill of flight in a controlled environment. Dress comfortably, receive training, and then take flight together in the wind tunnel. Cheer each other on and capture the exciting moments. It's a unique and adventurous date that you'll both remember.",
+      "image": "./images/IndoorSkydiving.jpg",
+      "id": 73,
+      "indoor": true,
+      "outdoor": false,
+      "night": false,
+      "day": true,
+      "long": true,
+      "short": true
     }
   ]
 }
