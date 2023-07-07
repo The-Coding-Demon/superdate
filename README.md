@@ -22,9 +22,9 @@ npm i yup formik emailjs
 
 ## Screenshots
 
-![ScreenShot](./assets/Screenshot 1.png)
-![ScreenShot](./assets/Screenshot 2.png)
-![ScreenShot](./assets/Screenshot 3.png)
+![ScreenShot 1](./images/Screenshot1.png)
+![ScreenShot 2](./images/Screenshot2.png)
+![ScreenShot 3](./images/Screenshot3.png)
 
 ## Credits
 
